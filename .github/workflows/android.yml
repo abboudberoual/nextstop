@@ -50,8 +50,14 @@ jobs:
         env:
           KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
         run: |
-          if [ -z "$KEYSTORE_B64" ]; then echo "::error::Add the KEYSTORE_B64 repo secret (see README)"; exit 1; fi
-          echo "$KEYSTORE_B64" | base64 -d > android/app/release.keystore
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > android/app/release.keystore
+          else
+            echo "::warning::No KEYSTORE_B64 secret: signing with a one-off key. Installing a later build will require uninstalling first (progress is kept if sync is on). See README to add a permanent key."
+            echo "KEYSTORE_PASSWORD=temp-$GITHUB_RUN_ID" >> "$GITHUB_ENV"
+            keytool -genkeypair -keystore android/app/release.keystore -alias finals -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "temp-$GITHUB_RUN_ID" -keypass "temp-$GITHUB_RUN_ID" -dname "CN=Next Stop temp, C=CA"
+          fi
           cat >> android/app/build.gradle <<'EOF'
           android {
               signingConfigs {
@@ -71,7 +77,7 @@ jobs:
       - name: Gradle build
         working-directory: android
         env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || env.KEYSTORE_PASSWORD }}
         run: |
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon
