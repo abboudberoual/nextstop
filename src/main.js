@@ -22,7 +22,7 @@ const native = Capacitor.isNativePlatform();
 const tx = v => String(v ?? '').split(/(\$\$[^$]+\$\$|\$[^$\n]+\$)/g).map(part => {
   const disp = part.startsWith('$$') && part.endsWith('$$') && part.length > 4;
   const inl = !disp && part.startsWith('$') && part.endsWith('$') && part.length > 2;
-  if (!disp && !inl) return esc(part).replace(/\((sheet p\.\d[^)]*|definition, not on the sheet|know this[^)]*|derived[^)]*)\)/g, (m, t) => `<span class="src ${t.startsWith('sheet') ? 'sheet' : t.startsWith('know') ? 'know' : t.startsWith('derived') ? 'der' : 'def'}">${t}</span>`);
+  if (!disp && !inl) return esc(part).replace(/\((sheet(?: p\.\d)?[^)]*|Lesson \d[^)]*|definition, not on the sheet|know this[^)]*|derived[^)]*)\)/g, (m, t) => `<span class="src ${t.startsWith('sheet') || t.startsWith('Lesson') ? 'sheet' : t.startsWith('know') ? 'know' : t.startsWith('derived') ? 'der' : 'def'}">${t}</span>`);
   try { return katex.renderToString(part.slice(disp ? 2 : 1, disp ? -2 : -1), { displayMode: disp, throwOnError: false, output: 'html' }); } catch { return esc(part); }
 }).join('');
 const buzz = (ok) => { if (native) (ok === undefined ? Haptics.impact({ style: ImpactStyle.Light }) : Haptics.notification({ type: ok ? NotificationType.Success : NotificationType.Error })).catch(() => {}); };

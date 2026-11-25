@@ -1,5 +1,5 @@
 {
- "version": 4,
+ "version": 6,
  "courses": [
   {
    "id": "mech361",
@@ -44,16 +44,16 @@
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "If acceleration is given as a function of position, $a(x)$, the relation that links $v$ and $x$ is:",
+   "question": "If acceleration is given as a function of position, $a(x)$, which relation links $v$ and $x$?",
+   "explanation": "(derived) $a=\\dfrac{dv}{dt}=\\dfrac{dv}{dx}\\dfrac{dx}{dt}$ (chain rule)\n$=v\\dfrac{dv}{dx}$\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
+   "source": "Lecture 1 – Rectilinear Motion",
    "choices": [
     "$v\\,dv=a\\,dx$",
     "$dv=a\\,dt$",
     "$dx=v\\,dt$",
     "$a=dv/dx$"
    ],
-   "answer": 0,
-   "explanation": "This comes from $a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}$.",
-   "source": "Lecture 1 – Rectilinear Motion"
+   "answer": 0
   },
   {
    "id": "e243-pk-02",
@@ -61,35 +61,35 @@
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
    "question": "For uniformly accelerated rectilinear motion, which is correct?",
+   "explanation": "Constant-$a$ rows (sheet):\n$v=v_0+a(t-t_0)$\n$x=x_0+v_0(t-t_0)+\\tfrac a2(t-t_0)^2$\nThese are valid ONLY when $a$ is constant.",
+   "source": "Lecture 2 – Uniformly Accelerated Motion",
    "choices": [
     "$v^2=v_0^2+2a(x-x_0)$",
     "$v=v_0+ax$",
     "$x=x_0+v_0t+at^2$",
     "$v^2=v_0^2+at$"
    ],
-   "answer": 0,
-   "explanation": "Also $v=v_0+at$ and $x=x_0+v_0t+\\tfrac12at^2$. These hold only for constant $a$.",
-   "source": "Lecture 2 – Uniformly Accelerated Motion"
+   "answer": 0
   },
   {
    "id": "e243-pk-03",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "tf",
-   "question": "The area under a $v$–$t$ curve between $t_1$ and $t_2$ equals the change in position $x_2-x_1$.",
-   "answer": true,
-   "explanation": "The area under an $a$–$t$ curve equals the change in velocity. The slope of $v$–$t$ is $a$.",
-   "source": "Lecture 1 – Rectilinear Motion"
+   "question": "The area under a $v$–$t$ curve between $t_1$ and $t_2$ equals $x_2-x_1$.",
+   "explanation": "$dx=v\\,dt$ (definition, not on the sheet), so integrating gives the area.\nThe area under $a$–$t$ is $\\Delta v$; the slope of $v$–$t$ is $a$.",
+   "source": "Lecture 1 – Rectilinear Motion",
+   "answer": true
   },
   {
    "id": "e243-pk-04",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "tf",
-   "question": "Total distance travelled equals the displacement only if the particle never reverses direction.",
-   "answer": true,
-   "explanation": "Find where $v=0$ and add the distances of each leg separately.",
-   "source": "Lecture 1 – Rectilinear Motion"
+   "question": "Total distance travelled equals displacement only if the particle never reverses.",
+   "explanation": "Find where $v=0$, then add the distance of each leg as a positive number.",
+   "source": "Lecture 1 – Rectilinear Motion",
+   "answer": true
   },
   {
    "id": "e243-pk-05",
@@ -97,28 +97,28 @@
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
    "question": "Relative motion: $\\vec v_B=$",
+   "explanation": "$\\vec v_B=\\vec v_A+\\vec v_{B/A}$ (sheet)\nValid for a translating (non-rotating) frame. $\\vec v_{B/A}$ = velocity of B as seen by an observer moving with A.",
+   "source": "Lecture 3 – Relative & Dependent Motion",
    "choices": [
     "$\\vec v_A+\\vec v_{B/A}$",
     "$\\vec v_A-\\vec v_{B/A}$",
     "$\\vec v_{B/A}-\\vec v_A$",
     "$\\vec v_A\\vec v_{B/A}$"
    ],
-   "answer": 0,
-   "explanation": "This holds for a translating (non-rotating) reference frame.",
-   "source": "Lecture 3 – Relative & Dependent Motion"
+   "answer": 0
   },
   {
    "id": "e243-pk-06",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "short",
-   "question": "How do you set up a dependent-motion (pulley/cable) problem?",
-   "answer": "Write the total cable length as a sum of position coordinates measured from fixed points, $x_A+2x_B+\\dots=$ const. Differentiate once for velocities ($v_A+2v_B=0$) and twice for accelerations.",
-   "explanation": "There is one constraint equation per cable. Constant segments (around pulleys) drop out when you differentiate.",
+   "question": "How do you set up a dependent-motion (cable) problem?",
+   "explanation": "One equation per cable. Constant lengths around pulleys drop out when you differentiate.\nSigns: a positive $v$ means the coordinate grows (moving away from the datum).\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
    "source": "Lecture 3 – Dependent Motion (Cables)",
+   "answer": "Write the total cable length with position coordinates from fixed datums: $x_A+2x_B+\\dots=$ const. Differentiate once for velocities, twice for accelerations.",
    "keywords": [
-    "cable length constant",
-    "position from fixed datum",
+    "length constant",
+    "fixed datum",
     "differentiate"
    ]
   },
@@ -127,74 +127,74 @@
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "In projectile motion (no air resistance), which statement is TRUE?",
+   "question": "In projectile motion with no drag, which is TRUE?",
+   "explanation": "Projectile rows (sheet):\n$x=x_0+v_{x0}(t-t_0)$\n$v_y=v_{y0}-9.81(t-t_0)$\n$y=y_0+v_{y0}(t-t_0)-4.905(t-t_0)^2$\nThe sheet uses $y$ positive up, so $g$ appears with a minus sign.",
+   "source": "Lecture 5 – Projectile Motion",
    "choices": [
-    "The horizontal velocity stays constant and the vertical acceleration is $-g$",
-    "Both velocity components are constant",
+    "The horizontal velocity is constant; the vertical acceleration is $-9.81\\ \\mathrm{m/s^2}$",
+    "Both components are constant",
     "The horizontal acceleration is $g$",
     "The speed is constant"
    ],
-   "answer": 0,
-   "explanation": "Treat $x$ and $y$ independently and link them through time $t$.",
-   "source": "Lecture 5 – Projectile Motion"
+   "answer": 0
   },
   {
    "id": "e243-pk-08",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "In normal–tangential coordinates, the acceleration components are:",
+   "question": "In normal–tangential coordinates, the acceleration is:",
+   "explanation": "n–t row (sheet)\n$a_t=\\dot v$ (changes the speed)\n$a_n=v^2/\\rho$ always points toward the centre of curvature (changes the direction)",
+   "source": "Lecture 5 – n-t Coordinates",
    "choices": [
-    "$a_t=\\dot v$, $a_n=v^2/\\rho$",
-    "$a_t=v^2/\\rho$, $a_n=\\dot v$",
-    "$a_t=\\rho\\dot\\theta$, $a_n=0$",
-    "$a_t=0$, $a_n=\\dot v$"
+    "$\\vec a=a_t\\vec e_t+\\dfrac{v^2}{\\rho}\\vec e_n$",
+    "$\\vec a=\\dfrac{v^2}{\\rho}\\vec e_t+a_t\\vec e_n$",
+    "$\\vec a=\\rho\\dot\\theta\\,\\vec e_t$",
+    "$\\vec a=\\dot v\\,\\vec e_n$"
    ],
-   "answer": 0,
-   "explanation": "$a_n$ always points toward the centre of curvature.",
-   "source": "Lecture 5 – n-t Coordinates"
+   "answer": 0
   },
   {
    "id": "e243-pk-09",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "tf",
-   "question": "A car moving at constant speed around a curve has zero acceleration.",
-   "answer": false,
-   "explanation": "$a_t=0$, but $a_n=v^2/\\rho\\ne0$ because the direction of the velocity changes.",
-   "source": "Lecture 6 – n-t Components"
+   "question": "A car at constant speed around a curve has zero acceleration.",
+   "explanation": "$a_t=0$, but $a_n=v^2/\\rho\\ne0$ (sheet) because the direction keeps changing.",
+   "source": "Lecture 6 – n-t Components",
+   "answer": false
   },
   {
    "id": "e243-pk-10",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "In polar ($r$–$\\theta$) coordinates, the radial acceleration is:",
+   "question": "In polar coordinates, the radial acceleration is:",
+   "explanation": "r–θ row (sheet):\n$\\vec a=[\\ddot r-r\\dot\\theta^2]\\vec e_r+[2\\dot r\\dot\\theta+r\\ddot\\theta]\\vec e_\\theta$\nThe $-r\\dot\\theta^2$ term points inward (centripetal).",
+   "source": "Lecture 6 – r-θ Components",
    "choices": [
     "$a_r=\\ddot r-r\\dot\\theta^2$",
     "$a_r=\\ddot r$",
     "$a_r=r\\ddot\\theta+2\\dot r\\dot\\theta$",
     "$a_r=\\ddot r+r\\dot\\theta^2$"
    ],
-   "answer": 0,
-   "explanation": "$a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta$, where $2\\dot r\\dot\\theta$ is the Coriolis-type term.",
-   "source": "Lecture 6 – r-θ Components"
+   "answer": 0
   },
   {
    "id": "e243-pk-11",
    "course": "engr243",
    "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "In polar coordinates, the velocity components are:",
+   "question": "In polar coordinates, the velocity is:",
+   "explanation": "r–θ row (sheet)\nThe radial part comes from $r$ changing length; the transverse part comes from $r$ rotating.",
+   "source": "Lecture 6 – r-θ Components",
    "choices": [
-    "$v_r=\\dot r$, $v_\\theta=r\\dot\\theta$",
-    "$v_r=r\\dot\\theta$, $v_\\theta=\\dot r$",
-    "$v_r=\\dot r$, $v_\\theta=\\dot\\theta$",
-    "$v_r=r$, $v_\\theta=\\theta$"
+    "$\\vec v=\\dot r\\,\\vec e_r+r\\dot\\theta\\,\\vec e_\\theta$",
+    "$\\vec v=r\\dot\\theta\\,\\vec e_r+\\dot r\\,\\vec e_\\theta$",
+    "$\\vec v=\\dot r\\,\\vec e_r+\\dot\\theta\\,\\vec e_\\theta$",
+    "$\\vec v=r\\,\\vec e_r$"
    ],
-   "answer": 0,
-   "explanation": "The radial part comes from the changing length of $r$. The transverse part comes from rotation of the position vector.",
-   "source": "Lecture 6 – r-θ Components"
+   "answer": 0
   },
   {
    "id": "e243-rk-01",
@@ -202,9 +202,9 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "short",
    "question": "Name the types of plane rigid-body motion.",
-   "answer": "Translation (rectilinear or curvilinear), rotation about a fixed axis, and general plane motion (translation + rotation).",
    "explanation": "In translation every point has the same $\\vec v$ and $\\vec a$, and $\\omega=0$.",
    "source": "Lecture 7 – Translation & Fixed-Axis Rotation",
+   "answer": "Translation (rectilinear or curvilinear), rotation about a fixed axis, and general plane motion (translation + rotation).",
    "keywords": [
     "translation",
     "fixed-axis rotation",
@@ -216,10 +216,10 @@
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "tf",
-   "question": "In curvilinear translation, all points of the body move along identical (parallel) curved paths and the body does not rotate.",
-   "answer": true,
+   "question": "In curvilinear translation all points follow identical parallel curves and the body doesn't rotate.",
    "explanation": "Example: a Ferris-wheel gondola that stays upright.",
-   "source": "Lecture 7 – Translation"
+   "source": "Lecture 7 – Translation",
+   "answer": true
   },
   {
    "id": "e243-rk-03",
@@ -227,47 +227,47 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
    "question": "For a point at distance $r$ from a fixed rotation axis:",
+   "explanation": "Vector rows (sheet):\n$\\vec v=\\vec\\omega\\times\\vec r$\n$\\vec a=\\vec\\alpha\\times\\vec r+\\vec\\omega\\times(\\vec\\omega\\times\\vec r)$\nThe second term has magnitude $r\\omega^2$ and points toward the axis.",
+   "source": "Lecture 7 – Fixed-Axis Rotation",
    "choices": [
     "$v=r\\omega$, $a_t=r\\alpha$, $a_n=r\\omega^2$",
     "$v=r\\alpha$, $a_t=r\\omega$, $a_n=r\\omega$",
     "$v=\\omega/r$, $a_t=\\alpha/r$",
     "$v=r\\omega^2$, $a_n=r\\omega$"
    ],
-   "answer": 0,
-   "explanation": "Vector form: $\\vec v=\\vec\\omega\\times\\vec r$ and $\\vec a=\\vec\\alpha\\times\\vec r-\\omega^2\\vec r$.",
-   "source": "Lecture 7 – Fixed-Axis Rotation"
+   "answer": 0
   },
   {
    "id": "e243-rk-04",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
-   "question": "Two gears in mesh (radii $r_A$, $r_B$) satisfy:",
+   "question": "Two meshing gears (radii $r_A$, $r_B$) satisfy:",
+   "explanation": "(derived) The contact points have equal speed: $v=r\\omega$ on each gear.\nExternal gears turn in opposite directions. A belt with no slip gives the same speed relation.",
+   "source": "Lecture 8 – Fixed-Axis Rotation Examples",
    "choices": [
-    "$r_A\\omega_A=r_B\\omega_B$ (equal contact-point speed)",
+    "$r_A\\omega_A=r_B\\omega_B$",
     "$\\omega_A=\\omega_B$",
     "$r_B\\omega_A=r_A\\omega_B$",
-    "$\\omega_A+\\omega_B=0$ with equal magnitudes"
+    "$\\omega_A+\\omega_B=0$, equal magnitudes"
    ],
-   "answer": 0,
-   "explanation": "Same for a belt with no slip: the belt speed equals $r\\omega$ on each pulley.",
-   "source": "Lecture 8 – Fixed-Axis Rotation Examples"
+   "answer": 0
   },
   {
    "id": "e243-rk-05",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
-   "question": "For general plane motion, the relative velocity equation is:",
+   "question": "For general plane motion, the relative-velocity equation is:",
+   "explanation": "Row (sheet)\nB moves on a circle around A, so $\\vec v_{B/A}$ is perpendicular to $\\vec r_{B/A}$.",
+   "source": "Lecture 8 – General Plane Motion",
    "choices": [
-    "$\\vec v_B=\\vec v_A+\\vec\\omega\\times\\vec r_{B/A}$",
-    "$\\vec v_B=\\vec v_A+\\vec\\alpha\\times\\vec r_{B/A}$",
+    "$\\vec v_B=\\vec v_A+\\omega\\vec k\\times\\vec r_{B/A}$",
+    "$\\vec v_B=\\vec v_A+\\alpha\\vec k\\times\\vec r_{B/A}$",
     "$\\vec v_B=\\vec v_A-\\omega^2\\vec r_{B/A}$",
     "$\\vec v_B=\\vec\\omega\\times\\vec v_A$"
    ],
-   "answer": 0,
-   "explanation": "The motion of B relative to A is a pure rotation about A.",
-   "source": "Lecture 8 – General Plane Motion"
+   "answer": 0
   },
   {
    "id": "e243-rk-06",
@@ -275,25 +275,25 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
    "question": "The instantaneous centre of zero velocity (IC) is located:",
+   "explanation": "(derived) Each velocity is perpendicular to the line from the IC, since $\\vec v=\\vec\\omega\\times\\vec r_{/IC}$ (sheet).\nThen $v_P=\\omega\\,r_{P/IC}$.\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
+   "source": "Lecture 9 – IC Method",
    "choices": [
-    "At the intersection of the lines perpendicular to the velocities of two points",
-    "At the centre of mass always",
+    "Where the lines perpendicular to the velocities of two points intersect",
+    "At the centre of mass",
     "Where the acceleration is zero",
-    "At the midpoint between two points"
+    "Midway between two points"
    ],
-   "answer": 0,
-   "explanation": "Then $v_P=\\omega\\,r_{P/IC}$ for any point P, perpendicular to $\\vec r_{P/IC}$.",
-   "source": "Lecture 9 – IC Method"
+   "answer": 0
   },
   {
    "id": "e243-rk-07",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "tf",
-   "question": "The instantaneous centre has zero velocity AND zero acceleration at that instant.",
-   "answer": false,
-   "explanation": "Its acceleration is generally not zero. That's why the IC can't be used for accelerations.",
-   "source": "Lecture 9 – IC Method"
+   "question": "The IC has zero velocity AND zero acceleration at that instant.",
+   "explanation": "In general its acceleration is NOT zero, so the IC can't be used for accelerations. Use the relative-acceleration row (sheet) instead.",
+   "source": "Lecture 9 – IC Method",
+   "answer": false
   },
   {
    "id": "e243-rk-08",
@@ -301,31 +301,31 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
    "question": "For a wheel of radius $r$ rolling without slipping, the centre O satisfies:",
+   "explanation": "(derived) The contact point is the IC, so $v_O=\\omega r$.\nDifferentiate: $a_O=r\\alpha$.\nThe contact point's acceleration is $r\\omega^2$, pointing up toward O.\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
+   "source": "Lecture 9 – General Plane Motion",
    "choices": [
     "$v_O=r\\omega$, $a_O=r\\alpha$",
     "$v_O=0$",
     "$v_O=2r\\omega$",
     "$a_O=r\\omega^2$"
    ],
-   "answer": 0,
-   "explanation": "The contact point is the IC (velocity zero). Its acceleration is $r\\omega^2$, pointing up toward O.",
-   "source": "Lecture 9 – General Plane Motion"
+   "answer": 0
   },
   {
    "id": "e243-rk-09",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
-   "question": "The top point of a wheel rolling without slipping at centre speed $v$ moves at:",
+   "question": "The top of a wheel rolling without slipping (centre speed $v$) moves at:",
+   "explanation": "It's $2r$ from the IC at the contact point: $\\omega(2r)=2v$.",
+   "source": "Lecture 9 – IC Method",
    "choices": [
     "$2v$",
     "$v$",
     "0",
     "$\\sqrt2\\,v$"
    ],
-   "answer": 0,
-   "explanation": "It is $2r$ from the IC at the contact point.",
-   "source": "Lecture 9 – IC Method"
+   "answer": 0
   },
   {
    "id": "e243-rk-10",
@@ -333,41 +333,41 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
    "question": "Relative acceleration in plane motion: $\\vec a_B=\\vec a_A+$",
+   "explanation": "Row (sheet)\nTangential part: $\\alpha r$, perpendicular to $\\vec r_{B/A}$.\nNormal part: $-\\omega^2\\vec r_{B/A}$. The minus sign means it points from B back toward A.",
+   "source": "Lecture 9 – Acceleration",
    "choices": [
-    "$\\vec\\alpha\\times\\vec r_{B/A}-\\omega^2\\vec r_{B/A}$",
-    "$\\vec\\omega\\times\\vec r_{B/A}$",
-    "$2\\vec\\omega\\times\\vec v_{rel}$",
+    "$\\alpha\\vec k\\times\\vec r_{B/A}-\\omega^2\\vec r_{B/A}$",
+    "$\\omega\\vec k\\times\\vec r_{B/A}$",
+    "$2\\vec\\Omega\\times\\vec v_{rel}$",
     "$\\omega^2\\vec r_{B/A}$"
    ],
-   "answer": 0,
-   "explanation": "Tangential part $\\alpha r$ ⊥ $r_{B/A}$. Normal part $\\omega^2r$ points from B toward A.",
-   "source": "Lecture 9 – Acceleration"
+   "answer": 0
   },
   {
    "id": "e243-rk-11",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "mcq",
-   "question": "When a point moves relative to a rotating frame, the Coriolis acceleration is:",
+   "question": "When a point moves relative to a rotating frame, the Coriolis term is:",
+   "explanation": "Rotating-frame row (sheet):\n$\\vec a_B=\\vec a_A+\\dot{\\vec\\Omega}\\times\\vec r_{B/A}+\\vec\\Omega\\times(\\vec\\Omega\\times\\vec r_{B/A})+2\\vec\\Omega\\times(\\vec v_{B/A})_{xyz}+(\\vec a_{B/A})_{xyz}$",
+   "source": "Lecture 10 – Rotating Frames & Coriolis",
    "choices": [
-    "$2\\vec\\Omega\\times\\vec v_{rel}$",
+    "$2\\vec\\Omega\\times(\\vec v_{B/A})_{xyz}$",
     "$\\vec\\Omega\\times\\vec r$",
     "$\\Omega^2r$",
-    "$\\vec\\alpha\\times\\vec r$"
+    "$\\dot{\\vec\\Omega}\\times\\vec r$"
    ],
-   "answer": 0,
-   "explanation": "$\\vec a_P=\\vec a_{P'}+\\vec a_{rel}+2\\vec\\Omega\\times\\vec v_{rel}$, where $P'$ is the coincident point of the rotating frame.",
-   "source": "Lecture 10 – Rotating Frames & Coriolis"
+   "answer": 0
   },
   {
    "id": "e243-rk-12",
    "course": "engr243",
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "tf",
-   "question": "The Coriolis acceleration is zero if the collar has no velocity relative to the rotating rod, or if the rod is not rotating.",
-   "answer": true,
-   "explanation": "It needs both $\\Omega\\ne0$ and $v_{rel}\\ne0$ (and not parallel).",
-   "source": "Lecture 11 – Coriolis Acceleration"
+   "question": "The Coriolis acceleration is zero if the collar doesn't move along the rotating rod, or if the rod isn't rotating.",
+   "explanation": "It needs both $\\Omega\\ne0$ and $(\\vec v_{B/A})_{xyz}\\ne0$, and they can't be parallel.",
+   "source": "Lecture 11 – Coriolis Acceleration",
+   "answer": true
   },
   {
    "id": "e243-rk-13",
@@ -375,11 +375,11 @@
    "topic": "Rigid-body kinematics (Ch 15)",
    "type": "short",
    "question": "When should you use the absolute-motion (analytical) method for a mechanism?",
-   "answer": "When the geometry gives a convenient position relation, e.g. $x=f(\\theta)$. Write the coordinate in terms of the angle and differentiate with respect to time (chain rule) to get $v$ and $a$ directly.",
-   "explanation": "This is an alternative to the relative-velocity and relative-acceleration vector equations.",
+   "explanation": "Show the chain rule step, e.g. $\\dot x=f'(\\theta)\\,\\dot\\theta$.\nThis is an alternative to the relative-motion rows (sheet).",
    "source": "Lecture 10 – Absolute Motion",
+   "answer": "When the geometry gives a position relation such as $x=f(\\theta)$. Differentiate with respect to time (chain rule) to get $v$, then again for $a$.",
    "keywords": [
-    "position as function of angle",
+    "position vs angle",
     "differentiate in time",
     "chain rule"
    ]
@@ -389,26 +389,26 @@
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "mcq",
-   "question": "Newton's second law for a particle in n–t coordinates gives, in the normal direction:",
+   "question": "Newton's second law in n–t coordinates, normal direction:",
+   "explanation": "(derived) $\\sum\\vec F=m\\vec a$ (sheet) with $\\vec a=a_t\\vec e_t+\\frac{v^2}\\rho\\vec e_n$ (sheet).\nTangential direction: $\\sum F_t=m\\dot v$.",
+   "source": "Lecture 11b & 13 – Newton's Second Law",
    "choices": [
-    "$\\sum F_n=mv^2/\\rho$",
+    "$\\sum F_n=m\\,v^2/\\rho$",
     "$\\sum F_n=m\\dot v$",
     "$\\sum F_n=0$",
     "$\\sum F_n=mv$"
    ],
-   "answer": 0,
-   "explanation": "The tangential direction gives $\\sum F_t=m\\dot v$.",
-   "source": "Lecture 11b & 13 – Newton's Second Law"
+   "answer": 0
   },
   {
    "id": "e243-nk-02",
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "tf",
-   "question": "Centrifugal force is a real force that should appear on a free-body diagram in an inertial frame.",
-   "answer": false,
-   "explanation": "In an inertial frame only real forces go on the FBD. $mv^2/\\rho$ belongs on the kinetic diagram ($m\\vec a$ side).",
-   "source": "Lecture 11b & 13 – Newton's Second Law"
+   "question": "Centrifugal force is a real force that belongs on a free-body diagram in an inertial frame.",
+   "explanation": "Only real forces go on the FBD. $mv^2/\\rho$ belongs on the kinetic diagram (the $m\\vec a$ side).",
+   "source": "Lecture 11b & 13 – Newton's Second Law",
+   "answer": false
   },
   {
    "id": "e243-nk-03",
@@ -416,41 +416,41 @@
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "mcq",
    "question": "For a rigid body in plane motion, the equations of motion are:",
+   "explanation": "$\\sum\\vec F=m\\vec a$ and $\\sum\\vec M=I\\vec\\alpha$ (sheet)\nSum moments about G, or about a fixed axis O using $I_O$.\nAbout any other point P, add the moment of $m\\vec a_G$.",
+   "source": "Lecture 14 – Rigid Bodies – Forces & Acceleration",
    "choices": [
     "$\\sum\\vec F=m\\vec a_G$ and $\\sum M_G=\\bar I\\alpha$",
     "$\\sum\\vec F=0$ and $\\sum M=0$",
     "$\\sum\\vec F=m\\vec a$ at any point and $\\sum M_O=0$",
-    "$\\sum M_G=m a_G$"
+    "$\\sum M_G=ma_G$"
    ],
-   "answer": 0,
-   "explanation": "Moments can also be taken about another point P: $\\sum M_P=\\bar I\\alpha+$ moment of $m\\vec a_G$ about P.",
-   "source": "Lecture 14 – Rigid Bodies – Forces & Acceleration"
+   "answer": 0
   },
   {
    "id": "e243-nk-04",
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "tf",
-   "question": "For a rigid body in pure translation, $\\alpha=0$, so $\\sum M_G=0$, but moments about other points need not be zero.",
-   "answer": true,
-   "explanation": "About a point P: $\\sum M_P=$ moment of $m\\vec a_G$ about P.",
-   "source": "Lecture 14 – Translation"
+   "question": "In pure translation $\\alpha=0$, so $\\sum M_G=0$, but moments about other points need not be zero.",
+   "explanation": "About a point P: $\\sum M_P$ = moment of $m\\vec a_G$ about P.",
+   "source": "Lecture 14 – Translation",
+   "answer": true
   },
   {
    "id": "e243-nk-05",
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "mcq",
-   "question": "For rotation about a fixed axis through O (not through G), a convenient moment equation is:",
+   "question": "For rotation about a fixed axis O (not through G), a convenient moment equation is:",
+   "explanation": "$\\sum M=I\\alpha$ and $I_0=\\bar I+mr^2$ (sheet)\nSumming about O removes the unknown pin reactions from the equation.",
+   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics",
    "choices": [
-    "$\\sum M_O=I_O\\alpha$, with $I_O=\\bar I+md^2$",
+    "$\\sum M_O=I_O\\alpha$, with $I_O=\\bar I+mr^2$",
     "$\\sum M_O=\\bar I\\alpha$",
     "$\\sum M_O=0$",
-    "$\\sum M_O=m a_G d$ only"
+    "$\\sum M_O=ma_Gd$ only"
    ],
-   "answer": 0,
-   "explanation": "Using O eliminates the unknown pin reactions from the moment equation.",
-   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics"
+   "answer": 0
   },
   {
    "id": "e243-nk-06",
@@ -458,25 +458,25 @@
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "mcq",
    "question": "The parallel-axis theorem is:",
+   "explanation": "Row (sheet)\n$\\bar I$ is about the parallel axis through G; $r$ is the distance between the two axes.",
+   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics",
    "choices": [
-    "$I=\\bar I+md^2$",
-    "$I=\\bar I-md^2$",
-    "$I=md^2$",
-    "$I=\\bar I\\,d^2$"
+    "$I_0=\\bar I+mr^2$",
+    "$I_0=\\bar I-mr^2$",
+    "$I_0=mr^2$",
+    "$I_0=\\bar I\\,r^2$"
    ],
-   "answer": 0,
-   "explanation": "$\\bar I$ is about the parallel centroidal axis, and $d$ is the distance between the axes.",
-   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics"
+   "answer": 0
   },
   {
    "id": "e243-nk-07",
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "short",
-   "question": "For a wheel rolling on a surface with friction, how do you decide between 'rolls without slipping' and 'slips'?",
-   "answer": "Assume no slip ($a_G=r\\alpha$), solve for the friction force $F$, then check $F\\le\\mu_sN$. If the check fails, it slips: use $F=\\mu_kN$ and treat $a_G$ and $\\alpha$ as independent.",
-   "explanation": "This is the standard assume-and-check procedure.",
+   "question": "For a wheel rolling with friction, how do you decide between 'rolls without slipping' and 'slips'?",
+   "explanation": "This is an assume-and-check procedure. State the assumption, then the check.\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
    "source": "Lecture 16 – Rolling with Friction",
+   "answer": "Assume no slip ($a_G=r\\alpha$) and solve for the friction force $F$. Check $F\\le\\mu_sN$. If the check fails, it slips: use $F=\\mu_kN$ and treat $a_G$ and $\\alpha$ as independent.",
    "keywords": [
     "assume no slip",
     "a = rα",
@@ -489,26 +489,26 @@
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "mcq",
-   "question": "A disk pulled horizontally at its centre rolls without slipping. Static friction at the contact point:",
+   "question": "A disk pulled horizontally at its centre rolls without slipping. Static friction at the contact:",
+   "explanation": "$\\sum M_G=\\bar I\\alpha$ (sheet): only friction has a moment about G.\nWithout friction the disk would slide without rotating.",
+   "source": "Lecture 16 – Rolling with Friction",
    "choices": [
-    "Acts opposite to the pull and provides the moment that spins the disk up",
-    "Is always zero",
-    "Acts in the direction of the pull",
+    "Acts opposite to the pull and supplies the moment that spins the disk up",
+    "Is zero",
+    "Acts with the pull",
     "Equals $\\mu_kN$"
    ],
-   "answer": 0,
-   "explanation": "If friction were zero, the disk would slide without rotating.",
-   "source": "Lecture 16 – Rolling with Friction"
+   "answer": 0
   },
   {
    "id": "e243-nk-09",
    "course": "engr243",
    "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
    "type": "tf",
-   "question": "The mass moment of inertia of a thin ring about its central axis ($mr^2$) is larger than that of a solid disk of the same mass and radius ($\\tfrac12mr^2$).",
-   "answer": true,
-   "explanation": "The ring's mass sits farther from the axis, so it accelerates more slowly when rolling down an incline.",
-   "source": "Lecture 15 – Rotation Kinetics"
+   "question": "A thin ring ($mr^2$) has a larger moment of inertia about its axis than a solid disk ($\\tfrac12mr^2$) of the same mass and radius.",
+   "explanation": "The ring's mass sits farther from the axis, so it rolls down an incline more slowly.\nShape moments of inertia (definition, not on the sheet).",
+   "source": "Lecture 15 – Rotation Kinetics",
+   "answer": true
   },
   {
    "id": "e243-we-01",
@@ -516,15 +516,15 @@
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
    "question": "The principle of work and energy is:",
+   "explanation": "$U^{tot}_{1\\to2}=\\Delta T$, $T=\\tfrac12mv^2$ (sheet)\nWork is a scalar, so there are no components to resolve.",
+   "source": "Lecture 17 – Energy Method (Particles)",
    "choices": [
-    "$T_1+\\sum U_{1\\to2}=T_2$",
+    "$U^{tot}_{1\\to2}=\\Delta T$",
     "$T_1=T_2$ always",
     "$\\sum F=ma$",
-    "$m v_1+\\int F dt=mv_2$"
+    "$mv_1+\\int Fdt=mv_2$"
    ],
-   "answer": 0,
-   "explanation": "$T=\\tfrac12mv^2$ for a particle. Work is a scalar, so no vector components are needed.",
-   "source": "Lecture 17 – Energy Method (Particles)"
+   "answer": 0
   },
   {
    "id": "e243-we-02",
@@ -532,15 +532,15 @@
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
    "question": "The work done by a linear spring as it stretches from $x_1$ to $x_2$ is:",
+   "explanation": "(derived) $U=\\int\\vec F\\cdot d\\vec r$ (sheet) with $F=-kx$\n$=-\\tfrac12k(x_2^2-x_1^2)$\n$x$ is measured from the unstretched length; it appears as $\\tfrac12kx^2$ in the energy row (sheet).\nIt's negative when stretching further, because the spring pulls back.",
+   "source": "Lecture 17 – Energy Method (Particles)",
    "choices": [
     "$-\\tfrac12k(x_2^2-x_1^2)$",
     "$\\tfrac12k(x_2-x_1)^2$",
     "$-k(x_2-x_1)$",
     "$kx_2x_1$"
    ],
-   "answer": 0,
-   "explanation": "$x$ is measured from the unstretched length. The potential energy is $V_e=\\tfrac12kx^2$.",
-   "source": "Lecture 17 – Energy Method (Particles)"
+   "answer": 0
   },
   {
    "id": "e243-we-03",
@@ -548,25 +548,25 @@
    "topic": "Work & energy (Ch 13, 17)",
    "type": "tf",
    "question": "The normal force on a particle sliding along a fixed surface does no work.",
-   "answer": true,
-   "explanation": "It is perpendicular to the displacement. Kinetic friction does negative work.",
-   "source": "Lecture 17 – Energy Method (Particles)"
+   "explanation": "It's perpendicular to the displacement, so $\\vec F\\cdot d\\vec r=0$ (sheet).\nKinetic friction does negative work.",
+   "source": "Lecture 17 – Energy Method (Particles)",
+   "answer": true
   },
   {
    "id": "e243-we-04",
    "course": "engr243",
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
-   "question": "Conservation of energy $T_1+V_1=T_2+V_2$ applies when:",
+   "question": "In the sheet's energy equation $\\tfrac12mv_1^2+mgy_1+\\tfrac12kx_1^2+U^{nc}_{1\\to2}=\\tfrac12mv_2^2+mgy_2+\\tfrac12kx_2^2$, what is $U^{nc}_{1\\to2}$?",
+   "explanation": "Energy row (sheet)\nWhen only gravity and springs do work, $U^{nc}=0$ and energy is conserved.\nFriction makes $U^{nc}<0$.",
+   "source": "Lecture 17 – Energy Method (Particles)",
    "choices": [
-    "Only conservative forces (gravity, springs) do work",
-    "Friction is present",
-    "Any forces act",
-    "The body is at rest"
+    "The work of non-conservative forces (friction, applied forces)",
+    "Gravity's work",
+    "Spring work",
+    "Always zero"
    ],
-   "answer": 0,
-   "explanation": "Otherwise use $T_1+V_1+U^{nc}_{1\\to2}=T_2+V_2$.",
-   "source": "Lecture 17 – Energy Method (Particles)"
+   "answer": 0
   },
   {
    "id": "e243-we-05",
@@ -574,25 +574,25 @@
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
    "question": "The kinetic energy of a rigid body in plane motion is:",
+   "explanation": "Rigid-body $T$ row (sheet)\nFor fixed-axis rotation about O: $T=\\tfrac12I_O\\omega^2$ (derived with $I_0=\\bar I+mr^2$ (sheet)).",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)",
    "choices": [
-    "$\\tfrac12m\\bar v^2+\\tfrac12\\bar I\\omega^2$",
-    "$\\tfrac12m\\bar v^2$ only",
+    "$\\tfrac12mv^2+\\tfrac12I\\omega^2$ (with $v=v_G$ and $I=\\bar I$)",
+    "$\\tfrac12mv^2$ only",
     "$\\tfrac12I\\omega$",
-    "$m\\bar v+\\bar I\\omega$"
+    "$mv+I\\omega$"
    ],
-   "answer": 0,
-   "explanation": "For fixed-axis rotation about O: $T=\\tfrac12I_O\\omega^2$. You can also use $\\tfrac12I_{IC}\\omega^2$.",
-   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+   "answer": 0
   },
   {
    "id": "e243-we-06",
    "course": "engr243",
    "topic": "Work & energy (Ch 13, 17)",
    "type": "tf",
-   "question": "For a wheel rolling without slipping, the friction force at the contact point does no work.",
-   "answer": true,
-   "explanation": "The contact point has zero velocity, so friction there does no work and energy is conserved if no other non-conservative forces act.",
-   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+   "question": "For a wheel rolling without slipping, the friction force at the contact does no work.",
+   "explanation": "The contact point has zero velocity, so $P=\\vec F\\cdot\\vec v=0$ (sheet).",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)",
+   "answer": true
   },
   {
    "id": "e243-we-07",
@@ -600,57 +600,57 @@
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
    "question": "Power is:",
+   "explanation": "Power row (sheet)\nFor a couple: $P=M\\omega$. Efficiency = output power ÷ input power.",
+   "source": "Lecture 17 – Energy Method",
    "choices": [
-    "$P=\\vec F\\cdot\\vec v$ (or $M\\omega$ for a couple)",
+    "$P=\\dfrac{dU}{dt}=\\vec F\\cdot\\vec v$",
     "$P=Fd$",
     "$P=\\tfrac12mv^2$",
     "$P=F/v$"
    ],
-   "answer": 0,
-   "explanation": "Efficiency = output power ÷ input power.",
-   "source": "Lecture 17 – Energy Method"
+   "answer": 0
   },
   {
    "id": "e243-we-08",
    "course": "engr243",
    "topic": "Work & energy (Ch 13, 17)",
    "type": "tf",
-   "question": "The work of a couple $M$ rotating through $\\Delta\\theta$ is $U=M\\Delta\\theta$ (for constant $M$).",
-   "answer": true,
-   "explanation": "Positive when $M$ and the rotation are in the same direction.",
-   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+   "question": "The work of a couple is $U_{1\\to2}=\\int\\vec M\\cdot d\\vec\\theta$, which is $M\\Delta\\theta$ for constant $M$.",
+   "explanation": "Couple row (sheet)\nPositive when $M$ and the rotation are in the same direction.",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)",
+   "answer": true
   },
   {
    "id": "e243-we-09",
    "course": "engr243",
    "topic": "Work & energy (Ch 13, 17)",
    "type": "mcq",
-   "question": "The gravitational potential energy of a body near Earth's surface is:",
+   "question": "In the sheet's energy equation, the gravity term $mgy$ uses:",
+   "explanation": "Energy row (sheet)\nThe datum doesn't matter, because only $mg(y_2-y_1)$ affects the result.",
+   "source": "Lecture 17 – Energy Method",
    "choices": [
-    "$V_g=Wy$, with $y$ measured upward from a datum",
-    "$V_g=-Wy$",
-    "$V_g=\\tfrac12Wy^2$",
-    "$V_g=mg/y$"
+    "$y$ measured upward from any chosen datum",
+    "$y$ measured downward",
+    "the absolute height above sea level",
+    "$y^2$"
    ],
-   "answer": 0,
-   "explanation": "The datum is arbitrary because only changes matter.",
-   "source": "Lecture 17 – Energy Method"
+   "answer": 0
   },
   {
    "id": "e243-im-01",
    "course": "engr243",
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
-   "question": "The principle of linear impulse and momentum for a particle is:",
+   "question": "The principle of linear impulse and momentum is:",
+   "explanation": "Row (sheet)\nIt's a vector equation, so write it in components. Best when forces act over a known time.",
+   "source": "Lecture 19 – Impulse & Momentum (Particles)",
    "choices": [
-    "$m\\vec v_1+\\sum\\int_{t_1}^{t_2}\\vec F\\,dt=m\\vec v_2$",
-    "$T_1+U=T_2$",
+    "$m\\vec v_1+\\int\\vec F\\,dt=m\\vec v_2$",
+    "$U=\\Delta T$",
     "$\\vec F=m\\vec a$",
-    "$m v_1^2+Ft=mv_2^2$"
+    "$mv_1^2+Ft=mv_2^2$"
    ],
-   "answer": 0,
-   "explanation": "It's a vector equation, so use components. Best when forces act over a known time.",
-   "source": "Lecture 19 – Impulse & Momentum (Particles)"
+   "answer": 0
   },
   {
    "id": "e243-im-02",
@@ -658,31 +658,31 @@
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
    "question": "Linear momentum of a system is conserved when:",
+   "explanation": "(derived) Set $\\int\\vec F\\,dt=0$ in the impulse row (sheet).\nInternal forces cancel in pairs. Momentum can be conserved in one direction even when it isn't in another.",
+   "source": "Lecture 19 – Impulse & Momentum",
    "choices": [
-    "The net external impulse on the system is zero",
+    "The net external impulse is zero",
     "Energy is conserved",
-    "The bodies stick together",
-    "Friction is absent between the bodies"
+    "The bodies stick",
+    "No friction acts between the bodies"
    ],
-   "answer": 0,
-   "explanation": "Internal forces cancel in pairs. Momentum can be conserved in one direction even if not in another.",
-   "source": "Lecture 19 – Impulse & Momentum"
+   "answer": 0
   },
   {
    "id": "e243-im-03",
    "course": "engr243",
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
-   "question": "The coefficient of restitution $e$ for a direct central impact is:",
+   "question": "The coefficient of restitution is:",
+   "explanation": "Row (sheet)\n$e=1$: perfectly elastic. $e=0$: perfectly plastic (the bodies stick) (definition, not on the sheet).\nUse it along the line of impact only.",
+   "source": "Lecture 22 – Conservation & Restitution",
    "choices": [
-    "$e=\\dfrac{v_B'-v_A'}{v_A-v_B}$ (separation speed ÷ approach speed)",
-    "$e=\\dfrac{v_A-v_B}{v_B'-v_A'}$",
-    "$e=v_A'/v_A$",
+    "$e=\\dfrac{v_2'-v_1'}{v_1-v_2}$ (separation ÷ approach)",
+    "$e=\\dfrac{v_1-v_2}{v_2'-v_1'}$",
+    "$e=v_1'/v_1$",
     "$e=T_2/T_1$"
    ],
-   "answer": 0,
-   "explanation": "$e=1$ perfectly elastic. $e=0$ perfectly plastic (bodies stick).",
-   "source": "Lecture 22 – Conservation & Restitution"
+   "answer": 0
   },
   {
    "id": "e243-im-04",
@@ -690,35 +690,35 @@
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "tf",
    "question": "In a perfectly elastic impact ($e=1$), kinetic energy is conserved.",
-   "answer": true,
    "explanation": "For $e<1$, some kinetic energy is lost to deformation, heat and sound.",
-   "source": "Lecture 22 – Restitution"
+   "source": "Lecture 22 – Restitution",
+   "answer": true
   },
   {
    "id": "e243-im-05",
    "course": "engr243",
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "tf",
-   "question": "In an oblique central impact of two smooth spheres, momentum of each sphere is conserved separately along the tangent to the contact plane.",
-   "answer": true,
-   "explanation": "Along the line of impact, use total momentum conservation plus the restitution equation.",
-   "source": "Lecture 22 – Restitution"
+   "question": "In an oblique impact of smooth spheres, each sphere's momentum along the tangent of the contact plane is conserved separately.",
+   "explanation": "No tangential impulse acts on a smooth contact.\nAlong the line of impact: total momentum plus the $e$ equation (sheet).\nNot on the formulae sheet, so it's worth a line on your crib sheet.",
+   "source": "Lecture 22 – Restitution",
+   "answer": true
   },
   {
    "id": "e243-im-06",
    "course": "engr243",
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
-   "question": "The angular momentum of a rigid body in plane motion about its mass centre is:",
+   "question": "The angular momentum of a rigid body about its mass centre (plane motion) is:",
+   "explanation": "Angular impulse row $I\\omega_1+\\int M\\,dt=I\\omega_2$ (sheet)\nParticle: $\\vec H_0=\\vec r\\times m\\vec v$ (sheet).",
+   "source": "Lecture 21 – Angular Momentum Method",
    "choices": [
     "$H_G=\\bar I\\omega$",
     "$H_G=m\\bar v$",
     "$H_G=\\tfrac12\\bar I\\omega^2$",
     "$H_G=\\bar I\\alpha$"
    ],
-   "answer": 0,
-   "explanation": "About a fixed axis O: $H_O=I_O\\omega$.",
-   "source": "Lecture 21 – Angular Momentum Method"
+   "answer": 0
   },
   {
    "id": "e243-im-07",
@@ -726,15 +726,15 @@
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
    "question": "Angular momentum about a point O is conserved when:",
+   "explanation": "(derived) Set $\\int M\\,dt=0$ in the angular impulse row (sheet).\nExample: a body pinned at O and hit by a projectile. The large pin impulse has no moment about O.",
+   "source": "Lecture 22 – Conservation",
    "choices": [
     "The net angular impulse of external forces about O is zero",
     "Linear momentum is conserved",
-    "There is no friction anywhere",
-    "The body is in translation"
+    "There's no friction",
+    "The body translates"
    ],
-   "answer": 0,
-   "explanation": "Example: a body pinned at O struck by a projectile. The large unknown pin impulse has no moment about O.",
-   "source": "Lecture 22 – Conservation"
+   "answer": 0
   },
   {
    "id": "e243-im-08",
@@ -742,9 +742,9 @@
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "short",
    "question": "When should you choose impulse–momentum over work–energy?",
-   "answer": "When the problem involves time (forces acting over a given time interval), impulsive forces such as impacts, or when velocities before and after are related but distances aren't known. Work–energy suits problems relating speed to position or distance.",
-   "explanation": "Impact problems need momentum, because energy is not conserved in impacts unless $e=1$.",
+   "explanation": "Impact problems need momentum, because energy is lost unless $e=1$.",
    "source": "Lecture 19 – Impulse & Momentum",
+   "answer": "When time is involved (forces over a time interval), for impacts and impulsive forces, or when relating velocities before and after without knowing distances. Work–energy suits relating speed to position or distance.",
    "keywords": [
     "time",
     "impacts",
@@ -756,10 +756,10 @@
    "course": "engr243",
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "tf",
-   "question": "During a short impact, non-impulsive forces such as body weight and spring forces can usually be neglected.",
-   "answer": true,
-   "explanation": "Their impulse $F\\Delta t$ is negligible because $\\Delta t\\to0$, unlike the large impact force.",
-   "source": "Lecture 19 – Impulse & Momentum"
+   "question": "During a short impact, non-impulsive forces like weight and spring forces can usually be neglected.",
+   "explanation": "Their impulse $F\\Delta t\\to0$ as $\\Delta t\\to0$, unlike the large impact force.",
+   "source": "Lecture 19 – Impulse & Momentum",
+   "answer": true
   },
   {
    "id": "e243-im-10",
@@ -767,15 +767,41 @@
    "topic": "Impulse & momentum (Ch 13, 17)",
    "type": "mcq",
    "question": "A figure skater pulls her arms in while spinning. Her angular velocity:",
+   "explanation": "$I\\omega_1=I\\omega_2$ with no external moment (angular impulse row (sheet)).\nHer kinetic energy actually increases, from the work her muscles do.",
+   "source": "Lecture 22 – Conservation",
    "choices": [
-    "Increases, because $I\\omega$ is conserved and $I$ decreases",
+    "Increases, because $I\\omega$ is conserved while $I$ drops",
     "Decreases",
     "Stays the same",
     "Drops to zero"
    ],
-   "answer": 0,
-   "explanation": "Her kinetic energy actually increases, from the work her muscles do.",
-   "source": "Lecture 22 – Conservation"
+   "answer": 0
+  },
+  {
+   "id": "e243-fv-01",
+   "course": "engr243",
+   "topic": "Free vibration (sheet)",
+   "type": "mcq",
+   "question": "For the free vibration $\\ddot x+\\omega_n^2x=0$ of a mass–spring system, $\\omega_n=$",
+   "explanation": "Vibration rows (sheet):\n$\\omega_n=\\sqrt{k/m}$ (rad/s)\n$\\tau=2\\pi/\\omega_n$ (s)\n$f=1/\\tau=\\frac{1}{2\\pi}\\sqrt{k/m}$ (Hz)",
+   "source": "Formulae sheet",
+   "choices": [
+    "$\\sqrt{k/m}$",
+    "$k/m$",
+    "$\\sqrt{m/k}$",
+    "$2\\pi\\sqrt{k/m}$"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e243-fv-02",
+   "course": "engr243",
+   "topic": "Free vibration (sheet)",
+   "type": "tf",
+   "question": "Doubling the mass on a spring doubles the period of free vibration.",
+   "explanation": "$\\tau=2\\pi/\\omega_n=2\\pi\\sqrt{m/k}$ (sheet)\nDoubling $m$ multiplies $\\tau$ by $\\sqrt2\\approx1.41$, not 2.",
+   "source": "Formulae sheet",
+   "answer": false
   },
   {
    "id": "e311-lt-01",
@@ -783,15 +809,15 @@
    "topic": "Laplace basics",
    "type": "mcq",
    "question": "The Laplace transform of $f(t)$ is defined as:",
+   "explanation": "$\\mathcal L\\{f\\}=\\int_0^\\infty e^{-st}f(t)\\,dt$ (sheet p.1)\nIt's an improper integral, so it converges only for $s$ large enough.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\int_0^\\infty e^{-st}f(t)\\,dt$",
     "$\\int_{-\\infty}^\\infty e^{-st}f(t)\\,dt$",
     "$\\int_0^\\infty e^{st}f(t)\\,dt$",
     "$\\int_0^t e^{-s\\tau}f(\\tau)\\,d\\tau$"
    ],
-   "answer": 0,
-   "explanation": "It is an improper integral that converges for $s$ large enough.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-lt-02",
@@ -799,9 +825,9 @@
    "topic": "Laplace basics",
    "type": "short",
    "question": "State sufficient conditions for $\\mathcal L\\{f(t)\\}$ to exist for $s>c$.",
-   "answer": "$f$ is piecewise continuous on $[0,\\infty)$ and of exponential order $c$: $|f(t)|\\le Me^{ct}$ for $t>T$.",
-   "explanation": "These are sufficient, not necessary. $t^{-1/2}$ has a transform even though it isn't piecewise continuous at 0.",
+   "explanation": "Existence theorem (definition, not on the sheet)\nThese are sufficient, not necessary: $t^{-1/2}$ has a transform anyway.",
    "source": "Ch 4 slides – The Laplace Transform",
+   "answer": "$f$ is piecewise continuous on $[0,\\infty)$ and of exponential order $c$: $|f(t)|\\le Me^{ct}$ for $t>T$.",
    "keywords": [
     "piecewise continuous",
     "exponential order"
@@ -813,9 +839,9 @@
    "topic": "Laplace basics",
    "type": "tf",
    "question": "$f(t)=e^{t^2}$ has a Laplace transform.",
-   "answer": false,
-   "explanation": "It grows faster than any $e^{ct}$, so it is not of exponential order and the integral diverges.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "It grows faster than any $Me^{ct}$, so it isn't of exponential order (definition, not on the sheet).\nThe integral diverges for every $s$.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": false
   },
   {
    "id": "e311-lt-04",
@@ -823,15 +849,15 @@
    "topic": "Laplace basics",
    "type": "mcq",
    "question": "$\\mathcal L\\{t^n\\}$ for $n=0,1,2,\\dots$ is:",
+   "explanation": "Table row $t^n$ (sheet p.1)\nCheck: $n=0$ gives $1/s$; $n=1$ gives $1/s^2$.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\dfrac{n!}{s^{n+1}}$",
     "$\\dfrac{n!}{s^n}$",
     "$\\dfrac{1}{s^{n+1}}$",
     "$\\dfrac{(n+1)!}{s^{n+1}}$"
    ],
-   "answer": 0,
-   "explanation": "For example, $\\mathcal L\\{1\\}=1/s$ and $\\mathcal L\\{t\\}=1/s^2$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-lt-05",
@@ -839,15 +865,15 @@
    "topic": "Laplace basics",
    "type": "mcq",
    "question": "$\\mathcal L\\{\\sin kt\\}$ is:",
+   "explanation": "Table (sheet p.1):\n$\\sin kt\\to k/(s^2+k^2)$\n$\\cos kt\\to s/(s^2+k^2)$\nsinh and cosh have $s^2-k^2$ instead.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\dfrac{k}{s^2+k^2}$",
     "$\\dfrac{s}{s^2+k^2}$",
     "$\\dfrac{k}{s^2-k^2}$",
     "$\\dfrac{1}{s^2+k^2}$"
    ],
-   "answer": 0,
-   "explanation": "$\\mathcal L\\{\\cos kt\\}=s/(s^2+k^2)$. Sinh and cosh have $s^2-k^2$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-lt-06",
@@ -855,15 +881,15 @@
    "topic": "Laplace basics",
    "type": "mcq",
    "question": "$\\mathcal L\\{e^{at}\\}$ is:",
+   "explanation": "Table (sheet p.1)\nFrom the definition: integrate $e^{-(s-a)t}$ from 0 to ∞, which converges only when $s>a$.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\dfrac{1}{s-a}$, for $s>a$",
     "$\\dfrac{1}{s+a}$",
     "$\\dfrac{a}{s-a}$",
     "$\\dfrac{s}{s-a}$"
    ],
-   "answer": 0,
-   "explanation": "Integrate $e^{-(s-a)t}$ from 0 to ∞. It converges only when $s>a$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-lt-07",
@@ -871,9 +897,9 @@
    "topic": "Laplace basics",
    "type": "tf",
    "question": "The Laplace transform is linear: $\\mathcal L\\{\\alpha f+\\beta g\\}=\\alpha F(s)+\\beta G(s)$.",
-   "answer": true,
-   "explanation": "Linearity, together with the inverse transform, is what makes partial fractions work.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "Linearity property (sheet p.1)\nThe inverse is linear too, which is why partial fractions work.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-lt-08",
@@ -881,9 +907,9 @@
    "topic": "Laplace basics",
    "type": "tf",
    "question": "$\\mathcal L\\{f(t)g(t)\\}=F(s)G(s)$.",
-   "answer": false,
-   "explanation": "The transform of a product is NOT the product of transforms. $F(s)G(s)$ is the transform of the convolution $f*g$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "The transform of a product is NOT the product of the transforms.\n$F(s)G(s)=\\mathcal L\\{f*g\\}$ (convolution theorem (sheet p.2)).",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": false
   },
   {
    "id": "e311-lt-09",
@@ -891,9 +917,9 @@
    "topic": "Laplace basics",
    "type": "tf",
    "question": "If $f$ is piecewise continuous and of exponential order, then $F(s)\\to0$ as $s\\to\\infty$.",
-   "answer": true,
-   "explanation": "So a function like $F(s)=s/(s+1)$ cannot be the transform of such an $f$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "Behaviour as $s\\to\\infty$ (definition, not on the sheet)\nSo $F(s)=s/(s+1)$ can't be the transform of such an $f$.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-dv-01",
@@ -901,15 +927,15 @@
    "topic": "Transforms of derivatives & IVPs",
    "type": "mcq",
    "question": "$\\mathcal L\\{y''(t)\\}$ equals:",
+   "explanation": "Derivative rows (sheet p.1):\n$\\mathcal L\\{f'\\}=sF-f(0)$\n$\\mathcal L\\{f''\\}=s^2F-sf(0)-f'(0)$\nThe powers of $s$ go down while the derivative order of the initial values goes up.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$s^2Y(s)-sy(0)-y'(0)$",
     "$s^2Y(s)-y(0)-sy'(0)$",
     "$s^2Y(s)+sy(0)+y'(0)$",
     "$sY(s)-y(0)$"
    ],
-   "answer": 0,
-   "explanation": "In general: $\\mathcal L\\{f^{(n)}\\}=s^nF-s^{n-1}f(0)-\\dots-f^{(n-1)}(0)$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-dv-02",
@@ -917,9 +943,9 @@
    "topic": "Transforms of derivatives & IVPs",
    "type": "short",
    "question": "Outline the steps for solving a linear constant-coefficient IVP with the Laplace transform.",
-   "answer": "1) Transform both sides, using the derivative formula with the initial conditions. 2) Solve the algebraic equation for $Y(s)$. 3) Use partial fractions or the theorems to find $y(t)=\\mathcal L^{-1}\\{Y(s)\\}$.",
-   "explanation": "The initial conditions go in at step 1, so you never solve for arbitrary constants.",
+   "explanation": "Derivative rows (sheet p.1)\nThe initial conditions go in at step 1, so there are no constants to fit at the end.",
    "source": "Ch 4 slides – The Laplace Transform",
+   "answer": "1) Transform both sides, inserting the initial conditions through the derivative rows. 2) Solve the algebraic equation for $Y(s)$. 3) Use partial fractions and the theorems to invert: $y=\\mathcal L^{-1}\\{Y\\}$.",
    "keywords": [
     "transform",
     "solve for Y(s)",
@@ -932,9 +958,9 @@
    "topic": "Transforms of derivatives & IVPs",
    "type": "tf",
    "question": "The Laplace method builds the initial conditions in automatically, so no constants need to be fitted at the end.",
-   "answer": true,
-   "explanation": "That is its main advantage over undetermined coefficients for IVPs.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "That's its main advantage over undetermined coefficients for IVPs.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-dv-04",
@@ -942,15 +968,15 @@
    "topic": "Transforms of derivatives & IVPs",
    "type": "mcq",
    "question": "$\\mathcal L\\left\\{\\int_0^t f(\\tau)\\,d\\tau\\right\\}$ equals:",
+   "explanation": "Integral row (sheet p.1)\nIt's also the convolution theorem (sheet p.2) with $g=1$, $G=1/s$.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$F(s)/s$",
     "$sF(s)$",
     "$F(s)-f(0)$",
     "$F'(s)$"
    ],
-   "answer": 0,
-   "explanation": "This is the special case $g=1$ of the convolution theorem.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-01",
@@ -958,15 +984,15 @@
    "topic": "Translation theorems",
    "type": "mcq",
    "question": "First translation theorem: $\\mathcal L\\{e^{at}f(t)\\}=$",
+   "explanation": "Row $e^{at}f(t)\\to F(s-a)$ (sheet p.1)\nMultiplying by an exponential in $t$ shifts along the $s$-axis.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$F(s-a)$",
     "$F(s+a)$",
     "$e^{-as}F(s)$",
     "$e^{as}F(s)$"
    ],
-   "answer": 0,
-   "explanation": "Multiplying by an exponential in $t$ shifts the transform along the $s$-axis.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-02",
@@ -974,15 +1000,15 @@
    "topic": "Translation theorems",
    "type": "mcq",
    "question": "$\\mathcal L\\{e^{-2t}\\cos3t\\}$ is:",
+   "explanation": "$\\mathcal L\\{\\cos3t\\}=\\dfrac{s}{s^2+9}$ (sheet p.1)\nHere $a=-2$, so replace $s$ with $s-(-2)=s+2$ everywhere (sheet p.1).",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\dfrac{s+2}{(s+2)^2+9}$",
     "$\\dfrac{s-2}{(s-2)^2+9}$",
     "$\\dfrac{s}{(s+2)^2+9}$",
     "$\\dfrac{3}{(s+2)^2+9}$"
    ],
-   "answer": 0,
-   "explanation": "Take $s/(s^2+9)$ and replace $s$ with $s+2$ everywhere.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-03",
@@ -990,15 +1016,15 @@
    "topic": "Translation theorems",
    "type": "mcq",
    "question": "The unit step function $\\mathcal U(t-a)$ equals:",
+   "explanation": "Definition (definition, not on the sheet)\n$\\mathcal L\\{\\mathcal U(t-a)\\}=e^{-as}/s$ (sheet p.1)",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
-    "0 for $0\\le t<a$ and 1 for $t\\ge a$",
-    "1 for $t<a$ and 0 for $t\\ge a$",
+    "0 for $0\\le t<a$, 1 for $t\\ge a$",
+    "1 for $t<a$, 0 for $t\\ge a$",
     "1 only at $t=a$",
     "$t-a$ for $t\\ge a$"
    ],
-   "answer": 0,
-   "explanation": "$\\mathcal L\\{\\mathcal U(t-a)\\}=e^{-as}/s$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-04",
@@ -1006,41 +1032,41 @@
    "topic": "Translation theorems",
    "type": "mcq",
    "question": "Second translation theorem: $\\mathcal L\\{f(t-a)\\mathcal U(t-a)\\}=$",
+   "explanation": "Row (sheet p.1)\nA delay of $a$ in time multiplies the transform by $e^{-as}$. The minus sign comes from shifting right.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$e^{-as}F(s)$",
     "$F(s-a)$",
     "$e^{as}F(s)$",
     "$F(s)/s$"
    ],
-   "answer": 0,
-   "explanation": "A delay of $a$ in time multiplies the transform by $e^{-as}$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-05",
    "course": "engr311",
    "topic": "Translation theorems",
    "type": "mcq",
-   "question": "The alternative form of the second translation theorem is $\\mathcal L\\{g(t)\\mathcal U(t-a)\\}=$",
+   "question": "The alternative form gives $\\mathcal L\\{g(t)\\mathcal U(t-a)\\}=$",
+   "explanation": "Row (sheet p.1)\nUse it when $g$ isn't already written as a shifted function, e.g. $t^2\\,\\mathcal U(t-1)$: $g(t+1)=(t+1)^2$.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$e^{-as}\\mathcal L\\{g(t+a)\\}$",
     "$e^{-as}\\mathcal L\\{g(t)\\}$",
     "$\\mathcal L\\{g(t-a)\\}$",
     "$e^{as}\\mathcal L\\{g(t+a)\\}$"
    ],
-   "answer": 0,
-   "explanation": "Useful when $g$ is not already written as a shifted function, e.g. $t^2\\,\\mathcal U(t-1)$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-06",
    "course": "engr311",
    "topic": "Translation theorems",
    "type": "short",
-   "question": "Write $f(t)=\\begin{cases}2 & 0\\le t<3\\\\ -1 & t\\ge3\\end{cases}$ using unit step functions.",
-   "answer": "$f(t)=2-3\\,\\mathcal U(t-3)$",
-   "explanation": "Start with the first piece, then at each break add (new piece − old piece) × $\\mathcal U(t-a)$.",
+   "question": "Write $f(t)=\\begin{cases}2 & 0\\le t<3\\\\ -1 & t\\ge3\\end{cases}$ with unit steps.",
+   "explanation": "Start with the first piece.\nAt each break add (new − old)·$\\mathcal U(t-a)$: here $(-1-2)\\,\\mathcal U(t-3)$.",
    "source": "Ch 4 slides – The Laplace Transform",
+   "answer": "$f(t)=2-3\\,\\mathcal U(t-3)$",
    "keywords": [
     "2 − 3U(t−3)"
    ]
@@ -1051,15 +1077,15 @@
    "topic": "Translation theorems",
    "type": "mcq",
    "question": "$\\mathcal L^{-1}\\left\\{\\dfrac{e^{-2s}}{s^2}\\right\\}$ is:",
+   "explanation": "$\\mathcal L^{-1}\\{1/s^2\\}=t$ (sheet p.1)\nThe factor $e^{-2s}$ means shift by 2 and switch on at $t=2$ (sheet p.1).",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$(t-2)\\,\\mathcal U(t-2)$",
     "$t\\,\\mathcal U(t-2)$",
     "$e^{-2t}t$",
     "$(t+2)\\,\\mathcal U(t-2)$"
    ],
-   "answer": 0,
-   "explanation": "$\\mathcal L^{-1}\\{1/s^2\\}=t$, then shift by 2 and switch on at $t=2$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-tr-08",
@@ -1067,9 +1093,9 @@
    "topic": "Translation theorems",
    "type": "tf",
    "question": "To invert $\\dfrac{1}{s^2+4s+13}$, complete the square to $(s+2)^2+9$ and use the first translation theorem.",
-   "answer": true,
-   "explanation": "The result is $\\tfrac13e^{-2t}\\sin3t$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "$\\dfrac{1}{(s+2)^2+9}=\\dfrac13\\cdot\\dfrac{3}{(s+2)^2+9}$\n$\\mathcal L^{-1}=\\tfrac13e^{-2t}\\sin3t$ (rows $\\sin kt$ and $e^{at}f$ (sheet p.1))",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-op-01",
@@ -1077,31 +1103,31 @@
    "topic": "Operational properties",
    "type": "mcq",
    "question": "$\\mathcal L\\{t\\,f(t)\\}$ equals:",
+   "explanation": "Row $t^nf(t)\\to(-1)^n\\dfrac{d^nF}{ds^n}$ (sheet p.1)\nWith $n=1$ the sign is negative.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$-\\dfrac{d}{ds}F(s)$",
     "$\\dfrac{d}{ds}F(s)$",
     "$sF(s)$",
     "$F(s)/s$"
    ],
-   "answer": 0,
-   "explanation": "In general $\\mathcal L\\{t^nf\\}=(-1)^nF^{(n)}(s)$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-op-02",
    "course": "engr311",
    "topic": "Operational properties",
    "type": "mcq",
-   "question": "The convolution $f*g$ is defined as:",
+   "question": "The convolution $f*g$ is:",
+   "explanation": "Convolution integral (sheet p.2)\nConvolution theorem: $\\mathcal L\\{f*g\\}=F(s)G(s)$ (sheet p.2)",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\int_0^t f(\\tau)g(t-\\tau)\\,d\\tau$",
     "$\\int_0^\\infty f(\\tau)g(\\tau)\\,d\\tau$",
     "$f(t)g(t)$",
     "$\\int_0^t f(\\tau)g(\\tau)\\,d\\tau$"
    ],
-   "answer": 0,
-   "explanation": "Convolution theorem: $\\mathcal L\\{f*g\\}=F(s)G(s)$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-op-03",
@@ -1109,9 +1135,9 @@
    "topic": "Operational properties",
    "type": "tf",
    "question": "Convolution is commutative: $f*g=g*f$.",
-   "answer": true,
-   "explanation": "Substitute $u=t-\\tau$ in the integral to show it.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "explanation": "Substitute $u=t-\\tau$ in the integral (sheet p.2).",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-op-04",
@@ -1119,9 +1145,9 @@
    "topic": "Operational properties",
    "type": "short",
    "question": "What kind of equation is $f(t)=g(t)+\\int_0^t f(\\tau)h(t-\\tau)d\\tau$, and how does Laplace solve it?",
-   "answer": "A Volterra integral equation. The integral is a convolution, so transforming gives $F=G+FH$, which solves to $F=G/(1-H)$. Then invert.",
-   "explanation": "The same approach works for integro-differential equations such as LRC circuits.",
+   "explanation": "Convolution theorem (sheet p.2)\nThe same method handles integro-differential equations such as LRC circuits.",
    "source": "Ch 4 slides – The Laplace Transform",
+   "answer": "A Volterra integral equation. The integral is $f*h$, so transforming gives $F=G+FH$, hence $F=\\dfrac{G}{1-H}$. Then invert.",
    "keywords": [
     "Volterra",
     "convolution",
@@ -1134,15 +1160,15 @@
    "topic": "Operational properties",
    "type": "mcq",
    "question": "If $f$ is periodic with period $T$, then $\\mathcal L\\{f\\}=$",
+   "explanation": "Periodic row (sheet p.1)\nYou only integrate over one period.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$\\dfrac{1}{1-e^{-sT}}\\int_0^T e^{-st}f(t)\\,dt$",
     "$\\int_0^T e^{-st}f(t)\\,dt$",
     "$\\dfrac{1}{1+e^{-sT}}\\int_0^T e^{-st}f(t)\\,dt$",
     "$T\\int_0^T e^{-st}f(t)\\,dt$"
    ],
-   "answer": 0,
-   "explanation": "You only integrate over one period.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-dd-01",
@@ -1150,25 +1176,25 @@
    "topic": "Dirac delta & systems",
    "type": "mcq",
    "question": "$\\mathcal L\\{\\delta(t-t_0)\\}$ for $t_0>0$ is:",
+   "explanation": "δ row (sheet p.1)\nWith $t_0=0$: $\\mathcal L\\{\\delta(t)\\}=1$.",
+   "source": "Ch 4 slides – The Laplace Transform",
    "choices": [
     "$e^{-st_0}$",
     "$1/s$",
     "$e^{-st_0}/s$",
     "1"
    ],
-   "answer": 0,
-   "explanation": "For $t_0=0$: $\\mathcal L\\{\\delta(t)\\}=1$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "answer": 0
   },
   {
    "id": "e311-dd-02",
    "course": "engr311",
    "topic": "Dirac delta & systems",
    "type": "tf",
-   "question": "The Dirac delta is an ordinary function that equals $\\infty$ at $t_0$ and 0 elsewhere, with $\\int_0^\\infty\\delta(t-t_0)dt=1$.",
-   "answer": false,
-   "explanation": "It is not a function in the usual sense. It's a generalized function, defined as a limit of unit impulses or by its sifting property $\\int f(t)\\delta(t-t_0)dt=f(t_0)$.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "question": "The Dirac delta is an ordinary function equal to ∞ at $t_0$ and 0 elsewhere.",
+   "explanation": "It's a generalized function, defined as a limit of unit impulses or by its sifting property $\\int f(t)\\delta(t-t_0)dt=f(t_0)$ (definition, not on the sheet).",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": false
   },
   {
    "id": "e311-dd-03",
@@ -1176,9 +1202,9 @@
    "topic": "Dirac delta & systems",
    "type": "short",
    "question": "What physical situation does $\\delta(t-t_0)$ model on the right side of a spring–mass equation?",
-   "answer": "A sudden impulse (a large force acting for a very short time, e.g. a hammer blow) at $t=t_0$, with total impulse 1.",
-   "explanation": "The response jumps in velocity at $t_0$ while the displacement stays continuous.",
+   "explanation": "The velocity jumps at $t_0$ while the displacement stays continuous.",
    "source": "Ch 4 slides – The Laplace Transform",
+   "answer": "A sudden impulse at $t=t_0$ (a large force acting for a very short time, e.g. a hammer blow) with total impulse 1.",
    "keywords": [
     "impulse",
     "short time",
@@ -1190,36 +1216,36 @@
    "course": "engr311",
    "topic": "Dirac delta & systems",
    "type": "tf",
-   "question": "The Laplace transform turns a system of linear ODEs with constant coefficients into a system of algebraic equations in $X(s)$, $Y(s)$.",
-   "answer": true,
-   "explanation": "Solve with elimination or Cramer's rule, then invert each one.",
-   "source": "Ch 4 slides – The Laplace Transform"
+   "question": "Laplace turns a system of linear constant-coefficient ODEs into algebraic equations in $X(s)$, $Y(s)$.",
+   "explanation": "Transform each equation with the derivative rows (sheet p.1).\nSolve by elimination or Cramer's rule, then invert each one.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "answer": true
   },
   {
    "id": "e311-of-01",
    "course": "engr311",
    "topic": "Orthogonal functions",
    "type": "mcq",
-   "question": "Two functions $f_1$, $f_2$ are orthogonal on $[a,b]$ if:",
+   "question": "Functions $f_1$, $f_2$ are orthogonal on $[a,b]$ if:",
+   "explanation": "Orthogonal sets (sheet p.2) with weight $w(x)=1$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$\\int_a^b f_1f_2\\,dx=0$",
     "$f_1(x)f_2(x)=0$ for all $x$",
     "$\\int_a^b (f_1+f_2)\\,dx=0$",
     "$f_1'=f_2$"
    ],
-   "answer": 0,
-   "explanation": "This is the inner product $(f_1,f_2)$ for real functions.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-of-02",
    "course": "engr311",
    "topic": "Orthogonal functions",
    "type": "tf",
-   "question": "$f_1=x^2$ and $f_2=x^3$ are orthogonal on $[-1,1]$.",
-   "answer": true,
-   "explanation": "$\\int_{-1}^1x^5dx=0$ because $x^5$ is odd on a symmetric interval.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "question": "$x^2$ and $x^3$ are orthogonal on $[-1,1]$.",
+   "explanation": "$\\int_{-1}^1x^2\\cdot x^3dx=\\int_{-1}^1x^5dx=0$\n$x^5$ is odd and the interval is symmetric.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": true
   },
   {
    "id": "e311-of-03",
@@ -1227,15 +1253,15 @@
    "topic": "Orthogonal functions",
    "type": "mcq",
    "question": "The norm of $\\phi_n$ on $[a,b]$ is:",
+   "explanation": "Norm (sheet p.2)\n$\\|\\phi_n\\|^2$ is the square norm. A set with every norm equal to 1 is orthonormal.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$\\|\\phi_n\\|=\\sqrt{\\int_a^b\\phi_n^2\\,dx}$",
     "$\\int_a^b\\phi_n\\,dx$",
     "$\\int_a^b\\phi_n^2\\,dx$",
     "$\\max|\\phi_n|$"
    ],
-   "answer": 0,
-   "explanation": "$\\|\\phi_n\\|^2$ is the square norm. A set with all norms equal to 1 is orthonormal.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-of-04",
@@ -1243,51 +1269,51 @@
    "topic": "Orthogonal functions",
    "type": "mcq",
    "question": "On $[-\\pi,\\pi]$, $\\|\\cos nx\\|$ for $n\\ge1$ equals:",
+   "explanation": "Norm (sheet p.2): $\\|\\cos nx\\|^2=\\int_{-\\pi}^{\\pi}\\cos^2nx\\,dx$\nUse $\\cos^2\\theta=\\tfrac12(1+\\cos2\\theta)$ (rearranged from the $\\cos2\\theta$ identity (sheet p.2))\n$=\\pi$, so $\\|\\cos nx\\|=\\sqrt\\pi$.\n$\\phi_0=1$ is the exception: its norm is $\\sqrt{2\\pi}$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$\\sqrt\\pi$",
     "$\\pi$",
     "$\\sqrt{2\\pi}$",
     "1"
    ],
-   "answer": 0,
-   "explanation": "$\\int_{-\\pi}^{\\pi}\\cos^2nx\\,dx=\\pi$. The member $\\phi_0=1$ is different: its norm is $\\sqrt{2\\pi}$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-of-05",
    "course": "engr311",
    "topic": "Orthogonal functions",
    "type": "mcq",
-   "question": "In an orthogonal series expansion $f=\\sum c_n\\phi_n$, the coefficients are:",
+   "question": "In an orthogonal series $f=\\sum c_n\\phi_n$, the coefficients are:",
+   "explanation": "(derived) Multiply both sides by $\\phi_m$ and integrate.\nOrthogonality (sheet p.2) kills every term except $n=m$.\n$(f,\\phi_m)=c_m\\|\\phi_m\\|^2$",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$c_n=\\dfrac{(f,\\phi_n)}{\\|\\phi_n\\|^2}$",
     "$c_n=(f,\\phi_n)$",
     "$c_n=\\|\\phi_n\\|^2$",
     "$c_n=f(n)$"
    ],
-   "answer": 0,
-   "explanation": "Multiply by $\\phi_m$ and integrate. Orthogonality kills every term except $n=m$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-of-06",
    "course": "engr311",
    "topic": "Orthogonal functions",
    "type": "tf",
-   "question": "A set $\\{\\phi_n\\}$ is orthogonal with respect to a weight function $w(x)$ if $\\int_a^b w\\,\\phi_m\\phi_n\\,dx=0$ for $m\\ne n$.",
-   "answer": true,
-   "explanation": "Weight functions show up in Sturm–Liouville problems (e.g. Bessel with $w=x$).",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "question": "$\\{\\phi_n\\}$ is orthogonal with respect to $w(x)$ if $\\int_a^b w\\,\\phi_m\\phi_n\\,dx=0$ for $m\\ne n$.",
+   "explanation": "Orthogonal sets (sheet p.2)\nWeight functions appear in Sturm–Liouville problems.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": true
   },
   {
    "id": "e311-of-07",
    "course": "engr311",
    "topic": "Orthogonal functions",
    "type": "short",
-   "question": "What is the classic trap when computing $\\int\\cos mx\\cos nx\\,dx$ with product-to-sum formulas?",
-   "answer": "Dividing by $m-n$ when $m=n$. The $m=n$ case (the norm) must be done separately using $\\cos^2\\theta=\\tfrac12(1+\\cos2\\theta)$. Special members like $\\phi_0=1$ also need separate handling.",
-   "explanation": "Straight from the Midterm 2 procedures sheet.",
+   "question": "What's the classic trap in $\\int\\cos mx\\cos nx\\,dx$ with product-to-sum formulas?",
+   "explanation": "Product-to-sum identities (sheet p.2)\nThis trap is called out on the Midterm 2 procedures sheet.",
    "source": "Midterm 2 procedures sheet",
+   "answer": "Dividing by $m-n$ when $m=n$. Do the $m=n$ case (the norm) separately, and handle special members like $\\phi_0=1$ separately too.",
    "keywords": [
     "m = n separately",
     "don't divide by m−n",
@@ -1299,58 +1325,58 @@
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "For the Fourier series of $f$ on $(-p,p)$, the coefficient $a_n$ is:",
+   "question": "In the Fourier series of $f$ on $(-p,p)$, $a_n$ is:",
+   "explanation": "Fourier series row (sheet p.2)\n$a_0=\\frac1p\\int_{-p}^pf\\,dx$, and the series starts with $a_0/2$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$\\dfrac1p\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
     "$\\dfrac{1}{2p}\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
     "$\\dfrac2p\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
     "$\\int_{-p}^pf(x)\\cos(nx)dx$"
    ],
-   "answer": 0,
-   "explanation": "$a_0=\\frac1p\\int f$, and the series starts with $a_0/2$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-fs-02",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "tf",
-   "question": "The series $\\frac{a_0}2+\\sum(a_n\\cos\\frac{n\\pi x}p+b_n\\sin\\frac{n\\pi x}p)$ uses $a_0/2$ so that the same formula for $a_n$ works at $n=0$.",
-   "answer": true,
-   "explanation": "So the constant term is the average value of $f$ over the interval.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "question": "The series begins with $a_0/2$ so that the same formula for $a_n$ also works at $n=0$.",
+   "explanation": "Fourier series row (sheet p.2)\nSo the constant term is the average value of $f$ over the interval.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": true
   },
   {
    "id": "e311-fs-03",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "At a jump discontinuity $x=c$, the Fourier series of a piecewise-smooth $f$ converges to:",
+   "question": "At a jump $x=c$, the Fourier series of a piecewise-smooth $f$ converges to:",
+   "explanation": "Convergence theorem (definition, not on the sheet)\nWhere $f$ is continuous, the series converges to $f(c)$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "$\\dfrac{f(c^+)+f(c^-)}{2}$",
     "$f(c^+)$",
     "$f(c^-)$",
     "0"
    ],
-   "answer": 0,
-   "explanation": "At points where $f$ is continuous, it converges to $f(c)$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-fs-04",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "At the endpoint $x=p$ of $(-p,p)$, the full Fourier series converges to:",
+   "question": "At the endpoint $x=p$, the full Fourier series converges to:",
+   "explanation": "The periodic extension joins the right end of the interval to the left end.\nConvergence theorem (definition, not on the sheet)",
+   "source": "Midterm 2 procedures sheet",
    "choices": [
     "$\\dfrac{f(-p^+)+f(p^-)}{2}$",
     "$f(p)$",
     "0",
     "$f(0)$"
    ],
-   "answer": 0,
-   "explanation": "The periodic extension joins the end of the interval to its start.",
-   "source": "Midterm 2 procedures sheet"
+   "answer": 0
   },
   {
    "id": "e311-fs-05",
@@ -1358,15 +1384,15 @@
    "topic": "Fourier series",
    "type": "mcq",
    "question": "If $f$ is even on $(-p,p)$, its Fourier series contains:",
+   "explanation": "(derived) $f\\sin(n\\pi x/p)$ is even × odd = odd, so $b_n=0$ (sheet p.2).\n$f\\cos$ is even, so $a_n=\\frac2p\\int_0^pf\\cos\\frac{n\\pi x}p dx$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
-    "Only $a_0$ and cosine terms ($b_n=0$)",
-    "Only sine terms",
-    "Both sines and cosines",
+    "Only $a_0$ and cosines ($b_n=0$)",
+    "Only sines",
+    "Both",
     "Only $a_0$"
    ],
-   "answer": 0,
-   "explanation": "$a_n=\\frac2p\\int_0^pf\\cos\\frac{n\\pi x}p dx$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-fs-06",
@@ -1374,15 +1400,15 @@
    "topic": "Fourier series",
    "type": "mcq",
    "question": "The product of two odd functions is:",
+   "explanation": "Parity rules (definition, not on the sheet):\neven × even = even\nodd × odd = even\neven × odd = odd",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
     "Even",
     "Odd",
     "Neither",
     "Zero"
    ],
-   "answer": 0,
-   "explanation": "even × even = even, odd × odd = even, even × odd = odd.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-fs-07",
@@ -1390,9 +1416,9 @@
    "topic": "Fourier series",
    "type": "tf",
    "question": "If $f$ is odd, then $\\int_{-a}^af(x)dx=0$.",
-   "answer": true,
-   "explanation": "For even $f$: $\\int_{-a}^a f=2\\int_0^af$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "explanation": "The areas left and right of zero cancel.\nFor even $f$: $\\int_{-a}^af=2\\int_0^af$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": true
   },
   {
    "id": "e311-fs-08",
@@ -1400,31 +1426,31 @@
    "topic": "Fourier series",
    "type": "mcq",
    "question": "Which function is neither even nor odd?",
+   "explanation": "Its even part ($x^2$) feeds $a_n$; its odd part ($x$) feeds $b_n$.",
+   "source": "Midterm 2 procedures sheet",
    "choices": [
     "$x+x^2$",
     "$|x|$",
     "$x^3$",
     "$\\cos x$"
    ],
-   "answer": 0,
-   "explanation": "Its even part ($x^2$) contributes to $a_n$ and its odd part ($x$) contributes to $b_n$.",
-   "source": "Midterm 2 procedures sheet"
+   "answer": 0
   },
   {
    "id": "e311-fs-09",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "The Gibbs phenomenon refers to:",
+   "question": "The Gibbs phenomenon is:",
+   "explanation": "Gibbs (definition, not on the sheet)\nThe overshoot stays even as $N\\to\\infty$; it just moves closer to the jump.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "choices": [
-    "A persistent overshoot of about 9% near a jump that narrows but does not shrink as more terms are added",
-    "The series diverging at a jump",
+    "An overshoot of about 9% near a jump that narrows but never shrinks as terms are added",
+    "Divergence at a jump",
     "Slow convergence of smooth functions",
-    "The series converging to the wrong function"
+    "Convergence to the wrong function"
    ],
-   "answer": 0,
-   "explanation": "The overshoot never goes away, even as $N\\to\\infty$.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "answer": 0
   },
   {
    "id": "e311-fs-10",
@@ -1432,19 +1458,19 @@
    "topic": "Fourier series",
    "type": "tf",
    "question": "A Fourier sine series always gives 0 at $x=0$ and $x=\\pm p$.",
-   "answer": true,
-   "explanation": "Every term $\\sin(n\\pi x/p)$ vanishes there. (Procedures sheet)",
-   "source": "Midterm 2 procedures sheet"
+   "explanation": "Every term $\\sin(n\\pi x/p)$ is 0 there. (Procedures sheet)",
+   "source": "Midterm 2 procedures sheet",
+   "answer": true
   },
   {
    "id": "e311-fs-11",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "short",
-   "question": "Name the three half-range expansions of $f$ defined on $(0,L)$ and the extension each one uses.",
-   "answer": "Cosine series (even extension to $(-L,0)$), sine series (odd extension), and full Fourier series (the function repeats with period $L$, i.e. $p=L/2$).",
-   "explanation": "You only integrate over $(0,L)$, with $p=L$ for cosine or sine.",
+   "question": "Name the three half-range expansions of $f$ on $(0,L)$ and the extension each one uses.",
+   "explanation": "The half-range coefficient formulas are NOT on the sheet (derived from (sheet p.2) by parity):\n$a_n=\\frac2L\\int_0^Lf\\cos\\frac{n\\pi x}L dx$\n$b_n=\\frac2L\\int_0^Lf\\sin\\frac{n\\pi x}L dx$",
    "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": "Cosine series (even extension), sine series (odd extension), full series (repeat with period $L$, so $p=L/2$).",
    "keywords": [
     "cosine/even",
     "sine/odd",
@@ -1456,42 +1482,42 @@
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "To evaluate a numerical sum like $1-\\frac13+\\frac15-\\dots$ from a Fourier series, you:",
+   "question": "To evaluate a sum like $1-\\frac13+\\frac15-\\dots$ from a Fourier series, you:",
+   "explanation": "Choose $x$ so the trig terms give a clean pattern ($1$, $(-1)^n$, or $1,0,-1,0$).\nAt a jump, the left side is the average value (definition, not on the sheet).",
+   "source": "Midterm 2 procedures sheet",
    "choices": [
-    "Plug a convenient $x$ (e.g. 0, $p/2$, $p$) into the series and use the convergence theorem for the left side",
+    "Plug a convenient $x$ (0, $p/2$, $p$) into the series and use the convergence theorem for the left side",
     "Differentiate the series",
-    "Integrate the series from 0 to $p$",
+    "Integrate from 0 to $p$",
     "Set $n=1$"
    ],
-   "answer": 0,
-   "explanation": "Choose $x$ so that $\\cos$ or $\\sin$ gives a clean pattern ($1$, $(-1)^n$, $1,0,-1,0$).",
-   "source": "Midterm 2 procedures sheet"
+   "answer": 0
   },
   {
    "id": "e311-fs-13",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "tf",
-   "question": "The complex Fourier series is $\\sum_{n=-\\infty}^\\infty c_ne^{in\\pi x/p}$ with $c_n=\\frac1{2p}\\int_{-p}^pf(x)e^{-in\\pi x/p}dx$.",
-   "answer": true,
-   "explanation": "It is equivalent to the real form, using Euler's formula.",
-   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+   "question": "The complex Fourier series is $\\sum_{-\\infty}^\\infty c_ne^{in\\pi x/p}$ with $c_n=\\frac1{2p}\\int_{-p}^pf\\,e^{-in\\pi x/p}dx$.",
+   "explanation": "Complex form (definition, not on the sheet)\nIt's equivalent to the real form through Euler's formula.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
+   "answer": true
   },
   {
    "id": "e311-fs-14",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "$\\sin n\\pi$ and $\\cos n\\pi$ for integer $n$ equal:",
+   "question": "For integer $n$, $\\sin n\\pi$ and $\\cos n\\pi$ equal:",
+   "explanation": "This is the most common simplification when computing coefficients.\nAlso: $\\sin(2n\\pi+\\theta)=\\sin\\theta$ (sheet p.2).",
+   "source": "Midterm 2 procedures sheet",
    "choices": [
     "$0$ and $(-1)^n$",
     "$(-1)^n$ and $0$",
     "$1$ and $0$",
     "$0$ and $1$"
    ],
-   "answer": 0,
-   "explanation": "This is the most common simplification step when computing coefficients.",
-   "source": "Midterm 2 procedures sheet"
+   "answer": 0
   },
   {
    "id": "e311-pd-01",
@@ -1499,44 +1525,44 @@
    "topic": "PDEs & separation of variables",
    "type": "mcq",
    "question": "The 1-D heat equation is:",
+   "explanation": "PDE forms (definition, not on the sheet)\nWave: $a^2u_{xx}=u_{tt}$. Laplace: $u_{xx}+u_{yy}=0$.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
     "$k\\,u_{xx}=u_t$",
     "$a^2u_{xx}=u_{tt}$",
     "$u_{xx}+u_{yy}=0$",
     "$u_t+u_x=0$"
    ],
-   "answer": 0,
-   "explanation": "The wave equation is $a^2u_{xx}=u_{tt}$ and Laplace's equation is $u_{xx}+u_{yy}=0$.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-02",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "mcq",
-   "question": "Classify by $B^2-4AC$: the heat, wave and Laplace equations are respectively:",
+   "question": "Classify by $B^2-4AC$: the heat, wave and Laplace equations are:",
+   "explanation": "Classification (definition, not on the sheet): $=0$ parabolic, $>0$ hyperbolic, $<0$ elliptic.\nHeat: $A=k$, $C=0$ → 0.\nWave: $A=a^2$, $C=-1$ → $4a^2>0$.\nLaplace: $A=C=1$ → $-4<0$.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
     "Parabolic, hyperbolic, elliptic",
     "Elliptic, parabolic, hyperbolic",
     "Hyperbolic, elliptic, parabolic",
     "All parabolic"
    ],
-   "answer": 0,
-   "explanation": "$B^2-4AC=0$ parabolic, $>0$ hyperbolic, $<0$ elliptic.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-03",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "short",
-   "question": "Describe the method of separation of variables for a linear PDE.",
-   "answer": "Assume $u(x,t)=X(x)T(t)$, substitute, and divide so each side depends on one variable. Set both sides equal to a separation constant $-\\lambda$. Solve the resulting ODEs, using the homogeneous BCs to get eigenvalues and eigenfunctions. Superpose the product solutions and fit the initial condition with a Fourier series.",
-   "explanation": "In this course the separation constant is written as $-\\lambda$, and you check the cases $\\lambda=0$, $\\lambda=-\\alpha^2$ and $\\lambda=\\alpha^2$.",
+   "question": "Describe separation of variables for a linear PDE.",
+   "explanation": "Check the three cases $\\lambda=0$, $\\lambda=-\\alpha^2$, $\\lambda=\\alpha^2$.\nThe IC fit uses the half-range formulas (derived from (sheet p.2)).",
    "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": "Assume $u=X(x)T(t)$ and substitute. Divide so each side depends on one variable, and set both sides equal to $-\\lambda$. Solve the ODEs, using the homogeneous BCs to find eigenvalues and eigenfunctions. Superpose the product solutions and fit the IC with a Fourier series.",
    "keywords": [
     "u = XT",
-    "separation constant −λ",
+    "−λ",
     "eigenvalues",
     "superposition",
     "Fourier coefficients"
@@ -1547,10 +1573,10 @@
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "tf",
-   "question": "The superposition principle says that if $u_1,\\dots,u_k$ solve a homogeneous linear PDE, then any linear combination does too.",
-   "answer": true,
-   "explanation": "This is why the series $\\sum A_n X_n T_n$ is still a solution.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "question": "Superposition: if $u_1,\\dots,u_k$ solve a homogeneous linear PDE, so does any linear combination.",
+   "explanation": "That's why $\\sum A_nX_nT_n$ is still a solution.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": true
   },
   {
    "id": "e311-pd-05",
@@ -1558,57 +1584,57 @@
    "topic": "PDEs & separation of variables",
    "type": "mcq",
    "question": "For the heat equation with $u(0,t)=u(L,t)=0$, the eigenfunctions are:",
+   "explanation": "(derived) $X''+\\lambda X=0$ with $X(0)=0$ gives $X=\\sin\\alpha x$.\n$X(L)=0$ gives $\\alpha L=n\\pi$.\nThe IC then becomes a half-range sine series.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
     "$\\sin\\frac{n\\pi x}{L}$, $\\lambda_n=(n\\pi/L)^2$",
     "$\\cos\\frac{n\\pi x}{L}$",
     "$e^{n\\pi x/L}$",
     "$\\sinh\\frac{n\\pi x}{L}$"
    ],
-   "answer": 0,
-   "explanation": "The initial condition then becomes a half-range sine expansion of $f$.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-06",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "mcq",
-   "question": "Insulated ends of a rod ($u_x(0,t)=u_x(L,t)=0$) lead to:",
+   "question": "Insulated ends ($u_x(0,t)=u_x(L,t)=0$) lead to:",
+   "explanation": "Neumann BCs give $X=\\cos(n\\pi x/L)$, including $n=0$.\nAs $t\\to\\infty$, $u$ tends to the average of the initial temperature: no heat leaves the rod.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
-    "A cosine series, including a constant term from $\\lambda_0=0$",
+    "A cosine series, including a constant from $\\lambda_0=0$",
     "A sine series",
     "Only the zero solution",
     "Exponential eigenfunctions"
    ],
-   "answer": 0,
-   "explanation": "As $t\\to\\infty$ the temperature tends to the average of the initial distribution.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-07",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "mcq",
-   "question": "Which boundary condition is a Neumann condition?",
+   "question": "Which BC is a Neumann condition?",
+   "explanation": "BC types (definition, not on the sheet):\nDirichlet specifies $u$\nNeumann specifies $\\partial u/\\partial n$\nRobin specifies a mix of the two (convection)",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
     "$\\partial u/\\partial x=0$ at $x=0$",
     "$u=0$ at $x=0$",
     "$u_x=-h(u-u_m)$ at $x=L$",
     "$u(x,0)=f(x)$"
    ],
-   "answer": 0,
-   "explanation": "Dirichlet specifies $u$. Neumann specifies the normal derivative. Robin specifies a combination of both (e.g. convection).",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-08",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "tf",
-   "question": "For the heat equation, each mode decays like $e^{-k(n\\pi/L)^2t}$, so higher modes die out faster.",
-   "answer": true,
-   "explanation": "The solution smooths out quickly, so after a while the first term dominates.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "question": "For the heat equation, mode $n$ decays like $e^{-k(n\\pi/L)^2t}$, so higher modes die out faster.",
+   "explanation": "The exponent grows like $n^2$, so after a short time the first term dominates.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": true
   },
   {
    "id": "e311-pd-09",
@@ -1616,28 +1642,28 @@
    "topic": "PDEs & separation of variables",
    "type": "mcq",
    "question": "The wave equation needs how many initial conditions?",
+   "explanation": "It's second order in $t$.\nThe heat equation is first order in $t$, so it needs one IC.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
-    "Two: initial displacement $u(x,0)$ and initial velocity $u_t(x,0)$",
-    "One: $u(x,0)$",
+    "Two: $u(x,0)$ and $u_t(x,0)$",
+    "One",
     "None",
     "Three"
    ],
-   "answer": 0,
-   "explanation": "It is second order in time. The heat equation is first order in time and needs one IC.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-10",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "short",
-   "question": "For a vibrating string with fixed ends, what are the standing waves and the fundamental frequency?",
-   "answer": "Each term $u_n=(A_n\\cos\\frac{n\\pi a}{L}t+B_n\\sin\\frac{n\\pi a}{L}t)\\sin\\frac{n\\pi x}{L}$ is a standing wave (normal mode). The $n=1$ mode is the first standing wave, with fundamental frequency $f_1=\\frac{a}{2L}$.",
-   "explanation": "Higher modes are overtones at integer multiples of $f_1$. Points with $\\sin(n\\pi x/L)=0$ are nodes.",
+   "question": "For a string with fixed ends, what are the standing waves and the fundamental frequency?",
+   "explanation": "(derived) The angular frequency is $n\\pi a/L$, so $f_n=\\dfrac{na}{2L}$.\nHigher modes are overtones. Points where $\\sin(n\\pi x/L)=0$ are nodes.",
    "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": "Each $u_n=(A_n\\cos\\frac{n\\pi a}{L}t+B_n\\sin\\frac{n\\pi a}{L}t)\\sin\\frac{n\\pi x}{L}$ is a standing wave (normal mode). For $n=1$: $f_1=\\frac{a}{2L}$.",
    "keywords": [
     "standing waves",
-    "fundamental frequency a/2L",
+    "f1 = a/2L",
     "nodes"
    ]
   },
@@ -1646,36 +1672,36 @@
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "mcq",
-   "question": "In the steady-state (Dirichlet) problem for Laplace's equation on a rectangle with three zero edges, the $y$-dependence typically uses:",
+   "question": "Laplace's equation on a rectangle with three zero edges: the non-periodic direction uses:",
+   "explanation": "The direction with homogeneous BCs gets $\\sin$ (the eigenfunctions).\nThe other direction gets $\\sinh/\\cosh$ (hyperbolic identities (sheet p.2)).",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
     "$\\sinh$ or $\\cosh$",
     "$\\sin$ or $\\cos$",
     "decaying exponentials in $t$",
     "polynomials"
    ],
-   "answer": 0,
-   "explanation": "The direction with homogeneous BCs gets $\\sin$ (eigenfunctions). The other direction gets $\\sinh/\\cosh$.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
    "id": "e311-pd-12",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "tf",
-   "question": "If a rectangle has nonzero temperatures on two edges, you can split it into two problems (each with one nonzero edge) and add the solutions.",
-   "answer": true,
-   "explanation": "This is the superposition principle for Laplace's equation.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "question": "If a rectangle has nonzero temperatures on two edges, split into two one-edge problems and add.",
+   "explanation": "Superposition for Laplace's equation.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": true
   },
   {
    "id": "e311-pd-13",
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "short",
-   "question": "How do you handle a heat problem with nonhomogeneous, time-independent BCs (e.g. $u(0,t)=u_0$, $u(L,t)=u_1$)?",
-   "answer": "Write $u=v(x,t)+\\psi(x)$. $\\psi$ is the steady-state solution satisfying $k\\psi''=0$ (plus any source term) and the nonhomogeneous BCs. $v$ satisfies the heat equation with homogeneous BCs and the IC $v(x,0)=f(x)-\\psi(x)$. Then $u\\to\\psi$ as $t\\to\\infty$.",
-   "explanation": "Section 13.6. With no source, $\\psi$ is the straight line between the end temperatures.",
+   "question": "How do you handle nonhomogeneous time-independent BCs like $u(0,t)=u_0$, $u(L,t)=u_1$?",
+   "explanation": "Section 13.6.\nWith no source, $\\psi$ is the straight line between $u_0$ and $u_1$.",
    "source": "Ch 13 slides – Boundary-Value Problems",
+   "answer": "Write $u=v(x,t)+\\psi(x)$. The steady state $\\psi$ satisfies $k\\psi''=0$ (plus any source term) and the nonhomogeneous BCs. Then $v$ satisfies the heat equation with homogeneous BCs and IC $v(x,0)=f-\\psi$. As $t\\to\\infty$, $u\\to\\psi$.",
    "keywords": [
     "u = v + ψ",
     "steady state",
@@ -1687,30 +1713,187 @@
    "course": "engr311",
    "topic": "PDEs & separation of variables",
    "type": "mcq",
-   "question": "In the separated heat problem, what does the $T(t)$ equation look like?",
+   "question": "In the separated heat problem, the $T(t)$ equation is:",
+   "explanation": "From $\\dfrac{X''}{X}=\\dfrac{T'}{kT}=-\\lambda$.\nWith $\\lambda>0$, $T$ decays, as heat physically must.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
    "choices": [
-    "$T'+k\\lambda T=0$, giving $T=e^{-k\\lambda t}$",
+    "$T'+k\\lambda T=0$, so $T=e^{-k\\lambda t}$",
     "$T''+a^2\\lambda T=0$",
-    "$T'=\\lambda T$ with growth",
+    "$T'=\\lambda T$ (growth)",
     "$T=$ constant"
    ],
-   "answer": 0,
-   "explanation": "With $\\lambda>0$ the solution decays, as heat physically must.",
-   "source": "Ch 13 slides – Boundary-Value Problems"
+   "answer": 0
   },
   {
-   "id": "e391-er-01",
+   "id": "e391-ex-01",
    "course": "engr391",
-   "topic": "Errors & fundamentals",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "When $Ax=b$ is solved with a correctly applied $PA=LU$ decomposition, the backward error $\\|b-Ax_c\\|$ is exactly zero.",
+   "explanation": "LU has no truncation error, but floating-point round-off still leaves a small nonzero residual (Lesson 3).",
+   "source": "Midterm practice sheet format",
+   "answer": false
+  },
+  {
+   "id": "e391-ex-02",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "Bisection can locate the root $r=1$ of $f(x)=(x-1)^2$.",
+   "explanation": "$f\\ge0$ everywhere, so there's no interval with $f(a)f(b)<0$ (Lesson 2).\nA double root doesn't change sign, so bracketing methods can't see it.",
+   "source": "Midterm practice sheet format",
+   "answer": false
+  },
+  {
+   "id": "e391-ex-03",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "$f$ is continuous with $f(a)<0$ and $f(b)>0$. Then:",
+   "explanation": "Intermediate value theorem (Lesson 2).\nThere could be 3, 5, … roots. Exactly one would need monotonic $f$.",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "There is at least one root in $[a,b]$",
+    "There is exactly one root",
+    "There is no root",
+    "Not enough information"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e391-ex-04",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "For an approximation $x_c$ of a simple root, an estimate of the RELATIVE error is:",
+   "explanation": "(derived) Newton step: absolute error $\\approx|f(x_c)/f'(x_c)|$ (Lesson 2)\nDivide by $|x_c|$ to make it relative.",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "$\\left|\\dfrac{f(x_c)}{x_c\\,f'(x_c)}\\right|$",
+    "$\\left|\\dfrac{f(x_c)}{f'(x_c)}\\right|$",
+    "$\\left|\\dfrac{x_cf(x_c)}{f'(x_c)}\\right|$",
+    "$\\left|\\dfrac{f(x_c)}{x_c}\\right|$"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e391-ex-05",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "Gauss elimination is insensitive to ill-conditioning.",
+   "explanation": "No direct method can fix an ill-conditioned system: about $\\log_{10}\\mathrm{cond}(A)$ digits are lost whatever the algorithm (Lesson 3).",
+   "source": "Midterm practice sheet format",
+   "answer": false
+  },
+  {
+   "id": "e391-ex-06",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "The interpolating polynomial through 8 distinct data points has degree at most:",
+   "explanation": "$n$ points → degree $\\le n-1$ (8 unknown coefficients) (Lesson 4).",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "7",
+    "8",
+    "9",
+    "4"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e391-ex-07",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "The more data points used for interpolation, the more accurate the result.",
+   "explanation": "With equally spaced points, high degrees oscillate near the ends (Runge phenomenon) (Lesson 4).",
+   "source": "Midterm practice sheet format",
+   "answer": false
+  },
+  {
+   "id": "e391-ex-08",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "$\\mathrm{cond}(A)$ for a $1\\times1$ matrix $A=[a]$, $a\\ne0$ (any norm) is:",
+   "explanation": "$\\|A\\|\\,\\|A^{-1}\\|=|a|\\cdot\\dfrac1{|a|}=1$ (Lesson 3).",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "1",
+    "$|a|$",
+    "$1/|a|$",
+    "$a^2$"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e391-ex-09",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "If $|f(x_1)|<|f(x_2)|$ for two approximations of the same root, then $x_1$ is necessarily the better one.",
+   "explanation": "A smaller backward error doesn't guarantee a smaller forward error. A flat or steep $f$ changes the relation (Lesson 2).",
+   "source": "Midterm practice sheet format",
+   "answer": false
+  },
+  {
+   "id": "e391-ex-10",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "tf",
+   "question": "In interpolation, the number of unknown coefficients equals the number of data points.",
+   "explanation": "Each point gives one equation, so the system is square (e.g. a Vandermonde matrix) (Lesson 4).",
+   "source": "Midterm practice sheet format",
+   "answer": true
+  },
+  {
+   "id": "e391-ex-11",
+   "course": "engr391",
+   "topic": "Exam-style theory",
    "type": "short",
-   "question": "Name the two kinds of numerical error discussed in Lesson 1 and where each comes from.",
-   "answer": "Round-off error: the computer stores only a finite number of digits. Truncation error: an infinite process (e.g. a Taylor series or a limit) is cut off after finitely many steps.",
-   "explanation": "Other error sources (modelling, bad input data) exist but aren't the algorithm's fault.",
-   "source": "Lesson 1 – Introduction and Fundamentals",
+   "question": "Match each error type to its source: round-off, truncation, propagation.",
+   "explanation": "Error taxonomy (Lesson 1)",
+   "source": "Midterm practice sheet format",
+   "answer": "Round-off: storing a finite number of digits. Truncation: using an approximate expression in place of an exact one. Propagation: errors in the input carried into the output.",
    "keywords": [
     "round-off: finite digits",
-    "truncation: approximation of math"
+    "truncation: approximate formula",
+    "propagation: input errors"
    ]
+  },
+  {
+   "id": "e391-ex-12",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "With the stopping criterion $\\varepsilon_s=0.5\\times10^{2-n}\\,\\%$, meeting it guarantees:",
+   "explanation": "Scarborough criterion (Lesson 1)\nIf $|\\varepsilon_a|<\\varepsilon_s$, the result is correct to at least $n$ significant figures.",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "At least $n$ significant digits",
+    "$n$ decimal places",
+    "An absolute error below $10^{-n}$",
+    "$n$ iterations"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "e391-ex-13",
+   "course": "engr391",
+   "topic": "Exam-style theory",
+   "type": "mcq",
+   "question": "The approximate relative error of iterate $x_{i+1}$ is:",
+   "explanation": "Approximate relative error (Lesson 1)\nDivide by the NEWEST estimate. The last option is the true relative error, which needs the exact value.",
+   "source": "Midterm practice sheet format",
+   "choices": [
+    "$\\varepsilon_a=\\left|\\dfrac{x_{i+1}-x_i}{x_{i+1}}\\right|\\times100\\%$",
+    "$\\left|\\dfrac{x_{i+1}-x_i}{x_i}\\right|$",
+    "$|x_{i+1}-x_i|$",
+    "$\\left|\\dfrac{x_{true}-x_{i+1}}{x_{true}}\\right|$"
+   ],
+   "answer": 0
   },
   {
    "id": "e391-er-02",
@@ -1718,25 +1901,25 @@
    "topic": "Errors & fundamentals",
    "type": "tf",
    "question": "Making the step size $h$ smaller always reduces the total numerical error.",
-   "answer": false,
-   "explanation": "Truncation error falls as $h$ shrinks, but round-off error grows (e.g. subtracting nearly equal numbers). The total error has a minimum at an optimal $h$.",
-   "source": "Lesson 1 – Introduction and Fundamentals"
+   "explanation": "Truncation error falls as $h$ shrinks, but round-off grows (cancellation) (Lesson 1).\nThe total error has a minimum at an optimal $h$.",
+   "source": "Lesson 1 – Introduction and Fundamentals",
+   "answer": false
   },
   {
    "id": "e391-er-03",
    "course": "engr391",
    "topic": "Errors & fundamentals",
    "type": "mcq",
-   "question": "A truncation error of $O(h^2)$ means that halving $h$ reduces the error by roughly a factor of:",
+   "question": "A truncation error of $O(h^2)$ means that halving $h$ reduces the error by about:",
+   "explanation": "$(1/2)^2=1/4$. For $O(h^4)$ it's 16.",
+   "source": "Lesson 1 – Introduction and Fundamentals",
    "choices": [
     "4",
     "2",
     "8",
     "16"
    ],
-   "answer": 0,
-   "explanation": "$(1/2)^2=1/4$. For $O(h^4)$ the factor is 16.",
-   "source": "Lesson 1 – Introduction and Fundamentals"
+   "answer": 0
   },
   {
    "id": "e391-er-04",
@@ -1744,25 +1927,25 @@
    "topic": "Errors & fundamentals",
    "type": "mcq",
    "question": "Truncating a Taylor series after the $h^n$ term leaves a remainder of order:",
+   "explanation": "Remainder $R_n=\\dfrac{f^{(n+1)}(\\xi)}{(n+1)!}h^{n+1}$ (Lesson 1)\nUse it to bound the truncation error.",
+   "source": "Lesson 1 – Introduction and Fundamentals",
    "choices": [
     "$O(h^{n+1})$",
     "$O(h^n)$",
     "$O(h^{n-1})$",
     "$O(1)$"
    ],
-   "answer": 0,
-   "explanation": "The remainder is $\\frac{f^{(n+1)}(\\xi)}{(n+1)!}h^{n+1}$.",
-   "source": "Lesson 1 – Introduction and Fundamentals"
+   "answer": 0
   },
   {
    "id": "e391-er-05",
    "course": "engr391",
    "topic": "Errors & fundamentals",
    "type": "tf",
-   "question": "The true error needs the exact answer, so in practice algorithms use an estimated error (e.g. the change between successive iterates) to decide when to stop.",
-   "answer": true,
-   "explanation": "Example: stop when $|x_{i+1}-x_i|<$ TOL.",
-   "source": "Lesson 1 – Introduction and Fundamentals"
+   "question": "The true error needs the exact answer, so algorithms stop on an estimated error, such as the change between iterates.",
+   "explanation": "Example: stop when $|\\varepsilon_a|<\\varepsilon_s$ (Lesson 1).",
+   "source": "Lesson 1 – Introduction and Fundamentals",
+   "answer": true
   },
   {
    "id": "e391-er-06",
@@ -1770,15 +1953,15 @@
    "topic": "Errors & fundamentals",
    "type": "mcq",
    "question": "Subtracting two nearly equal floating-point numbers mainly causes:",
+   "explanation": "This is why forward differences go bad when $h$ is tiny (Lesson 6).",
+   "source": "Lesson 6 – Numerical Differentiation",
    "choices": [
-    "Loss of significant digits (catastrophic cancellation)",
+    "Loss of significant digits (cancellation)",
     "Overflow",
     "Truncation error",
-    "No error at all"
+    "No error"
    ],
-   "answer": 0,
-   "explanation": "This is why forward-difference derivatives go bad when $h$ is tiny.",
-   "source": "Lesson 6 – Numerical Differentiation"
+   "answer": 0
   },
   {
    "id": "e391-nl-01",
@@ -1786,41 +1969,41 @@
    "topic": "Nonlinear equations",
    "type": "mcq",
    "question": "Which two root-finding methods are bracketing methods?",
+   "explanation": "Bracketing methods need $f(a)f(b)<0$ and always converge. Open methods may diverge (Lesson 2).",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "Bisection and false position",
     "Newton and fixed-point",
     "Newton and secant",
     "Fixed-point and bisection"
    ],
-   "answer": 0,
-   "explanation": "Bracketing needs $f(a)f(b)<0$ and always converges. Open methods (fixed-point, Newton) may not converge.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-02",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "tf",
-   "question": "Bisection is guaranteed to converge for a continuous $f$ with $f(a)f(b)<0$.",
-   "answer": true,
-   "explanation": "By the intermediate value theorem there's a root in $[a,b]$, and each step halves the bracket.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "question": "Bisection is guaranteed to converge for continuous $f$ with $f(a)f(b)<0$.",
+   "explanation": "The IVT puts a root in $[a,b]$, and the bracket halves each step (Lesson 2).",
+   "source": "Lesson 2 – Non-linear Equations",
+   "answer": true
   },
   {
    "id": "e391-nl-03",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "After $n$ bisection steps starting from $[a,b]$, the error bound (using the midpoint) is:",
+   "question": "After $n$ bisection steps from $[a,b]$, the error bound of the midpoint is:",
+   "explanation": "Error bound (Lesson 2)\nSolve $\\frac{b-a}{2^{n+1}}<\\text{TOL}$ for $n$ to get the number of steps without iterating.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "$\\dfrac{b-a}{2^{n+1}}$",
     "$\\dfrac{b-a}{n}$",
     "$(b-a)^n$",
     "$\\dfrac{b-a}{2n}$"
    ],
-   "answer": 0,
-   "explanation": "Solve this for $n$ to find how many steps reach a given TOL.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-04",
@@ -1828,73 +2011,73 @@
    "topic": "Nonlinear equations",
    "type": "mcq",
    "question": "Bisection converges:",
+   "explanation": "Each step gains about one binary digit (about 0.3 decimal digits) (Lesson 2).",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "Linearly, with ratio 1/2",
     "Quadratically",
     "Superlinearly",
     "Cubically"
    ],
-   "answer": 0,
-   "explanation": "Each step gains about one binary digit (~0.3 decimal digits).",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-05",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "The fixed-point iteration $x_{i+1}=g(x_i)$ converges locally to the fixed point $r$ if:",
+   "question": "Fixed-point iteration $x_{i+1}=g(x_i)$ converges locally to $r$ if:",
+   "explanation": "Convergence is linear, with $e_{n}\\approx|g'(r)|^ne_0$ (Lesson 2).\n$|g'(r)|>1$ means the errors grow.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "$|g'(r)|<1$",
     "$|g'(r)|>1$",
     "$g(r)=0$",
     "$g'(r)=1$"
    ],
-   "answer": 0,
-   "explanation": "The convergence is linear with rate $S=|g'(r)|$. If $|g'(r)|>1$ the iteration diverges.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-06",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "tf",
-   "question": "The same equation $f(x)=0$ can be rewritten as $x=g(x)$ in several ways, and some rewritings converge while others diverge.",
-   "answer": true,
-   "explanation": "Pick a $g$ with $|g'(r)|<1$, and as small as possible.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "question": "$f(x)=0$ can be rewritten as $x=g(x)$ in several ways, and some converge while others diverge.",
+   "explanation": "Pick a $g$ with $|g'(r)|<1$, and the smaller the better (Lesson 2).",
+   "source": "Lesson 2 – Non-linear Equations",
+   "answer": true
   },
   {
    "id": "e391-nl-07",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "Newton's method update is:",
+   "question": "The Newton–Raphson update is:",
+   "explanation": "Newton (Lesson 2)\nFollow the tangent line down to the $x$-axis. The minus sign takes you downhill toward the root.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "$x_{i+1}=x_i-\\dfrac{f(x_i)}{f'(x_i)}$",
     "$x_{i+1}=x_i-f'(x_i)f(x_i)$",
     "$x_{i+1}=\\dfrac{x_i+f(x_i)}{2}$",
     "$x_{i+1}=g(x_i)$ with $g=f$"
    ],
-   "answer": 0,
-   "explanation": "Geometrically: follow the tangent line down to the $x$-axis.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-08",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "Newton's method at a root of multiplicity $m>1$ converges:",
+   "question": "Newton at a root of multiplicity $m>1$ converges:",
+   "explanation": "Quadratic convergence needs $f'(r)\\ne0$ (Lesson 2).\nModified Newton $x_{i+1}=x_i-m\\,f/f'$ restores it.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
-    "Only linearly, with rate $(m-1)/m$",
+    "Only linearly, with ratio $(m-1)/m$",
     "Quadratically",
     "Cubically",
     "Not at all"
    ],
-   "answer": 0,
-   "explanation": "Quadratic convergence needs a simple root ($f'(r)\\ne0$). The modified Newton $x_{i+1}=x_i-m\\,f/f'$ restores it.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-09",
@@ -1902,9 +2085,9 @@
    "topic": "Nonlinear equations",
    "type": "tf",
    "question": "Newton's method always converges, whatever the initial guess.",
-   "answer": false,
-   "explanation": "It's an open method. A poor guess, a near-zero $f'$ or cycling can make it diverge.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "explanation": "It's an open method: a bad start, a near-zero $f'$ or cycling can make it fail (Lesson 2).",
+   "source": "Lesson 2 – Non-linear Equations",
+   "answer": false
   },
   {
    "id": "e391-nl-10",
@@ -1912,15 +2095,15 @@
    "topic": "Nonlinear equations",
    "type": "mcq",
    "question": "The backward error of an approximate root $x_a$ is:",
+   "explanation": "Forward error $=|r-x_a|$ (Lesson 2).\nA small backward error doesn't guarantee a small forward error.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "$|f(x_a)|$",
     "$|r-x_a|$",
     "$|x_a|$",
     "$|f'(x_a)|$"
    ],
-   "answer": 0,
-   "explanation": "The forward error is $|r-x_a|$. A small backward error does not guarantee a small forward error when the problem is ill-conditioned.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-11",
@@ -1928,13 +2111,13 @@
    "topic": "Nonlinear equations",
    "type": "short",
    "question": "Why are multiple roots ill-conditioned?",
-   "answer": "Near a root of multiplicity $m$, $f$ is very flat ($f'(r)=0$), so a tiny backward error $|f(x_a)|$ allows a large forward error $|r-x_a|\\approx(m!|f(x_a)|/|f^{(m)}|)^{1/m}$. Small changes to the equation shift the root a lot.",
-   "explanation": "The error magnification factor is large. This is the Wilkinson polynomial idea.",
+   "explanation": "The error magnification factor is large (the Wilkinson polynomial idea) (Lesson 2).",
    "source": "Lesson 2 – Non-linear Equations",
+   "answer": "Near a root of multiplicity $m$, $f$ is very flat ($f'(r)=0$). A tiny backward error $|f(x_a)|$ allows a large forward error, roughly $(m!\\,|f(x_a)|/|f^{(m)}|)^{1/m}$.",
    "keywords": [
     "flat f",
     "small backward, large forward",
-    "error magnification"
+    "magnification"
    ]
   },
   {
@@ -1943,41 +2126,41 @@
    "topic": "Nonlinear equations",
    "type": "mcq",
    "question": "The error magnification factor is:",
+   "explanation": "Definition (Lesson 2)\nA large factor means the problem is ill-conditioned.",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "Relative forward error ÷ relative backward error",
-    "Forward error × backward error",
-    "Backward error ÷ forward error",
-    "Number of iterations ÷ tolerance"
+    "Forward × backward",
+    "Backward ÷ forward",
+    "Iterations ÷ tolerance"
    ],
-   "answer": 0,
-   "explanation": "A large factor means the problem is ill-conditioned.",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-nl-13",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "An algorithm converges with order $q$ if:",
+   "question": "A method converges with order $q$ if:",
+   "explanation": "Order (Lesson 2)\n$q=1$: linear (needs $C<1$). $q=2$: quadratic (correct digits roughly double each step).",
+   "source": "Lesson 2 – Non-linear Equations",
    "choices": [
     "$e_{i+1}\\approx C\\,e_i^q$",
-    "$e_{i+1}\\approx C\\,q\\,e_i$",
+    "$e_{i+1}\\approx Cq\\,e_i$",
     "$e_{i+1}=e_i-q$",
     "$e_i\\approx q^i$"
    ],
-   "answer": 0,
-   "explanation": "$q=1$ linear (needs $C<1$), $q=2$ quadratic (correct digits roughly double each step).",
-   "source": "Lesson 2 – Non-linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-01",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "tf",
-   "question": "Gauss elimination and LU decomposition have no truncation error. Only round-off error affects the result.",
-   "answer": true,
-   "explanation": "They are direct methods that would be exact in exact arithmetic. (L3 takeaway)",
-   "source": "Lesson 3 – Linear Equations"
+   "question": "Gauss elimination and LU have no truncation error, only round-off.",
+   "explanation": "They're direct methods: exact in exact arithmetic (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
+   "answer": true
   },
   {
    "id": "e391-ls-02",
@@ -1985,9 +2168,9 @@
    "topic": "Linear systems",
    "type": "short",
    "question": "What are the two stages of Gauss elimination?",
-   "answer": "Forward elimination (reduce the augmented matrix to upper-triangular form), then back substitution (solve from the last equation upward).",
-   "explanation": "Forward elimination costs about $\\tfrac23n^3$ operations. Back substitution costs about $n^2$.",
+   "explanation": "Cost (Lesson 3):\nforward elimination ≈ $\\tfrac23n^3$ operations\nback substitution ≈ $n^2$",
    "source": "Lesson 3 – Linear Equations",
+   "answer": "Forward elimination (reduce to upper-triangular form), then back substitution.",
    "keywords": [
     "forward elimination",
     "back substitution"
@@ -1999,15 +2182,15 @@
    "topic": "Linear systems",
    "type": "mcq",
    "question": "Partial pivoting means:",
+   "explanation": "It avoids dividing by zero or by tiny pivots, which would blow up round-off (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
     "Swapping rows so the pivot is the largest-magnitude entry in its column (at or below the diagonal)",
-    "Swapping columns randomly",
-    "Dividing every row by its largest entry",
+    "Swapping columns at random",
+    "Dividing rows by their largest entry",
     "Skipping zero pivots"
    ],
-   "answer": 0,
-   "explanation": "It avoids dividing by zero or tiny pivots, which would amplify round-off.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-04",
@@ -2015,122 +2198,122 @@
    "topic": "Linear systems",
    "type": "tf",
    "question": "Naive Gauss elimination can fail even when the system has a unique solution.",
-   "answer": true,
-   "explanation": "For example, with a zero pivot $a_{11}=0$. Pivoting fixes this.",
-   "source": "Lesson 3 – Linear Equations"
+   "explanation": "Example: $a_{11}=0$. Pivoting fixes it (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
+   "answer": true
   },
   {
    "id": "e391-ls-05",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "mcq",
-   "question": "The main advantage of LU decomposition over plain Gauss elimination is:",
+   "question": "The main advantage of LU over plain Gauss elimination is:",
+   "explanation": "Solve $Ld=b$ (forward), then $Ux=d$ (back), each $O(n^2)$ (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
-    "Once $A=LU$ is computed, each new right-hand side $b$ is solved cheaply (two triangular solves)",
-    "It has no round-off error",
-    "It works for singular matrices",
-    "It needs no pivoting ever"
+    "Once $A=LU$ is computed, each new $b$ costs only two triangular solves",
+    "No round-off",
+    "Works for singular $A$",
+    "Never needs pivoting"
    ],
-   "answer": 0,
-   "explanation": "Solve $Lc=b$ (forward), then $Ux=c$ (back). Each costs only $O(n^2)$.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-06",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "mcq",
-   "question": "With pivoting, the factorization is written as:",
+   "question": "With pivoting, the factorization is:",
+   "explanation": "$P$ is a permutation matrix. Then $LUx=Pb$ (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
-    "$PA=LU$, with $P$ a permutation matrix",
+    "$PA=LU$",
     "$A=LUP$",
     "$A=PLU^T$",
     "$A=L+U$"
    ],
-   "answer": 0,
-   "explanation": "Then $Ax=b$ becomes $LUx=Pb$.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-07",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "mcq",
-   "question": "The infinity norm $\\|x\\|_\\infty$ of a vector is:",
+   "question": "The infinity norm $\\|x\\|_\\infty$ is:",
+   "explanation": "Norms (Lesson 3)\n$\\|A\\|_\\infty$ is the largest absolute row sum.",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
     "$\\max_i|x_i|$",
     "$\\sum|x_i|$",
     "$\\sqrt{\\sum x_i^2}$",
-    "$\\min_i|x_i|$"
+    "$\\min|x_i|$"
    ],
-   "answer": 0,
-   "explanation": "The matching matrix norm $\\|A\\|_\\infty$ is the maximum absolute row sum.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-08",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "mcq",
-   "question": "The condition number $\\mathrm{cond}(A)=\\|A\\|\\|A^{-1}\\|$ represents:",
+   "question": "$\\mathrm{cond}(A)=\\|A\\|\\|A^{-1}\\|$ is:",
+   "explanation": "Condition number (Lesson 3)\nIt's always $\\ge1$. Large means ill-conditioned.",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
-    "The largest possible error magnification factor when solving $Ax=b$",
-    "The number of iterations needed",
-    "The determinant of $A$",
-    "The rank of $A$"
+    "The largest possible error magnification factor for $Ax=b$",
+    "The number of iterations",
+    "$\\det A$",
+    "The rank"
    ],
-   "answer": 0,
-   "explanation": "$\\mathrm{cond}(A)\\ge1$. A large value means ill-conditioned.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-09",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "mcq",
-   "question": "If $\\mathrm{cond}(A)\\approx10^k$, you can expect to lose about ___ significant digits when solving $Ax=b$:",
+   "question": "If $\\mathrm{cond}(A)\\approx10^k$, about how many significant digits are lost?",
+   "explanation": "Rule of thumb (Lesson 3)\nIn double precision (about 16 digits) with $\\mathrm{cond}=10^{10}$, only about 6 digits can be trusted.",
+   "source": "Lesson 3 – Linear Equations",
    "choices": [
     "$k$",
     "$2k$",
     "$k/2$",
     "$10^k$"
    ],
-   "answer": 0,
-   "explanation": "With double precision (~16 digits) and $\\mathrm{cond}=10^{10}$, only about 6 digits are trustworthy.",
-   "source": "Lesson 3 – Linear Equations"
+   "answer": 0
   },
   {
    "id": "e391-ls-10",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "tf",
-   "question": "A small residual $\\|b-Ax_a\\|$ guarantees that $x_a$ is close to the true solution.",
-   "answer": false,
-   "explanation": "The residual is the backward error. If $A$ is ill-conditioned, the forward error can be large despite a small residual.",
-   "source": "Lesson 3 – Linear Equations"
+   "question": "A small residual $\\|b-Ax_a\\|$ guarantees $x_a$ is close to the true solution.",
+   "explanation": "The residual is the backward error. With large $\\mathrm{cond}(A)$ the forward error can still be large (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
+   "answer": false
   },
   {
    "id": "e391-ls-11",
    "course": "engr391",
    "topic": "Linear systems",
    "type": "tf",
-   "question": "A system with two nearly identical equations (nearly parallel lines) is ill-conditioned.",
-   "answer": true,
-   "explanation": "Tiny changes in the data move the intersection point a lot.",
-   "source": "Lesson 3 – Linear Equations"
+   "question": "Two nearly identical equations (nearly parallel lines) make an ill-conditioned system.",
+   "explanation": "Tiny changes in the data move the intersection point a lot (Lesson 3).",
+   "source": "Lesson 3 – Linear Equations",
+   "answer": true
   },
   {
    "id": "e391-ri-01",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "short",
-   "question": "What is the difference between regression and interpolation?",
-   "answer": "Regression (curve fitting) finds a model that best fits noisy data in the least-squares sense and need not pass through the points. Interpolation finds a function that passes exactly through every data point.",
-   "explanation": "Use regression for measured data with scatter, interpolation for exact tabulated values.",
+   "question": "What's the difference between regression and interpolation?",
+   "explanation": "Use regression for measured data and interpolation for exact tabulated values (Lesson 4).",
    "source": "Lesson 4 – Regression and Interpolation",
+   "answer": "Regression finds the least-squares best fit to noisy data and needn't pass through the points. Interpolation passes exactly through every point.",
    "keywords": [
-    "regression: best fit, least squares",
-    "interpolation: passes through points"
+    "regression: best fit",
+    "interpolation: through points"
    ]
   },
   {
@@ -2138,84 +2321,84 @@
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "Linear least squares chooses parameters to minimize:",
+   "question": "Linear least squares minimizes:",
+   "explanation": "Setting the partial derivatives to zero gives the normal equations $A^TA\\hat a=A^Ty$ (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
-    "The squared error $SE=\\sum r_i^2$",
+    "$SE=\\sum r_i^2$",
     "The largest residual",
-    "The sum of residuals $\\sum r_i$",
-    "The number of data points"
+    "$\\sum r_i$",
+    "The number of points"
    ],
-   "answer": 0,
-   "explanation": "Setting the partial derivatives to zero gives the normal equations $A^TA\\hat a=A^Ty$.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-ri-03",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "The root-mean-square error of a fit is:",
+   "question": "The RMSE of a fit is:",
+   "explanation": "MSE $=SE/m$ and RMSE $=\\sqrt{MSE}$, with $m$ = number of points (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
     "$\\sqrt{SE/m}$",
     "$SE/m$",
     "$\\sqrt{SE}$",
     "$SE\\cdot m$"
    ],
-   "answer": 0,
-   "explanation": "MSE $=SE/m$, RMSE $=\\sqrt{MSE}$, with $m$ = number of data points.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-ri-04",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "tf",
-   "question": "\"Linear\" regression means linear in the parameters $a_i$, so $y=a_1+a_2x+a_3x^2$ or $y=a_1+a_2\\sin x$ count as linear models.",
-   "answer": true,
-   "explanation": "The basis functions $f_i(x)$ can be nonlinear in $x$.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "question": "'Linear' regression means linear in the parameters, so $y=a_1+a_2x+a_3x^2$ counts.",
+   "explanation": "The basis functions can be nonlinear in $x$ (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "answer": true
   },
   {
    "id": "e391-ri-05",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "To fit an exponential model $y=c\\,e^{kx}$ with linear least squares, you:",
+   "question": "To fit $y=c\\,e^{kx}$ with linear least squares, you:",
+   "explanation": "Linearization (Lesson 4)\nPower law: $\\ln y=\\ln c+k\\ln x$ (the Moore's-law example).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
     "Take logs: $\\ln y=\\ln c+kx$, then fit a line",
-    "Fit $y$ directly against $x$",
+    "Fit $y$ directly",
     "Take $\\sqrt y$",
-    "Use interpolation instead"
+    "Interpolate"
    ],
-   "answer": 0,
-   "explanation": "Power law $y=cx^k$: $\\ln y=\\ln c+k\\ln x$. This is linearization (e.g. the Moore's law example).",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-ri-06",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "tf",
-   "question": "The residual vector of a least-squares fit is orthogonal to the columns of $A$.",
-   "answer": true,
-   "explanation": "$A^T(y-A\\hat a)=0$ is exactly the normal equations.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "question": "The least-squares residual vector is orthogonal to the columns of $A$.",
+   "explanation": "$A^T(y-A\\hat a)=0$ is exactly the normal equations (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "answer": true
   },
   {
    "id": "e391-ri-07",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "Through $n$ distinct data points there is a unique interpolating polynomial of degree at most:",
+   "question": "Through $n$ distinct points there's a unique interpolating polynomial of degree at most:",
+   "explanation": "Vandermonde, Newton and Lagrange are the same polynomial written differently (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
     "$n-1$",
     "$n$",
     "$n+1$",
     "$2n$"
    ],
-   "answer": 0,
-   "explanation": "Vandermonde, Newton and Lagrange forms all give the same polynomial, written differently.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-ri-08",
@@ -2223,39 +2406,39 @@
    "topic": "Regression & interpolation",
    "type": "tf",
    "question": "The Vandermonde matrix is often badly conditioned, which is one reason to prefer the Newton or Lagrange forms.",
-   "answer": true,
-   "explanation": "Its columns $1,x,x^2,\\dots$ become nearly parallel.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "explanation": "Its columns $1, x, x^2, \\dots$ become nearly parallel (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "answer": true
   },
   {
    "id": "e391-ri-09",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "A practical advantage of Newton's divided-difference form is:",
+   "question": "A practical advantage of Newton's divided differences is:",
+   "explanation": "The coefficients are the top diagonal of the divided-difference table (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
-    "Adding a new data point only adds one new term, so earlier coefficients are reused",
-    "It needs no arithmetic",
-    "It always gives a lower-degree polynomial",
-    "It avoids round-off completely"
+    "A new point adds only one new term; earlier coefficients are reused",
+    "No arithmetic needed",
+    "Lower degree",
+    "No round-off"
    ],
-   "answer": 0,
-   "explanation": "Coefficients come from the top diagonal of the divided-difference table.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-ri-10",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "short",
-   "question": "What does the interpolation error theorem say, and how can the error be reduced?",
-   "answer": "$f(x)-P(x)=\\frac{(x-x_1)\\cdots(x-x_n)}{n!}f^{(n)}(c)$. The error depends on the product of distances to the nodes and on a high derivative. It can be reduced by placing nodes well, e.g. Chebyshev points clustered toward the ends rather than equally spaced.",
-   "explanation": "Equally spaced high-degree interpolation can oscillate wildly near the ends (Runge phenomenon).",
+   "question": "State the interpolation error theorem and how to reduce the error.",
+   "explanation": "Error theorem (Lesson 4)\nEqually spaced, high-degree interpolation oscillates near the ends (Runge).",
    "source": "Lesson 4 – Regression and Interpolation",
+   "answer": "$f(x)-P(x)=\\frac{(x-x_1)\\cdots(x-x_n)}{n!}f^{(n)}(c)$. Place the nodes well, e.g. Chebyshev points clustered toward the ends rather than equally spaced.",
    "keywords": [
     "product (x−xi)",
     "f^(n)/n!",
-    "Chebyshev nodes",
+    "Chebyshev",
     "Runge"
    ]
   },
@@ -2264,26 +2447,26 @@
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "tf",
-   "question": "Increasing the degree of an equally spaced interpolating polynomial always improves accuracy.",
-   "answer": false,
-   "explanation": "The Runge phenomenon: large oscillations near the interval ends.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "question": "Raising the degree of an equally spaced interpolant always improves accuracy.",
+   "explanation": "Runge phenomenon (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "answer": false
   },
   {
    "id": "e391-ri-12",
    "course": "engr391",
    "topic": "Regression & interpolation",
    "type": "mcq",
-   "question": "Cubic splines join piecewise cubics so that at interior knots these are continuous:",
+   "question": "Cubic splines are continuous at interior knots in:",
+   "explanation": "End conditions (natural, clamped) supply the last two equations (Lesson 4).",
+   "source": "Lesson 4 – Regression and Interpolation",
    "choices": [
-    "The function, first and second derivatives",
+    "Function, first and second derivatives",
     "Only the function",
-    "The function and first derivative only",
+    "Function and first derivative only",
     "All derivatives"
    ],
-   "answer": 0,
-   "explanation": "End conditions (natural, clamped, …) supply the last two equations.",
-   "source": "Lesson 4 – Regression and Interpolation"
+   "answer": 0
   },
   {
    "id": "e391-nd-01",
@@ -2291,15 +2474,15 @@
    "topic": "Numerical differentiation",
    "type": "mcq",
    "question": "The forward difference $\\dfrac{f(x+h)-f(x)}{h}$ has truncation error:",
+   "explanation": "(derived) Taylor: $f(x+h)=f+hf'+\\frac{h^2}2f''+\\dots$\nRearrange: error $=\\frac h2f''$, i.e. $O(h)$.\nCentral difference $\\frac{f(x+h)-f(x-h)}{2h}$ is $O(h^2)$ (Lesson 6).",
+   "source": "Lesson 6 – Numerical Differentiation",
    "choices": [
     "$O(h)$",
     "$O(h^2)$",
     "$O(h^3)$",
     "$O(1)$"
    ],
-   "answer": 0,
-   "explanation": "The central difference $\\frac{f(x+h)-f(x-h)}{2h}$ is $O(h^2)$.",
-   "source": "Lesson 6 – Numerical Differentiation"
+   "answer": 0
   },
   {
    "id": "e391-nd-02",
@@ -2307,15 +2490,15 @@
    "topic": "Numerical differentiation",
    "type": "mcq",
    "question": "The three-point central difference for $f''(x)$ is:",
+   "explanation": "(derived) Add the Taylor series of $f(x+h)$ and $f(x-h)$: the odd terms cancel (Lesson 6).",
+   "source": "Lesson 6 – Numerical Differentiation",
    "choices": [
-    "$\\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$, error $O(h^2)$",
+    "$\\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$, $O(h^2)$",
     "$\\dfrac{f(x+h)-f(x-h)}{2h}$",
     "$\\dfrac{f(x+h)-2f(x)}{h^2}$",
     "$\\dfrac{f(x+2h)-f(x)}{2h}$"
    ],
-   "answer": 0,
-   "explanation": "This comes from adding the Taylor series for $f(x\\pm h)$.",
-   "source": "Lesson 6 – Numerical Differentiation"
+   "answer": 0
   },
   {
    "id": "e391-nd-03",
@@ -2323,13 +2506,13 @@
    "topic": "Numerical differentiation",
    "type": "short",
    "question": "Why is there an optimal step size $h$ for numerical differentiation?",
-   "answer": "Total error = truncation error (shrinks as $h$ shrinks, e.g. $\\propto h^2$) + round-off error (grows like $\\epsilon_{mach}/h$ because of cancellation). Their sum has a minimum at an intermediate $h$.",
-   "explanation": "For the central difference, $h_{opt}\\sim\\epsilon_{mach}^{1/3}\\approx10^{-5}$ in double precision.",
+   "explanation": "For the central difference, $h_{opt}\\sim\\epsilon_{mach}^{1/3}\\approx10^{-5}$ in double precision (Lesson 6).",
    "source": "Lesson 6 – Numerical Differentiation",
+   "answer": "Total error = truncation (shrinks with $h$, e.g. $\\propto h^2$) + round-off (grows like $\\epsilon_{mach}/h$ from cancellation). The sum has a minimum.",
    "keywords": [
-    "truncation decreases",
-    "round-off increases",
-    "minimum total"
+    "truncation down",
+    "round-off up",
+    "minimum"
    ]
   },
   {
@@ -2337,26 +2520,26 @@
    "course": "engr391",
    "topic": "Numerical differentiation",
    "type": "tf",
-   "question": "Higher-order difference formulas allow a larger optimal $h$ and a smaller minimum achievable error.",
-   "answer": true,
-   "explanation": "Their truncation error drops faster, so round-off dominates later.",
-   "source": "Lesson 6 – Numerical Differentiation"
+   "question": "Higher-order difference formulas allow a larger optimal $h$ and a smaller minimum error.",
+   "explanation": "Truncation error falls faster, so round-off takes over later (Lesson 6).",
+   "source": "Lesson 6 – Numerical Differentiation",
+   "answer": true
   },
   {
    "id": "e391-ni-01",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "mcq",
-   "question": "Newton–Cotes formulas are derived by:",
+   "question": "Newton–Cotes formulas come from:",
+   "explanation": "Closed formulas (trapezoid, Simpson) include the endpoints; open formulas (midpoint) don't (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "Integrating an interpolating polynomial through equally spaced points",
-    "Choosing optimal (non-uniform) nodes",
-    "Fitting a least-squares line",
-    "Taylor series in $h$ only"
+    "Optimal non-uniform nodes",
+    "A least-squares line",
+    "Taylor series only"
    ],
-   "answer": 0,
-   "explanation": "Closed formulas include the endpoints (trapezoid, Simpson). Open formulas don't (midpoint).",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-02",
@@ -2364,15 +2547,15 @@
    "topic": "Numerical integration",
    "type": "mcq",
    "question": "The composite trapezoid rule has global error:",
+   "explanation": "One panel: $-\\frac{h^3}{12}f''(c)$. Summing $n\\propto1/h$ panels loses one order (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "$O(h^2)$",
     "$O(h)$",
     "$O(h^3)$",
     "$O(h^4)$"
    ],
-   "answer": 0,
-   "explanation": "A single application has error $-\\frac{h^3}{12}f''(c)$. Summing $n\\propto1/h$ panels loses one order.",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-03",
@@ -2380,15 +2563,15 @@
    "topic": "Numerical integration",
    "type": "mcq",
    "question": "The composite Simpson's 1/3 rule has global error:",
+   "explanation": "Halving $h$ cuts the error by about 16. It needs an even number of subintervals (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "$O(h^4)$",
     "$O(h^2)$",
     "$O(h^3)$",
     "$O(h^5)$"
    ],
-   "answer": 0,
-   "explanation": "Halving $h$ cuts the error by about 16. It needs an even number of subintervals.",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-04",
@@ -2396,56 +2579,55 @@
    "topic": "Numerical integration",
    "type": "mcq",
    "question": "The degree of precision of Simpson's rule is:",
+   "explanation": "It's exact for cubics, one degree more than expected from the parabola fit, because the errors cancel by symmetry (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "3",
     "2",
     "1",
     "4"
    ],
-   "answer": 0,
-   "explanation": "Degree of precision = highest polynomial degree integrated exactly. Trapezoid: 1. Simpson: 3 (one more than expected).",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-05",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "tf",
-   "question": "Composite Simpson's rule requires an even number of subintervals.",
-   "answer": true,
-   "explanation": "Each application covers two subintervals (three points).",
-   "source": "Lesson 7 – Numerical Integration"
+   "question": "Composite Simpson's rule needs an even number of subintervals.",
+   "explanation": "Each application covers 2 subintervals (3 points) (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
+   "answer": true
   },
   {
    "id": "e391-ni-06",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "mcq",
-   "question": "When $h$ is halved, the error of the composite trapezoid rule falls by about a factor of:",
+   "question": "Halving $h$ in the composite trapezoid rule cuts the error by about:",
+   "explanation": "A ratio near 4 confirms $O(h^2)$ (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "4",
     "2",
     "8",
     "16"
    ],
-   "answer": 0,
-   "explanation": "Ratios close to 4 (trapezoid) or 16 (Simpson) confirm the expected order of convergence.",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-07",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "short",
-   "question": "What is Richardson extrapolation (the Richardson error formula) used for in numerical integration?",
-   "answer": "Combining two estimates with step sizes $h$ and $h/2$ to estimate the error and cancel the leading error term. For an $O(h^n)$ method: error $\\approx\\frac{I_{h/2}-I_h}{2^n-1}$, and the improved value is $I_{h/2}+\\frac{I_{h/2}-I_h}{2^n-1}$.",
-   "explanation": "Applying it repeatedly to the trapezoid rule gives Romberg integration.",
+   "question": "What is Richardson extrapolation used for in integration?",
+   "explanation": "Richardson (Lesson 7)\nApplying it repeatedly to the trapezoid rule gives Romberg integration.",
    "source": "Lesson 7 – Numerical Integration",
+   "answer": "Combining estimates with steps $h$ and $h/2$ to estimate and cancel the leading error term. For an $O(h^n)$ method: error ≈ $\\frac{I_{h/2}-I_h}{2^n-1}$; improved value $=I_{h/2}+\\frac{I_{h/2}-I_h}{2^n-1}$.",
    "keywords": [
     "two step sizes",
     "estimate error",
-    "cancel leading term",
-    "Romberg"
+    "cancel leading term"
    ]
   },
   {
@@ -2454,41 +2636,41 @@
    "topic": "Numerical integration",
    "type": "mcq",
    "question": "Romberg integration is:",
+   "explanation": "Each column raises the order by 2 (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
-    "Repeated Richardson extrapolation of composite trapezoid estimates",
-    "Gauss quadrature with random nodes",
-    "Simpson's 3/8 rule",
-    "Monte Carlo integration"
+    "Repeated Richardson extrapolation of trapezoid estimates",
+    "Random-node Gauss quadrature",
+    "Simpson's 3/8",
+    "Monte Carlo"
    ],
-   "answer": 0,
-   "explanation": "Each column of the Romberg table raises the order by 2.",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-09",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "mcq",
-   "question": "Gauss quadrature with $n$ points is exact for polynomials up to degree:",
+   "question": "$n$-point Gauss quadrature is exact up to degree:",
+   "explanation": "Both the nodes (roots of Legendre polynomials) and the weights are chosen optimally (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
    "choices": [
     "$2n-1$",
     "$n-1$",
     "$n$",
     "$2n$"
    ],
-   "answer": 0,
-   "explanation": "It achieves this by choosing both the node locations and the weights optimally (roots of Legendre polynomials).",
-   "source": "Lesson 7 – Numerical Integration"
+   "answer": 0
   },
   {
    "id": "e391-ni-10",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "tf",
-   "question": "Gauss quadrature needs the function values at non-uniformly spaced points, so it suits integrating a known function better than tabulated equally spaced data.",
-   "answer": true,
-   "explanation": "For tabulated data, use composite Newton–Cotes formulas.",
-   "source": "Lesson 7 – Numerical Integration"
+   "question": "Gauss quadrature needs $f$ at non-uniform points, so it suits a known function better than tabulated equally spaced data.",
+   "explanation": "For tabulated data, use composite Newton–Cotes (Lesson 7).",
+   "source": "Lesson 7 – Numerical Integration",
+   "answer": true
   },
   {
    "id": "e391-iv-01",
@@ -2496,75 +2678,75 @@
    "topic": "Initial value problems",
    "type": "mcq",
    "question": "Euler's method update for $y'=f(t,y)$ is:",
+   "explanation": "Explicit, first order: follow the slope at the start of the step (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "$w_{i+1}=w_i+h\\,f(t_i,w_i)$",
     "$w_{i+1}=w_i+\\frac h2[f(t_i,w_i)+f(t_{i+1},w_{i+1})]$",
     "$w_{i+1}=w_i+h\\,f(t_{i+1},w_{i+1})$",
     "$w_{i+1}=w_i-h\\,f'(t_i)$"
    ],
-   "answer": 0,
-   "explanation": "Explicit, first order. Follow the slope at the start of the step.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "e391-iv-02",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "mcq",
-   "question": "Euler's method has local and global truncation errors of order:",
+   "question": "Euler's local and global truncation errors are:",
+   "explanation": "Errors build up over about $1/h$ steps, so the global order is one less (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "$O(h^2)$ local, $O(h)$ global",
     "$O(h)$ local, $O(h^2)$ global",
     "$O(h^2)$ both",
     "$O(h^3)$ local, $O(h^2)$ global"
    ],
-   "answer": 0,
-   "explanation": "Errors accumulate over $\\sim1/h$ steps, so the global error is one order lower than the local error.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "e391-iv-03",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "mcq",
-   "question": "Classical RK4 has global truncation error:",
+   "question": "Classical RK4 has global error:",
+   "explanation": "Four slope evaluations per step; local error $O(h^5)$ (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "$O(h^4)$",
     "$O(h^2)$",
     "$O(h^5)$",
     "$O(h)$"
    ],
-   "answer": 0,
-   "explanation": "It uses four slope evaluations per step. Local error $O(h^5)$.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "e391-iv-04",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "mcq",
-   "question": "The explicit trapezoid method (Heun) and the midpoint method are both:",
+   "question": "The explicit trapezoid (Heun) and midpoint methods are:",
+   "explanation": "Two slope evaluations per step; global error $O(h^2)$ (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "Second-order Runge–Kutta methods",
-    "First-order methods",
-    "Fourth-order methods",
-    "Implicit multistep methods"
+    "First order",
+    "Fourth order",
+    "Implicit multistep"
    ],
-   "answer": 0,
-   "explanation": "Both use two slope evaluations per step and have global error $O(h^2)$.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "e391-iv-05",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "short",
-   "question": "What is the intuitive idea behind Runge–Kutta methods compared with Euler's method?",
-   "answer": "Instead of using only the slope at the start of the step, they evaluate the slope at several points inside the step and use a weighted average. This reaches higher accuracy without needing derivatives of $f$.",
-   "explanation": "Taylor methods also reach higher order, but they need the derivatives of $f$.",
+   "question": "What's the idea behind Runge–Kutta compared with Euler?",
+   "explanation": "Taylor methods also reach higher order, but they need derivatives of $f$ (Lesson 8).",
    "source": "Lesson 8 – Initial Value Problems",
+   "answer": "Evaluate the slope at several points inside the step and take a weighted average. This gives higher accuracy without derivatives of $f$.",
    "keywords": [
-    "several slope evaluations",
+    "several slopes",
     "weighted average",
     "no derivatives of f"
    ]
@@ -2574,14 +2756,14 @@
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "short",
-   "question": "What does the Lipschitz condition guarantee for an IVP, and what are its consequences?",
-   "answer": "If $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$, the IVP has a unique solution, and solutions starting from nearby initial conditions stay close, separating by at most a factor $e^{L(t-t_0)}$. So small errors can grow over time.",
-   "explanation": "This explains why the global error can grow exponentially with $t$.",
+   "question": "What does the Lipschitz condition guarantee for an IVP?",
+   "explanation": "This explains why the global error can grow exponentially in $t$ (Lesson 8).",
    "source": "Lesson 8 – Initial Value Problems",
+   "answer": "If $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$, the IVP has a unique solution, and nearby solutions separate by at most a factor $e^{L(t-t_0)}$, so errors can grow over time.",
    "keywords": [
-    "existence and uniqueness",
-    "e^{L(t−t0)} growth",
-    "sensitivity to ICs"
+    "existence & uniqueness",
+    "e^{L(t−t0)}",
+    "sensitivity"
    ]
   },
   {
@@ -2589,10 +2771,10 @@
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "tf",
-   "question": "For a stiff or rapidly decaying problem, Euler's method with too large a step can produce oscillating, growing (unstable) solutions even though the true solution decays.",
-   "answer": true,
-   "explanation": "For $y'=-\\lambda y$, explicit Euler is stable only if $h<2/\\lambda$.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "question": "For a stiff or fast-decaying problem, Euler with too large a step can give growing oscillations even though the true solution decays.",
+   "explanation": "For $y'=-\\lambda y$, Euler is stable only if $h<2/\\lambda$ (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
+   "answer": true
   },
   {
    "id": "e391-iv-08",
@@ -2600,41 +2782,41 @@
    "topic": "Initial value problems",
    "type": "mcq",
    "question": "A higher-order ODE like $y''=f(t,y,y')$ is solved with IVP solvers by:",
+   "explanation": "The pendulum and orbit examples (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "Rewriting it as a first-order system: $y_1=y$, $y_2=y'$",
-    "Applying Euler directly to $y''$",
-    "Integrating twice analytically first",
-    "It cannot be solved numerically"
+    "Applying Euler to $y''$",
+    "Integrating twice analytically",
+    "It can't be"
    ],
-   "answer": 0,
-   "explanation": "Pendulum and orbital-mechanics examples in Lesson 8.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "e391-iv-09",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "tf",
-   "question": "For very small step sizes, round-off error can make IVP results worse, just as in numerical differentiation.",
-   "answer": true,
-   "explanation": "The total error vs $h$ again has a minimum.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "question": "For very small step sizes, round-off can make IVP results worse.",
+   "explanation": "The total error vs $h$ again has a minimum (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
+   "answer": true
   },
   {
    "id": "e391-iv-10",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "mcq",
-   "question": "Using Richardson's formula with step sizes $h$ and $h/2$ for an order-$n$ method, the estimated error of the $h/2$ solution is:",
+   "question": "Using Richardson with steps $h$ and $h/2$ for an order-$n$ method, the estimated error of $w_{h/2}$ is:",
+   "explanation": "This is the basis for error control and step-size selection (Lesson 8).",
+   "source": "Lesson 8 – Initial Value Problems",
    "choices": [
     "$\\dfrac{w_{h/2}-w_h}{2^n-1}$",
     "$w_{h/2}-w_h$",
     "$\\dfrac{w_h}{2^n}$",
     "$2^n(w_{h/2}-w_h)$"
    ],
-   "answer": 0,
-   "explanation": "This is the basis for error control and step-size selection.",
-   "source": "Lesson 8 – Initial Value Problems"
+   "answer": 0
   },
   {
    "id": "m361-hb-01",

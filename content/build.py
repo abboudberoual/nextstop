@@ -10,9 +10,9 @@ for f in sorted(here.glob("*.py")):
     for q in m.Q:
         if q["id"] in seen: sys.exit(f"duplicate id {q['id']}")
         seen.add(q["id"]); qs.append({k: v for k, v in q.items() if v not in (None, [], "")})
-# Keep hand-added questions (imports from class projects) that no module defines, but drop the old samples.
+# Keep questions imported from class projects (marked "imported": true); anything else not defined by a module is stale and dropped.
 for q in bank["questions"]:
-    if q["id"] not in seen and "-s0" not in q["id"]: qs.append(q)
+    if q["id"] not in seen and q.get("imported"): qs.append(q)
 figs = json.loads((here / "figures.json").read_text())
 used = {q["figure"] for q in qs if q.get("figure")}
 missing = used - set(figs)
