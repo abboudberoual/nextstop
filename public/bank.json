@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "courses": [
   {
    "id": "mech361",
@@ -40,237 +40,2362 @@
  ],
  "questions": [
   {
-   "id": "m361-s01",
-   "course": "mech361",
-   "topic": "Pipe flow",
+   "id": "e243-pk-01",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "If acceleration is given as a function of position, $a(x)$, the relation that links $v$ and $x$ is:",
+   "choices": [
+    "$v\\,dv=a\\,dx$",
+    "$dv=a\\,dt$",
+    "$dx=v\\,dt$",
+    "$a=dv/dx$"
+   ],
+   "answer": 0,
+   "explanation": "This comes from $a=\\frac{dv}{dt}=\\frac{dv}{dx}\\frac{dx}{dt}=v\\frac{dv}{dx}$.",
+   "source": "Lecture 1 – Rectilinear Motion"
+  },
+  {
+   "id": "e243-pk-02",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "For uniformly accelerated rectilinear motion, which is correct?",
+   "choices": [
+    "$v^2=v_0^2+2a(x-x_0)$",
+    "$v=v_0+ax$",
+    "$x=x_0+v_0t+at^2$",
+    "$v^2=v_0^2+at$"
+   ],
+   "answer": 0,
+   "explanation": "Also $v=v_0+at$ and $x=x_0+v_0t+\\tfrac12at^2$. These hold only for constant $a$.",
+   "source": "Lecture 2 – Uniformly Accelerated Motion"
+  },
+  {
+   "id": "e243-pk-03",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
    "type": "tf",
-   "question": "In fully developed laminar pipe flow, the Darcy friction factor depends only on the Reynolds number.",
+   "question": "The area under a $v$–$t$ curve between $t_1$ and $t_2$ equals the change in position $x_2-x_1$.",
    "answer": true,
-   "explanation": "For laminar flow f = 64/Re, independent of wall roughness.",
-   "source": "Sample (general knowledge)"
+   "explanation": "The area under an $a$–$t$ curve equals the change in velocity. The slope of $v$–$t$ is $a$.",
+   "source": "Lecture 1 – Rectilinear Motion"
   },
   {
-   "id": "m361-s02",
-   "course": "mech361",
-   "topic": "Pipe flow",
-   "type": "mcq",
-   "question": "Doubling the mean velocity in fully developed laminar pipe flow (same pipe, same fluid) changes the head loss by a factor of:",
-   "choices": [
-    "2",
-    "4",
-    "√2",
-    "1 (no change)"
-   ],
-   "answer": 0,
-   "explanation": "h_L = f(L/D)V²/2g with f = 64/Re ∝ 1/V, so h_L ∝ V.",
-   "source": "Sample (general knowledge)"
-  },
-  {
-   "id": "m361-s03",
-   "course": "mech361",
-   "topic": "Boundary layers",
-   "type": "short",
-   "question": "What does the displacement thickness δ* of a boundary layer physically represent?",
-   "answer": "The distance the wall would have to be moved outward so that an inviscid (uniform) flow carries the same mass flow rate as the actual boundary-layer flow.",
-   "keywords": [
-    "mass flow deficit",
-    "wall displaced outward",
-    "equivalent inviscid flow"
-   ],
-   "explanation": "δ* = ∫(1 − u/U) dy. It measures the mass-flux deficit caused by the slowed fluid near the wall.",
-   "source": "Sample (general knowledge)"
-  },
-  {
-   "id": "m361-s04",
-   "course": "mech361",
-   "topic": "External flow & drag",
-   "type": "mcq",
-   "question": "The 'drag crisis' on a smooth sphere near Re ≈ 3×10⁵ is caused by:",
-   "choices": [
-    "The boundary layer turning turbulent and separating later",
-    "Flow becoming fully laminar",
-    "Compressibility effects",
-    "The wake becoming wider"
-   ],
-   "answer": 0,
-   "explanation": "A turbulent boundary layer resists the adverse pressure gradient better, so separation moves aft, the wake narrows and C_D drops sharply.",
-   "source": "Sample (general knowledge)"
-  },
-  {
-   "id": "m361-s05",
-   "course": "mech361",
-   "topic": "Boundary layers",
+   "id": "e243-pk-04",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
    "type": "tf",
-   "question": "A favourable pressure gradient (dp/dx < 0) promotes boundary-layer separation.",
-   "answer": false,
-   "explanation": "Separation needs an adverse gradient (dp/dx > 0). A favourable gradient accelerates the flow and keeps it attached.",
-   "source": "Sample (general knowledge)"
+   "question": "Total distance travelled equals the displacement only if the particle never reverses direction.",
+   "answer": true,
+   "explanation": "Find where $v=0$ and add the distances of each leg separately.",
+   "source": "Lecture 1 – Rectilinear Motion"
   },
   {
-   "id": "e311-s01",
-   "course": "engr311",
-   "topic": "Laplace transform",
+   "id": "e243-pk-05",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
    "type": "mcq",
-   "question": "What is $\\mathcal{L}\\{e^{at} f(t)\\}$?",
+   "question": "Relative motion: $\\vec v_B=$",
+   "choices": [
+    "$\\vec v_A+\\vec v_{B/A}$",
+    "$\\vec v_A-\\vec v_{B/A}$",
+    "$\\vec v_{B/A}-\\vec v_A$",
+    "$\\vec v_A\\vec v_{B/A}$"
+   ],
+   "answer": 0,
+   "explanation": "This holds for a translating (non-rotating) reference frame.",
+   "source": "Lecture 3 – Relative & Dependent Motion"
+  },
+  {
+   "id": "e243-pk-06",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "short",
+   "question": "How do you set up a dependent-motion (pulley/cable) problem?",
+   "answer": "Write the total cable length as a sum of position coordinates measured from fixed points, $x_A+2x_B+\\dots=$ const. Differentiate once for velocities ($v_A+2v_B=0$) and twice for accelerations.",
+   "explanation": "There is one constraint equation per cable. Constant segments (around pulleys) drop out when you differentiate.",
+   "source": "Lecture 3 – Dependent Motion (Cables)",
+   "keywords": [
+    "cable length constant",
+    "position from fixed datum",
+    "differentiate"
+   ]
+  },
+  {
+   "id": "e243-pk-07",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "In projectile motion (no air resistance), which statement is TRUE?",
+   "choices": [
+    "The horizontal velocity stays constant and the vertical acceleration is $-g$",
+    "Both velocity components are constant",
+    "The horizontal acceleration is $g$",
+    "The speed is constant"
+   ],
+   "answer": 0,
+   "explanation": "Treat $x$ and $y$ independently and link them through time $t$.",
+   "source": "Lecture 5 – Projectile Motion"
+  },
+  {
+   "id": "e243-pk-08",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "In normal–tangential coordinates, the acceleration components are:",
+   "choices": [
+    "$a_t=\\dot v$, $a_n=v^2/\\rho$",
+    "$a_t=v^2/\\rho$, $a_n=\\dot v$",
+    "$a_t=\\rho\\dot\\theta$, $a_n=0$",
+    "$a_t=0$, $a_n=\\dot v$"
+   ],
+   "answer": 0,
+   "explanation": "$a_n$ always points toward the centre of curvature.",
+   "source": "Lecture 5 – n-t Coordinates"
+  },
+  {
+   "id": "e243-pk-09",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "tf",
+   "question": "A car moving at constant speed around a curve has zero acceleration.",
+   "answer": false,
+   "explanation": "$a_t=0$, but $a_n=v^2/\\rho\\ne0$ because the direction of the velocity changes.",
+   "source": "Lecture 6 – n-t Components"
+  },
+  {
+   "id": "e243-pk-10",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "In polar ($r$–$\\theta$) coordinates, the radial acceleration is:",
+   "choices": [
+    "$a_r=\\ddot r-r\\dot\\theta^2$",
+    "$a_r=\\ddot r$",
+    "$a_r=r\\ddot\\theta+2\\dot r\\dot\\theta$",
+    "$a_r=\\ddot r+r\\dot\\theta^2$"
+   ],
+   "answer": 0,
+   "explanation": "$a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta$, where $2\\dot r\\dot\\theta$ is the Coriolis-type term.",
+   "source": "Lecture 6 – r-θ Components"
+  },
+  {
+   "id": "e243-pk-11",
+   "course": "engr243",
+   "topic": "Particle kinematics (Ch 11)",
+   "type": "mcq",
+   "question": "In polar coordinates, the velocity components are:",
+   "choices": [
+    "$v_r=\\dot r$, $v_\\theta=r\\dot\\theta$",
+    "$v_r=r\\dot\\theta$, $v_\\theta=\\dot r$",
+    "$v_r=\\dot r$, $v_\\theta=\\dot\\theta$",
+    "$v_r=r$, $v_\\theta=\\theta$"
+   ],
+   "answer": 0,
+   "explanation": "The radial part comes from the changing length of $r$. The transverse part comes from rotation of the position vector.",
+   "source": "Lecture 6 – r-θ Components"
+  },
+  {
+   "id": "e243-rk-01",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "short",
+   "question": "Name the types of plane rigid-body motion.",
+   "answer": "Translation (rectilinear or curvilinear), rotation about a fixed axis, and general plane motion (translation + rotation).",
+   "explanation": "In translation every point has the same $\\vec v$ and $\\vec a$, and $\\omega=0$.",
+   "source": "Lecture 7 – Translation & Fixed-Axis Rotation",
+   "keywords": [
+    "translation",
+    "fixed-axis rotation",
+    "general plane motion"
+   ]
+  },
+  {
+   "id": "e243-rk-02",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "tf",
+   "question": "In curvilinear translation, all points of the body move along identical (parallel) curved paths and the body does not rotate.",
+   "answer": true,
+   "explanation": "Example: a Ferris-wheel gondola that stays upright.",
+   "source": "Lecture 7 – Translation"
+  },
+  {
+   "id": "e243-rk-03",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "For a point at distance $r$ from a fixed rotation axis:",
+   "choices": [
+    "$v=r\\omega$, $a_t=r\\alpha$, $a_n=r\\omega^2$",
+    "$v=r\\alpha$, $a_t=r\\omega$, $a_n=r\\omega$",
+    "$v=\\omega/r$, $a_t=\\alpha/r$",
+    "$v=r\\omega^2$, $a_n=r\\omega$"
+   ],
+   "answer": 0,
+   "explanation": "Vector form: $\\vec v=\\vec\\omega\\times\\vec r$ and $\\vec a=\\vec\\alpha\\times\\vec r-\\omega^2\\vec r$.",
+   "source": "Lecture 7 – Fixed-Axis Rotation"
+  },
+  {
+   "id": "e243-rk-04",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "Two gears in mesh (radii $r_A$, $r_B$) satisfy:",
+   "choices": [
+    "$r_A\\omega_A=r_B\\omega_B$ (equal contact-point speed)",
+    "$\\omega_A=\\omega_B$",
+    "$r_B\\omega_A=r_A\\omega_B$",
+    "$\\omega_A+\\omega_B=0$ with equal magnitudes"
+   ],
+   "answer": 0,
+   "explanation": "Same for a belt with no slip: the belt speed equals $r\\omega$ on each pulley.",
+   "source": "Lecture 8 – Fixed-Axis Rotation Examples"
+  },
+  {
+   "id": "e243-rk-05",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "For general plane motion, the relative velocity equation is:",
+   "choices": [
+    "$\\vec v_B=\\vec v_A+\\vec\\omega\\times\\vec r_{B/A}$",
+    "$\\vec v_B=\\vec v_A+\\vec\\alpha\\times\\vec r_{B/A}$",
+    "$\\vec v_B=\\vec v_A-\\omega^2\\vec r_{B/A}$",
+    "$\\vec v_B=\\vec\\omega\\times\\vec v_A$"
+   ],
+   "answer": 0,
+   "explanation": "The motion of B relative to A is a pure rotation about A.",
+   "source": "Lecture 8 – General Plane Motion"
+  },
+  {
+   "id": "e243-rk-06",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "The instantaneous centre of zero velocity (IC) is located:",
+   "choices": [
+    "At the intersection of the lines perpendicular to the velocities of two points",
+    "At the centre of mass always",
+    "Where the acceleration is zero",
+    "At the midpoint between two points"
+   ],
+   "answer": 0,
+   "explanation": "Then $v_P=\\omega\\,r_{P/IC}$ for any point P, perpendicular to $\\vec r_{P/IC}$.",
+   "source": "Lecture 9 – IC Method"
+  },
+  {
+   "id": "e243-rk-07",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "tf",
+   "question": "The instantaneous centre has zero velocity AND zero acceleration at that instant.",
+   "answer": false,
+   "explanation": "Its acceleration is generally not zero. That's why the IC can't be used for accelerations.",
+   "source": "Lecture 9 – IC Method"
+  },
+  {
+   "id": "e243-rk-08",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "For a wheel of radius $r$ rolling without slipping, the centre O satisfies:",
+   "choices": [
+    "$v_O=r\\omega$, $a_O=r\\alpha$",
+    "$v_O=0$",
+    "$v_O=2r\\omega$",
+    "$a_O=r\\omega^2$"
+   ],
+   "answer": 0,
+   "explanation": "The contact point is the IC (velocity zero). Its acceleration is $r\\omega^2$, pointing up toward O.",
+   "source": "Lecture 9 – General Plane Motion"
+  },
+  {
+   "id": "e243-rk-09",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "The top point of a wheel rolling without slipping at centre speed $v$ moves at:",
+   "choices": [
+    "$2v$",
+    "$v$",
+    "0",
+    "$\\sqrt2\\,v$"
+   ],
+   "answer": 0,
+   "explanation": "It is $2r$ from the IC at the contact point.",
+   "source": "Lecture 9 – IC Method"
+  },
+  {
+   "id": "e243-rk-10",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "Relative acceleration in plane motion: $\\vec a_B=\\vec a_A+$",
+   "choices": [
+    "$\\vec\\alpha\\times\\vec r_{B/A}-\\omega^2\\vec r_{B/A}$",
+    "$\\vec\\omega\\times\\vec r_{B/A}$",
+    "$2\\vec\\omega\\times\\vec v_{rel}$",
+    "$\\omega^2\\vec r_{B/A}$"
+   ],
+   "answer": 0,
+   "explanation": "Tangential part $\\alpha r$ ⊥ $r_{B/A}$. Normal part $\\omega^2r$ points from B toward A.",
+   "source": "Lecture 9 – Acceleration"
+  },
+  {
+   "id": "e243-rk-11",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "mcq",
+   "question": "When a point moves relative to a rotating frame, the Coriolis acceleration is:",
+   "choices": [
+    "$2\\vec\\Omega\\times\\vec v_{rel}$",
+    "$\\vec\\Omega\\times\\vec r$",
+    "$\\Omega^2r$",
+    "$\\vec\\alpha\\times\\vec r$"
+   ],
+   "answer": 0,
+   "explanation": "$\\vec a_P=\\vec a_{P'}+\\vec a_{rel}+2\\vec\\Omega\\times\\vec v_{rel}$, where $P'$ is the coincident point of the rotating frame.",
+   "source": "Lecture 10 – Rotating Frames & Coriolis"
+  },
+  {
+   "id": "e243-rk-12",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "tf",
+   "question": "The Coriolis acceleration is zero if the collar has no velocity relative to the rotating rod, or if the rod is not rotating.",
+   "answer": true,
+   "explanation": "It needs both $\\Omega\\ne0$ and $v_{rel}\\ne0$ (and not parallel).",
+   "source": "Lecture 11 – Coriolis Acceleration"
+  },
+  {
+   "id": "e243-rk-13",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics (Ch 15)",
+   "type": "short",
+   "question": "When should you use the absolute-motion (analytical) method for a mechanism?",
+   "answer": "When the geometry gives a convenient position relation, e.g. $x=f(\\theta)$. Write the coordinate in terms of the angle and differentiate with respect to time (chain rule) to get $v$ and $a$ directly.",
+   "explanation": "This is an alternative to the relative-velocity and relative-acceleration vector equations.",
+   "source": "Lecture 10 – Absolute Motion",
+   "keywords": [
+    "position as function of angle",
+    "differentiate in time",
+    "chain rule"
+   ]
+  },
+  {
+   "id": "e243-nk-01",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "mcq",
+   "question": "Newton's second law for a particle in n–t coordinates gives, in the normal direction:",
+   "choices": [
+    "$\\sum F_n=mv^2/\\rho$",
+    "$\\sum F_n=m\\dot v$",
+    "$\\sum F_n=0$",
+    "$\\sum F_n=mv$"
+   ],
+   "answer": 0,
+   "explanation": "The tangential direction gives $\\sum F_t=m\\dot v$.",
+   "source": "Lecture 11b & 13 – Newton's Second Law"
+  },
+  {
+   "id": "e243-nk-02",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "tf",
+   "question": "Centrifugal force is a real force that should appear on a free-body diagram in an inertial frame.",
+   "answer": false,
+   "explanation": "In an inertial frame only real forces go on the FBD. $mv^2/\\rho$ belongs on the kinetic diagram ($m\\vec a$ side).",
+   "source": "Lecture 11b & 13 – Newton's Second Law"
+  },
+  {
+   "id": "e243-nk-03",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "mcq",
+   "question": "For a rigid body in plane motion, the equations of motion are:",
+   "choices": [
+    "$\\sum\\vec F=m\\vec a_G$ and $\\sum M_G=\\bar I\\alpha$",
+    "$\\sum\\vec F=0$ and $\\sum M=0$",
+    "$\\sum\\vec F=m\\vec a$ at any point and $\\sum M_O=0$",
+    "$\\sum M_G=m a_G$"
+   ],
+   "answer": 0,
+   "explanation": "Moments can also be taken about another point P: $\\sum M_P=\\bar I\\alpha+$ moment of $m\\vec a_G$ about P.",
+   "source": "Lecture 14 – Rigid Bodies – Forces & Acceleration"
+  },
+  {
+   "id": "e243-nk-04",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "tf",
+   "question": "For a rigid body in pure translation, $\\alpha=0$, so $\\sum M_G=0$, but moments about other points need not be zero.",
+   "answer": true,
+   "explanation": "About a point P: $\\sum M_P=$ moment of $m\\vec a_G$ about P.",
+   "source": "Lecture 14 – Translation"
+  },
+  {
+   "id": "e243-nk-05",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "mcq",
+   "question": "For rotation about a fixed axis through O (not through G), a convenient moment equation is:",
+   "choices": [
+    "$\\sum M_O=I_O\\alpha$, with $I_O=\\bar I+md^2$",
+    "$\\sum M_O=\\bar I\\alpha$",
+    "$\\sum M_O=0$",
+    "$\\sum M_O=m a_G d$ only"
+   ],
+   "answer": 0,
+   "explanation": "Using O eliminates the unknown pin reactions from the moment equation.",
+   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics"
+  },
+  {
+   "id": "e243-nk-06",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "mcq",
+   "question": "The parallel-axis theorem is:",
+   "choices": [
+    "$I=\\bar I+md^2$",
+    "$I=\\bar I-md^2$",
+    "$I=md^2$",
+    "$I=\\bar I\\,d^2$"
+   ],
+   "answer": 0,
+   "explanation": "$\\bar I$ is about the parallel centroidal axis, and $d$ is the distance between the axes.",
+   "source": "Lecture 15 – Fixed-Axis Rotation Kinetics"
+  },
+  {
+   "id": "e243-nk-07",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "short",
+   "question": "For a wheel rolling on a surface with friction, how do you decide between 'rolls without slipping' and 'slips'?",
+   "answer": "Assume no slip ($a_G=r\\alpha$), solve for the friction force $F$, then check $F\\le\\mu_sN$. If the check fails, it slips: use $F=\\mu_kN$ and treat $a_G$ and $\\alpha$ as independent.",
+   "explanation": "This is the standard assume-and-check procedure.",
+   "source": "Lecture 16 – Rolling with Friction",
+   "keywords": [
+    "assume no slip",
+    "a = rα",
+    "check F ≤ μs N",
+    "else F = μk N"
+   ]
+  },
+  {
+   "id": "e243-nk-08",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "mcq",
+   "question": "A disk pulled horizontally at its centre rolls without slipping. Static friction at the contact point:",
+   "choices": [
+    "Acts opposite to the pull and provides the moment that spins the disk up",
+    "Is always zero",
+    "Acts in the direction of the pull",
+    "Equals $\\mu_kN$"
+   ],
+   "answer": 0,
+   "explanation": "If friction were zero, the disk would slide without rotating.",
+   "source": "Lecture 16 – Rolling with Friction"
+  },
+  {
+   "id": "e243-nk-09",
+   "course": "engr243",
+   "topic": "Kinetics: Newton's 2nd law (Ch 12, 16)",
+   "type": "tf",
+   "question": "The mass moment of inertia of a thin ring about its central axis ($mr^2$) is larger than that of a solid disk of the same mass and radius ($\\tfrac12mr^2$).",
+   "answer": true,
+   "explanation": "The ring's mass sits farther from the axis, so it accelerates more slowly when rolling down an incline.",
+   "source": "Lecture 15 – Rotation Kinetics"
+  },
+  {
+   "id": "e243-we-01",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The principle of work and energy is:",
+   "choices": [
+    "$T_1+\\sum U_{1\\to2}=T_2$",
+    "$T_1=T_2$ always",
+    "$\\sum F=ma$",
+    "$m v_1+\\int F dt=mv_2$"
+   ],
+   "answer": 0,
+   "explanation": "$T=\\tfrac12mv^2$ for a particle. Work is a scalar, so no vector components are needed.",
+   "source": "Lecture 17 – Energy Method (Particles)"
+  },
+  {
+   "id": "e243-we-02",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The work done by a linear spring as it stretches from $x_1$ to $x_2$ is:",
+   "choices": [
+    "$-\\tfrac12k(x_2^2-x_1^2)$",
+    "$\\tfrac12k(x_2-x_1)^2$",
+    "$-k(x_2-x_1)$",
+    "$kx_2x_1$"
+   ],
+   "answer": 0,
+   "explanation": "$x$ is measured from the unstretched length. The potential energy is $V_e=\\tfrac12kx^2$.",
+   "source": "Lecture 17 – Energy Method (Particles)"
+  },
+  {
+   "id": "e243-we-03",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "tf",
+   "question": "The normal force on a particle sliding along a fixed surface does no work.",
+   "answer": true,
+   "explanation": "It is perpendicular to the displacement. Kinetic friction does negative work.",
+   "source": "Lecture 17 – Energy Method (Particles)"
+  },
+  {
+   "id": "e243-we-04",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "Conservation of energy $T_1+V_1=T_2+V_2$ applies when:",
+   "choices": [
+    "Only conservative forces (gravity, springs) do work",
+    "Friction is present",
+    "Any forces act",
+    "The body is at rest"
+   ],
+   "answer": 0,
+   "explanation": "Otherwise use $T_1+V_1+U^{nc}_{1\\to2}=T_2+V_2$.",
+   "source": "Lecture 17 – Energy Method (Particles)"
+  },
+  {
+   "id": "e243-we-05",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The kinetic energy of a rigid body in plane motion is:",
+   "choices": [
+    "$\\tfrac12m\\bar v^2+\\tfrac12\\bar I\\omega^2$",
+    "$\\tfrac12m\\bar v^2$ only",
+    "$\\tfrac12I\\omega$",
+    "$m\\bar v+\\bar I\\omega$"
+   ],
+   "answer": 0,
+   "explanation": "For fixed-axis rotation about O: $T=\\tfrac12I_O\\omega^2$. You can also use $\\tfrac12I_{IC}\\omega^2$.",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+  },
+  {
+   "id": "e243-we-06",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "tf",
+   "question": "For a wheel rolling without slipping, the friction force at the contact point does no work.",
+   "answer": true,
+   "explanation": "The contact point has zero velocity, so friction there does no work and energy is conserved if no other non-conservative forces act.",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+  },
+  {
+   "id": "e243-we-07",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "Power is:",
+   "choices": [
+    "$P=\\vec F\\cdot\\vec v$ (or $M\\omega$ for a couple)",
+    "$P=Fd$",
+    "$P=\\tfrac12mv^2$",
+    "$P=F/v$"
+   ],
+   "answer": 0,
+   "explanation": "Efficiency = output power ÷ input power.",
+   "source": "Lecture 17 – Energy Method"
+  },
+  {
+   "id": "e243-we-08",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "tf",
+   "question": "The work of a couple $M$ rotating through $\\Delta\\theta$ is $U=M\\Delta\\theta$ (for constant $M$).",
+   "answer": true,
+   "explanation": "Positive when $M$ and the rotation are in the same direction.",
+   "source": "Lecture 18 – Energy Method (Rigid Bodies)"
+  },
+  {
+   "id": "e243-we-09",
+   "course": "engr243",
+   "topic": "Work & energy (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The gravitational potential energy of a body near Earth's surface is:",
+   "choices": [
+    "$V_g=Wy$, with $y$ measured upward from a datum",
+    "$V_g=-Wy$",
+    "$V_g=\\tfrac12Wy^2$",
+    "$V_g=mg/y$"
+   ],
+   "answer": 0,
+   "explanation": "The datum is arbitrary because only changes matter.",
+   "source": "Lecture 17 – Energy Method"
+  },
+  {
+   "id": "e243-im-01",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The principle of linear impulse and momentum for a particle is:",
+   "choices": [
+    "$m\\vec v_1+\\sum\\int_{t_1}^{t_2}\\vec F\\,dt=m\\vec v_2$",
+    "$T_1+U=T_2$",
+    "$\\vec F=m\\vec a$",
+    "$m v_1^2+Ft=mv_2^2$"
+   ],
+   "answer": 0,
+   "explanation": "It's a vector equation, so use components. Best when forces act over a known time.",
+   "source": "Lecture 19 – Impulse & Momentum (Particles)"
+  },
+  {
+   "id": "e243-im-02",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "Linear momentum of a system is conserved when:",
+   "choices": [
+    "The net external impulse on the system is zero",
+    "Energy is conserved",
+    "The bodies stick together",
+    "Friction is absent between the bodies"
+   ],
+   "answer": 0,
+   "explanation": "Internal forces cancel in pairs. Momentum can be conserved in one direction even if not in another.",
+   "source": "Lecture 19 – Impulse & Momentum"
+  },
+  {
+   "id": "e243-im-03",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The coefficient of restitution $e$ for a direct central impact is:",
+   "choices": [
+    "$e=\\dfrac{v_B'-v_A'}{v_A-v_B}$ (separation speed ÷ approach speed)",
+    "$e=\\dfrac{v_A-v_B}{v_B'-v_A'}$",
+    "$e=v_A'/v_A$",
+    "$e=T_2/T_1$"
+   ],
+   "answer": 0,
+   "explanation": "$e=1$ perfectly elastic. $e=0$ perfectly plastic (bodies stick).",
+   "source": "Lecture 22 – Conservation & Restitution"
+  },
+  {
+   "id": "e243-im-04",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "tf",
+   "question": "In a perfectly elastic impact ($e=1$), kinetic energy is conserved.",
+   "answer": true,
+   "explanation": "For $e<1$, some kinetic energy is lost to deformation, heat and sound.",
+   "source": "Lecture 22 – Restitution"
+  },
+  {
+   "id": "e243-im-05",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "tf",
+   "question": "In an oblique central impact of two smooth spheres, momentum of each sphere is conserved separately along the tangent to the contact plane.",
+   "answer": true,
+   "explanation": "Along the line of impact, use total momentum conservation plus the restitution equation.",
+   "source": "Lecture 22 – Restitution"
+  },
+  {
+   "id": "e243-im-06",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "The angular momentum of a rigid body in plane motion about its mass centre is:",
+   "choices": [
+    "$H_G=\\bar I\\omega$",
+    "$H_G=m\\bar v$",
+    "$H_G=\\tfrac12\\bar I\\omega^2$",
+    "$H_G=\\bar I\\alpha$"
+   ],
+   "answer": 0,
+   "explanation": "About a fixed axis O: $H_O=I_O\\omega$.",
+   "source": "Lecture 21 – Angular Momentum Method"
+  },
+  {
+   "id": "e243-im-07",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "Angular momentum about a point O is conserved when:",
+   "choices": [
+    "The net angular impulse of external forces about O is zero",
+    "Linear momentum is conserved",
+    "There is no friction anywhere",
+    "The body is in translation"
+   ],
+   "answer": 0,
+   "explanation": "Example: a body pinned at O struck by a projectile. The large unknown pin impulse has no moment about O.",
+   "source": "Lecture 22 – Conservation"
+  },
+  {
+   "id": "e243-im-08",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "short",
+   "question": "When should you choose impulse–momentum over work–energy?",
+   "answer": "When the problem involves time (forces acting over a given time interval), impulsive forces such as impacts, or when velocities before and after are related but distances aren't known. Work–energy suits problems relating speed to position or distance.",
+   "explanation": "Impact problems need momentum, because energy is not conserved in impacts unless $e=1$.",
+   "source": "Lecture 19 – Impulse & Momentum",
+   "keywords": [
+    "time",
+    "impacts",
+    "energy for distance"
+   ]
+  },
+  {
+   "id": "e243-im-09",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "tf",
+   "question": "During a short impact, non-impulsive forces such as body weight and spring forces can usually be neglected.",
+   "answer": true,
+   "explanation": "Their impulse $F\\Delta t$ is negligible because $\\Delta t\\to0$, unlike the large impact force.",
+   "source": "Lecture 19 – Impulse & Momentum"
+  },
+  {
+   "id": "e243-im-10",
+   "course": "engr243",
+   "topic": "Impulse & momentum (Ch 13, 17)",
+   "type": "mcq",
+   "question": "A figure skater pulls her arms in while spinning. Her angular velocity:",
+   "choices": [
+    "Increases, because $I\\omega$ is conserved and $I$ decreases",
+    "Decreases",
+    "Stays the same",
+    "Drops to zero"
+   ],
+   "answer": 0,
+   "explanation": "Her kinetic energy actually increases, from the work her muscles do.",
+   "source": "Lecture 22 – Conservation"
+  },
+  {
+   "id": "e311-lt-01",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "mcq",
+   "question": "The Laplace transform of $f(t)$ is defined as:",
+   "choices": [
+    "$\\int_0^\\infty e^{-st}f(t)\\,dt$",
+    "$\\int_{-\\infty}^\\infty e^{-st}f(t)\\,dt$",
+    "$\\int_0^\\infty e^{st}f(t)\\,dt$",
+    "$\\int_0^t e^{-s\\tau}f(\\tau)\\,d\\tau$"
+   ],
+   "answer": 0,
+   "explanation": "It is an improper integral that converges for $s$ large enough.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-02",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "short",
+   "question": "State sufficient conditions for $\\mathcal L\\{f(t)\\}$ to exist for $s>c$.",
+   "answer": "$f$ is piecewise continuous on $[0,\\infty)$ and of exponential order $c$: $|f(t)|\\le Me^{ct}$ for $t>T$.",
+   "explanation": "These are sufficient, not necessary. $t^{-1/2}$ has a transform even though it isn't piecewise continuous at 0.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "keywords": [
+    "piecewise continuous",
+    "exponential order"
+   ]
+  },
+  {
+   "id": "e311-lt-03",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "tf",
+   "question": "$f(t)=e^{t^2}$ has a Laplace transform.",
+   "answer": false,
+   "explanation": "It grows faster than any $e^{ct}$, so it is not of exponential order and the integral diverges.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-04",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{t^n\\}$ for $n=0,1,2,\\dots$ is:",
+   "choices": [
+    "$\\dfrac{n!}{s^{n+1}}$",
+    "$\\dfrac{n!}{s^n}$",
+    "$\\dfrac{1}{s^{n+1}}$",
+    "$\\dfrac{(n+1)!}{s^{n+1}}$"
+   ],
+   "answer": 0,
+   "explanation": "For example, $\\mathcal L\\{1\\}=1/s$ and $\\mathcal L\\{t\\}=1/s^2$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-05",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{\\sin kt\\}$ is:",
+   "choices": [
+    "$\\dfrac{k}{s^2+k^2}$",
+    "$\\dfrac{s}{s^2+k^2}$",
+    "$\\dfrac{k}{s^2-k^2}$",
+    "$\\dfrac{1}{s^2+k^2}$"
+   ],
+   "answer": 0,
+   "explanation": "$\\mathcal L\\{\\cos kt\\}=s/(s^2+k^2)$. Sinh and cosh have $s^2-k^2$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-06",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{e^{at}\\}$ is:",
+   "choices": [
+    "$\\dfrac{1}{s-a}$, for $s>a$",
+    "$\\dfrac{1}{s+a}$",
+    "$\\dfrac{a}{s-a}$",
+    "$\\dfrac{s}{s-a}$"
+   ],
+   "answer": 0,
+   "explanation": "Integrate $e^{-(s-a)t}$ from 0 to ∞. It converges only when $s>a$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-07",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "tf",
+   "question": "The Laplace transform is linear: $\\mathcal L\\{\\alpha f+\\beta g\\}=\\alpha F(s)+\\beta G(s)$.",
+   "answer": true,
+   "explanation": "Linearity, together with the inverse transform, is what makes partial fractions work.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-08",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "tf",
+   "question": "$\\mathcal L\\{f(t)g(t)\\}=F(s)G(s)$.",
+   "answer": false,
+   "explanation": "The transform of a product is NOT the product of transforms. $F(s)G(s)$ is the transform of the convolution $f*g$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-lt-09",
+   "course": "engr311",
+   "topic": "Laplace basics",
+   "type": "tf",
+   "question": "If $f$ is piecewise continuous and of exponential order, then $F(s)\\to0$ as $s\\to\\infty$.",
+   "answer": true,
+   "explanation": "So a function like $F(s)=s/(s+1)$ cannot be the transform of such an $f$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dv-01",
+   "course": "engr311",
+   "topic": "Transforms of derivatives & IVPs",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{y''(t)\\}$ equals:",
+   "choices": [
+    "$s^2Y(s)-sy(0)-y'(0)$",
+    "$s^2Y(s)-y(0)-sy'(0)$",
+    "$s^2Y(s)+sy(0)+y'(0)$",
+    "$sY(s)-y(0)$"
+   ],
+   "answer": 0,
+   "explanation": "In general: $\\mathcal L\\{f^{(n)}\\}=s^nF-s^{n-1}f(0)-\\dots-f^{(n-1)}(0)$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dv-02",
+   "course": "engr311",
+   "topic": "Transforms of derivatives & IVPs",
+   "type": "short",
+   "question": "Outline the steps for solving a linear constant-coefficient IVP with the Laplace transform.",
+   "answer": "1) Transform both sides, using the derivative formula with the initial conditions. 2) Solve the algebraic equation for $Y(s)$. 3) Use partial fractions or the theorems to find $y(t)=\\mathcal L^{-1}\\{Y(s)\\}$.",
+   "explanation": "The initial conditions go in at step 1, so you never solve for arbitrary constants.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "keywords": [
+    "transform",
+    "solve for Y(s)",
+    "inverse transform"
+   ]
+  },
+  {
+   "id": "e311-dv-03",
+   "course": "engr311",
+   "topic": "Transforms of derivatives & IVPs",
+   "type": "tf",
+   "question": "The Laplace method builds the initial conditions in automatically, so no constants need to be fitted at the end.",
+   "answer": true,
+   "explanation": "That is its main advantage over undetermined coefficients for IVPs.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dv-04",
+   "course": "engr311",
+   "topic": "Transforms of derivatives & IVPs",
+   "type": "mcq",
+   "question": "$\\mathcal L\\left\\{\\int_0^t f(\\tau)\\,d\\tau\\right\\}$ equals:",
+   "choices": [
+    "$F(s)/s$",
+    "$sF(s)$",
+    "$F(s)-f(0)$",
+    "$F'(s)$"
+   ],
+   "answer": 0,
+   "explanation": "This is the special case $g=1$ of the convolution theorem.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-tr-01",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "First translation theorem: $\\mathcal L\\{e^{at}f(t)\\}=$",
    "choices": [
     "$F(s-a)$",
     "$F(s+a)$",
     "$e^{-as}F(s)$",
-    "$\\dfrac{F(s)}{s-a}$"
+    "$e^{as}F(s)$"
    ],
    "answer": 0,
-   "explanation": "First translation theorem: multiplying by e^{at} shifts the transform to F(s − a).",
-   "source": "Sample (Zill §4.3)"
+   "explanation": "Multiplying by an exponential in $t$ shifts the transform along the $s$-axis.",
+   "source": "Ch 4 slides – The Laplace Transform"
   },
   {
-   "id": "e311-s02",
+   "id": "e311-tr-02",
    "course": "engr311",
-   "topic": "Laplace transform",
-   "type": "tf",
-   "question": "$\\mathcal{L}\\{f(t-a)\\,\\mathcal{U}(t-a)\\} = e^{-as}F(s)$ for $a > 0$.",
-   "answer": true,
-   "explanation": "Second translation theorem: a delay of a in time multiplies the transform by e^{−as}.",
-   "source": "Sample (Zill §4.3)"
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{e^{-2t}\\cos3t\\}$ is:",
+   "choices": [
+    "$\\dfrac{s+2}{(s+2)^2+9}$",
+    "$\\dfrac{s-2}{(s-2)^2+9}$",
+    "$\\dfrac{s}{(s+2)^2+9}$",
+    "$\\dfrac{3}{(s+2)^2+9}$"
+   ],
+   "answer": 0,
+   "explanation": "Take $s/(s^2+9)$ and replace $s$ with $s+2$ everywhere.",
+   "source": "Ch 4 slides – The Laplace Transform"
   },
   {
-   "id": "e311-s03",
+   "id": "e311-tr-03",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "The unit step function $\\mathcal U(t-a)$ equals:",
+   "choices": [
+    "0 for $0\\le t<a$ and 1 for $t\\ge a$",
+    "1 for $t<a$ and 0 for $t\\ge a$",
+    "1 only at $t=a$",
+    "$t-a$ for $t\\ge a$"
+   ],
+   "answer": 0,
+   "explanation": "$\\mathcal L\\{\\mathcal U(t-a)\\}=e^{-as}/s$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-tr-04",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "Second translation theorem: $\\mathcal L\\{f(t-a)\\mathcal U(t-a)\\}=$",
+   "choices": [
+    "$e^{-as}F(s)$",
+    "$F(s-a)$",
+    "$e^{as}F(s)$",
+    "$F(s)/s$"
+   ],
+   "answer": 0,
+   "explanation": "A delay of $a$ in time multiplies the transform by $e^{-as}$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-tr-05",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "The alternative form of the second translation theorem is $\\mathcal L\\{g(t)\\mathcal U(t-a)\\}=$",
+   "choices": [
+    "$e^{-as}\\mathcal L\\{g(t+a)\\}$",
+    "$e^{-as}\\mathcal L\\{g(t)\\}$",
+    "$\\mathcal L\\{g(t-a)\\}$",
+    "$e^{as}\\mathcal L\\{g(t+a)\\}$"
+   ],
+   "answer": 0,
+   "explanation": "Useful when $g$ is not already written as a shifted function, e.g. $t^2\\,\\mathcal U(t-1)$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-tr-06",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "short",
+   "question": "Write $f(t)=\\begin{cases}2 & 0\\le t<3\\\\ -1 & t\\ge3\\end{cases}$ using unit step functions.",
+   "answer": "$f(t)=2-3\\,\\mathcal U(t-3)$",
+   "explanation": "Start with the first piece, then at each break add (new piece − old piece) × $\\mathcal U(t-a)$.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "keywords": [
+    "2 − 3U(t−3)"
+   ]
+  },
+  {
+   "id": "e311-tr-07",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "mcq",
+   "question": "$\\mathcal L^{-1}\\left\\{\\dfrac{e^{-2s}}{s^2}\\right\\}$ is:",
+   "choices": [
+    "$(t-2)\\,\\mathcal U(t-2)$",
+    "$t\\,\\mathcal U(t-2)$",
+    "$e^{-2t}t$",
+    "$(t+2)\\,\\mathcal U(t-2)$"
+   ],
+   "answer": 0,
+   "explanation": "$\\mathcal L^{-1}\\{1/s^2\\}=t$, then shift by 2 and switch on at $t=2$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-tr-08",
+   "course": "engr311",
+   "topic": "Translation theorems",
+   "type": "tf",
+   "question": "To invert $\\dfrac{1}{s^2+4s+13}$, complete the square to $(s+2)^2+9$ and use the first translation theorem.",
+   "answer": true,
+   "explanation": "The result is $\\tfrac13e^{-2t}\\sin3t$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-op-01",
+   "course": "engr311",
+   "topic": "Operational properties",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{t\\,f(t)\\}$ equals:",
+   "choices": [
+    "$-\\dfrac{d}{ds}F(s)$",
+    "$\\dfrac{d}{ds}F(s)$",
+    "$sF(s)$",
+    "$F(s)/s$"
+   ],
+   "answer": 0,
+   "explanation": "In general $\\mathcal L\\{t^nf\\}=(-1)^nF^{(n)}(s)$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-op-02",
+   "course": "engr311",
+   "topic": "Operational properties",
+   "type": "mcq",
+   "question": "The convolution $f*g$ is defined as:",
+   "choices": [
+    "$\\int_0^t f(\\tau)g(t-\\tau)\\,d\\tau$",
+    "$\\int_0^\\infty f(\\tau)g(\\tau)\\,d\\tau$",
+    "$f(t)g(t)$",
+    "$\\int_0^t f(\\tau)g(\\tau)\\,d\\tau$"
+   ],
+   "answer": 0,
+   "explanation": "Convolution theorem: $\\mathcal L\\{f*g\\}=F(s)G(s)$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-op-03",
+   "course": "engr311",
+   "topic": "Operational properties",
+   "type": "tf",
+   "question": "Convolution is commutative: $f*g=g*f$.",
+   "answer": true,
+   "explanation": "Substitute $u=t-\\tau$ in the integral to show it.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-op-04",
+   "course": "engr311",
+   "topic": "Operational properties",
+   "type": "short",
+   "question": "What kind of equation is $f(t)=g(t)+\\int_0^t f(\\tau)h(t-\\tau)d\\tau$, and how does Laplace solve it?",
+   "answer": "A Volterra integral equation. The integral is a convolution, so transforming gives $F=G+FH$, which solves to $F=G/(1-H)$. Then invert.",
+   "explanation": "The same approach works for integro-differential equations such as LRC circuits.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "keywords": [
+    "Volterra",
+    "convolution",
+    "F = G/(1−H)"
+   ]
+  },
+  {
+   "id": "e311-op-05",
+   "course": "engr311",
+   "topic": "Operational properties",
+   "type": "mcq",
+   "question": "If $f$ is periodic with period $T$, then $\\mathcal L\\{f\\}=$",
+   "choices": [
+    "$\\dfrac{1}{1-e^{-sT}}\\int_0^T e^{-st}f(t)\\,dt$",
+    "$\\int_0^T e^{-st}f(t)\\,dt$",
+    "$\\dfrac{1}{1+e^{-sT}}\\int_0^T e^{-st}f(t)\\,dt$",
+    "$T\\int_0^T e^{-st}f(t)\\,dt$"
+   ],
+   "answer": 0,
+   "explanation": "You only integrate over one period.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dd-01",
+   "course": "engr311",
+   "topic": "Dirac delta & systems",
+   "type": "mcq",
+   "question": "$\\mathcal L\\{\\delta(t-t_0)\\}$ for $t_0>0$ is:",
+   "choices": [
+    "$e^{-st_0}$",
+    "$1/s$",
+    "$e^{-st_0}/s$",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "For $t_0=0$: $\\mathcal L\\{\\delta(t)\\}=1$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dd-02",
+   "course": "engr311",
+   "topic": "Dirac delta & systems",
+   "type": "tf",
+   "question": "The Dirac delta is an ordinary function that equals $\\infty$ at $t_0$ and 0 elsewhere, with $\\int_0^\\infty\\delta(t-t_0)dt=1$.",
+   "answer": false,
+   "explanation": "It is not a function in the usual sense. It's a generalized function, defined as a limit of unit impulses or by its sifting property $\\int f(t)\\delta(t-t_0)dt=f(t_0)$.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-dd-03",
+   "course": "engr311",
+   "topic": "Dirac delta & systems",
+   "type": "short",
+   "question": "What physical situation does $\\delta(t-t_0)$ model on the right side of a spring–mass equation?",
+   "answer": "A sudden impulse (a large force acting for a very short time, e.g. a hammer blow) at $t=t_0$, with total impulse 1.",
+   "explanation": "The response jumps in velocity at $t_0$ while the displacement stays continuous.",
+   "source": "Ch 4 slides – The Laplace Transform",
+   "keywords": [
+    "impulse",
+    "short time",
+    "hammer blow"
+   ]
+  },
+  {
+   "id": "e311-dd-04",
+   "course": "engr311",
+   "topic": "Dirac delta & systems",
+   "type": "tf",
+   "question": "The Laplace transform turns a system of linear ODEs with constant coefficients into a system of algebraic equations in $X(s)$, $Y(s)$.",
+   "answer": true,
+   "explanation": "Solve with elimination or Cramer's rule, then invert each one.",
+   "source": "Ch 4 slides – The Laplace Transform"
+  },
+  {
+   "id": "e311-of-01",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "mcq",
+   "question": "Two functions $f_1$, $f_2$ are orthogonal on $[a,b]$ if:",
+   "choices": [
+    "$\\int_a^b f_1f_2\\,dx=0$",
+    "$f_1(x)f_2(x)=0$ for all $x$",
+    "$\\int_a^b (f_1+f_2)\\,dx=0$",
+    "$f_1'=f_2$"
+   ],
+   "answer": 0,
+   "explanation": "This is the inner product $(f_1,f_2)$ for real functions.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-02",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "tf",
+   "question": "$f_1=x^2$ and $f_2=x^3$ are orthogonal on $[-1,1]$.",
+   "answer": true,
+   "explanation": "$\\int_{-1}^1x^5dx=0$ because $x^5$ is odd on a symmetric interval.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-03",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "mcq",
+   "question": "The norm of $\\phi_n$ on $[a,b]$ is:",
+   "choices": [
+    "$\\|\\phi_n\\|=\\sqrt{\\int_a^b\\phi_n^2\\,dx}$",
+    "$\\int_a^b\\phi_n\\,dx$",
+    "$\\int_a^b\\phi_n^2\\,dx$",
+    "$\\max|\\phi_n|$"
+   ],
+   "answer": 0,
+   "explanation": "$\\|\\phi_n\\|^2$ is the square norm. A set with all norms equal to 1 is orthonormal.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-04",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "mcq",
+   "question": "On $[-\\pi,\\pi]$, $\\|\\cos nx\\|$ for $n\\ge1$ equals:",
+   "choices": [
+    "$\\sqrt\\pi$",
+    "$\\pi$",
+    "$\\sqrt{2\\pi}$",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "$\\int_{-\\pi}^{\\pi}\\cos^2nx\\,dx=\\pi$. The member $\\phi_0=1$ is different: its norm is $\\sqrt{2\\pi}$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-05",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "mcq",
+   "question": "In an orthogonal series expansion $f=\\sum c_n\\phi_n$, the coefficients are:",
+   "choices": [
+    "$c_n=\\dfrac{(f,\\phi_n)}{\\|\\phi_n\\|^2}$",
+    "$c_n=(f,\\phi_n)$",
+    "$c_n=\\|\\phi_n\\|^2$",
+    "$c_n=f(n)$"
+   ],
+   "answer": 0,
+   "explanation": "Multiply by $\\phi_m$ and integrate. Orthogonality kills every term except $n=m$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-06",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "tf",
+   "question": "A set $\\{\\phi_n\\}$ is orthogonal with respect to a weight function $w(x)$ if $\\int_a^b w\\,\\phi_m\\phi_n\\,dx=0$ for $m\\ne n$.",
+   "answer": true,
+   "explanation": "Weight functions show up in Sturm–Liouville problems (e.g. Bessel with $w=x$).",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-of-07",
+   "course": "engr311",
+   "topic": "Orthogonal functions",
+   "type": "short",
+   "question": "What is the classic trap when computing $\\int\\cos mx\\cos nx\\,dx$ with product-to-sum formulas?",
+   "answer": "Dividing by $m-n$ when $m=n$. The $m=n$ case (the norm) must be done separately using $\\cos^2\\theta=\\tfrac12(1+\\cos2\\theta)$. Special members like $\\phi_0=1$ also need separate handling.",
+   "explanation": "Straight from the Midterm 2 procedures sheet.",
+   "source": "Midterm 2 procedures sheet",
+   "keywords": [
+    "m = n separately",
+    "don't divide by m−n",
+    "φ0 special"
+   ]
+  },
+  {
+   "id": "e311-fs-01",
    "course": "engr311",
    "topic": "Fourier series",
    "type": "mcq",
-   "question": "The Fourier series of an odd function on (−p, p) contains:",
+   "question": "For the Fourier series of $f$ on $(-p,p)$, the coefficient $a_n$ is:",
    "choices": [
+    "$\\dfrac1p\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
+    "$\\dfrac{1}{2p}\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
+    "$\\dfrac2p\\int_{-p}^pf(x)\\cos\\dfrac{n\\pi x}{p}dx$",
+    "$\\int_{-p}^pf(x)\\cos(nx)dx$"
+   ],
+   "answer": 0,
+   "explanation": "$a_0=\\frac1p\\int f$, and the series starts with $a_0/2$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-fs-02",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "tf",
+   "question": "The series $\\frac{a_0}2+\\sum(a_n\\cos\\frac{n\\pi x}p+b_n\\sin\\frac{n\\pi x}p)$ uses $a_0/2$ so that the same formula for $a_n$ works at $n=0$.",
+   "answer": true,
+   "explanation": "So the constant term is the average value of $f$ over the interval.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-fs-03",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "At a jump discontinuity $x=c$, the Fourier series of a piecewise-smooth $f$ converges to:",
+   "choices": [
+    "$\\dfrac{f(c^+)+f(c^-)}{2}$",
+    "$f(c^+)$",
+    "$f(c^-)$",
+    "0"
+   ],
+   "answer": 0,
+   "explanation": "At points where $f$ is continuous, it converges to $f(c)$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-fs-04",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "At the endpoint $x=p$ of $(-p,p)$, the full Fourier series converges to:",
+   "choices": [
+    "$\\dfrac{f(-p^+)+f(p^-)}{2}$",
+    "$f(p)$",
+    "0",
+    "$f(0)$"
+   ],
+   "answer": 0,
+   "explanation": "The periodic extension joins the end of the interval to its start.",
+   "source": "Midterm 2 procedures sheet"
+  },
+  {
+   "id": "e311-fs-05",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "If $f$ is even on $(-p,p)$, its Fourier series contains:",
+   "choices": [
+    "Only $a_0$ and cosine terms ($b_n=0$)",
     "Only sine terms",
-    "Only cosine terms and a₀",
     "Both sines and cosines",
-    "Only a₀"
+    "Only $a_0$"
    ],
    "answer": 0,
-   "explanation": "f(x)cos(nπx/p) is odd so every aₙ (and a₀) integrates to zero, leaving a sine series.",
-   "source": "Sample (general knowledge)"
+   "explanation": "$a_n=\\frac2p\\int_0^pf\\cos\\frac{n\\pi x}p dx$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
   },
   {
-   "id": "e311-s04",
+   "id": "e311-fs-06",
    "course": "engr311",
-   "topic": "PDEs",
-   "type": "short",
-   "question": "Name the 1-D heat equation and the 1-D wave equation, and say which one is parabolic and which is hyperbolic.",
-   "answer": "Heat: k u_xx = u_t (parabolic). Wave: a² u_xx = u_tt (hyperbolic).",
-   "keywords": [
-    "u_t = k u_xx",
-    "u_tt = a² u_xx",
-    "parabolic / hyperbolic"
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "The product of two odd functions is:",
+   "choices": [
+    "Even",
+    "Odd",
+    "Neither",
+    "Zero"
    ],
-   "explanation": "Classified by B² − 4AC: heat gives 0 (parabolic), wave gives a positive value (hyperbolic).",
-   "source": "Sample (general knowledge)"
+   "answer": 0,
+   "explanation": "even × even = even, odd × odd = even, even × odd = odd.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
   },
   {
-   "id": "e311-s05",
+   "id": "e311-fs-07",
    "course": "engr311",
-   "topic": "Laplace transform",
+   "topic": "Fourier series",
    "type": "tf",
-   "question": "$\\mathcal{L}\\{\\delta(t - t_0)\\} = e^{-s t_0}$ for $t_0 \\ge 0$.",
+   "question": "If $f$ is odd, then $\\int_{-a}^af(x)dx=0$.",
    "answer": true,
-   "explanation": "Sifting property of the Dirac delta.",
-   "source": "Sample (Zill §4.5)"
+   "explanation": "For even $f$: $\\int_{-a}^a f=2\\int_0^af$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
   },
   {
-   "id": "e243-s01",
-   "course": "engr243",
-   "topic": "Kinematics of particles",
+   "id": "e311-fs-08",
+   "course": "engr311",
+   "topic": "Fourier series",
    "type": "mcq",
-   "question": "For a particle moving on a curved path at constant speed, its acceleration is:",
+   "question": "Which function is neither even nor odd?",
    "choices": [
-    "Directed toward the centre of curvature, magnitude v²/ρ",
-    "Zero",
-    "Tangent to the path",
-    "Directed away from the centre of curvature"
+    "$x+x^2$",
+    "$|x|$",
+    "$x^3$",
+    "$\\cos x$"
    ],
    "answer": 0,
-   "explanation": "Constant speed means aₜ = 0, but aₙ = v²/ρ points to the centre of curvature.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Its even part ($x^2$) contributes to $a_n$ and its odd part ($x$) contributes to $b_n$.",
+   "source": "Midterm 2 procedures sheet"
   },
   {
-   "id": "e243-s02",
-   "course": "engr243",
-   "topic": "Work & energy",
+   "id": "e311-fs-09",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "The Gibbs phenomenon refers to:",
+   "choices": [
+    "A persistent overshoot of about 9% near a jump that narrows but does not shrink as more terms are added",
+    "The series diverging at a jump",
+    "Slow convergence of smooth functions",
+    "The series converging to the wrong function"
+   ],
+   "answer": 0,
+   "explanation": "The overshoot never goes away, even as $N\\to\\infty$.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-fs-10",
+   "course": "engr311",
+   "topic": "Fourier series",
    "type": "tf",
-   "question": "The work done by friction on a block sliding on a fixed surface depends on the path taken.",
+   "question": "A Fourier sine series always gives 0 at $x=0$ and $x=\\pm p$.",
    "answer": true,
-   "explanation": "Friction is non-conservative: its work depends on path length.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Every term $\\sin(n\\pi x/p)$ vanishes there. (Procedures sheet)",
+   "source": "Midterm 2 procedures sheet"
   },
   {
-   "id": "e243-s03",
-   "course": "engr243",
-   "topic": "Impulse & momentum",
+   "id": "e311-fs-11",
+   "course": "engr311",
+   "topic": "Fourier series",
    "type": "short",
-   "question": "State the condition under which the linear momentum of a system of particles is conserved.",
-   "answer": "When the resultant external force (impulse) on the system is zero over the interval.",
+   "question": "Name the three half-range expansions of $f$ defined on $(0,L)$ and the extension each one uses.",
+   "answer": "Cosine series (even extension to $(-L,0)$), sine series (odd extension), and full Fourier series (the function repeats with period $L$, i.e. $p=L/2$).",
+   "explanation": "You only integrate over $(0,L)$, with $p=L$ for cosine or sine.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series",
    "keywords": [
-    "sum of external forces = 0",
-    "internal forces cancel"
-   ],
-   "explanation": "Internal forces occur in equal and opposite pairs, so only external impulse changes total momentum.",
-   "source": "Sample (general knowledge)"
+    "cosine/even",
+    "sine/odd",
+    "full/period L"
+   ]
   },
   {
-   "id": "e243-s04",
-   "course": "engr243",
-   "topic": "Rigid-body kinematics",
+   "id": "e311-fs-12",
+   "course": "engr311",
+   "topic": "Fourier series",
    "type": "mcq",
-   "question": "A wheel rolls without slipping. The velocity of the contact point with the ground is:",
+   "question": "To evaluate a numerical sum like $1-\\frac13+\\frac15-\\dots$ from a Fourier series, you:",
    "choices": [
-    "Zero",
-    "ωr forward",
-    "2ωr forward",
-    "ωr backward"
+    "Plug a convenient $x$ (e.g. 0, $p/2$, $p$) into the series and use the convergence theorem for the left side",
+    "Differentiate the series",
+    "Integrate the series from 0 to $p$",
+    "Set $n=1$"
    ],
    "answer": 0,
-   "explanation": "No slip means the contact point is the instantaneous centre of zero velocity.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Choose $x$ so that $\\cos$ or $\\sin$ gives a clean pattern ($1$, $(-1)^n$, $1,0,-1,0$).",
+   "source": "Midterm 2 procedures sheet"
   },
   {
-   "id": "e243-s05",
-   "course": "engr243",
-   "topic": "Impulse & momentum",
+   "id": "e311-fs-13",
+   "course": "engr311",
+   "topic": "Fourier series",
    "type": "tf",
-   "question": "In a perfectly plastic impact the coefficient of restitution is e = 1.",
+   "question": "The complex Fourier series is $\\sum_{n=-\\infty}^\\infty c_ne^{in\\pi x/p}$ with $c_n=\\frac1{2p}\\int_{-p}^pf(x)e^{-in\\pi x/p}dx$.",
+   "answer": true,
+   "explanation": "It is equivalent to the real form, using Euler's formula.",
+   "source": "Ch 12 slides – Orthogonal Functions & Fourier Series"
+  },
+  {
+   "id": "e311-fs-14",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "$\\sin n\\pi$ and $\\cos n\\pi$ for integer $n$ equal:",
+   "choices": [
+    "$0$ and $(-1)^n$",
+    "$(-1)^n$ and $0$",
+    "$1$ and $0$",
+    "$0$ and $1$"
+   ],
+   "answer": 0,
+   "explanation": "This is the most common simplification step when computing coefficients.",
+   "source": "Midterm 2 procedures sheet"
+  },
+  {
+   "id": "e311-pd-01",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "The 1-D heat equation is:",
+   "choices": [
+    "$k\\,u_{xx}=u_t$",
+    "$a^2u_{xx}=u_{tt}$",
+    "$u_{xx}+u_{yy}=0$",
+    "$u_t+u_x=0$"
+   ],
+   "answer": 0,
+   "explanation": "The wave equation is $a^2u_{xx}=u_{tt}$ and Laplace's equation is $u_{xx}+u_{yy}=0$.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-02",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "Classify by $B^2-4AC$: the heat, wave and Laplace equations are respectively:",
+   "choices": [
+    "Parabolic, hyperbolic, elliptic",
+    "Elliptic, parabolic, hyperbolic",
+    "Hyperbolic, elliptic, parabolic",
+    "All parabolic"
+   ],
+   "answer": 0,
+   "explanation": "$B^2-4AC=0$ parabolic, $>0$ hyperbolic, $<0$ elliptic.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-03",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "short",
+   "question": "Describe the method of separation of variables for a linear PDE.",
+   "answer": "Assume $u(x,t)=X(x)T(t)$, substitute, and divide so each side depends on one variable. Set both sides equal to a separation constant $-\\lambda$. Solve the resulting ODEs, using the homogeneous BCs to get eigenvalues and eigenfunctions. Superpose the product solutions and fit the initial condition with a Fourier series.",
+   "explanation": "In this course the separation constant is written as $-\\lambda$, and you check the cases $\\lambda=0$, $\\lambda=-\\alpha^2$ and $\\lambda=\\alpha^2$.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "keywords": [
+    "u = XT",
+    "separation constant −λ",
+    "eigenvalues",
+    "superposition",
+    "Fourier coefficients"
+   ]
+  },
+  {
+   "id": "e311-pd-04",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "tf",
+   "question": "The superposition principle says that if $u_1,\\dots,u_k$ solve a homogeneous linear PDE, then any linear combination does too.",
+   "answer": true,
+   "explanation": "This is why the series $\\sum A_n X_n T_n$ is still a solution.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-05",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "For the heat equation with $u(0,t)=u(L,t)=0$, the eigenfunctions are:",
+   "choices": [
+    "$\\sin\\frac{n\\pi x}{L}$, $\\lambda_n=(n\\pi/L)^2$",
+    "$\\cos\\frac{n\\pi x}{L}$",
+    "$e^{n\\pi x/L}$",
+    "$\\sinh\\frac{n\\pi x}{L}$"
+   ],
+   "answer": 0,
+   "explanation": "The initial condition then becomes a half-range sine expansion of $f$.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-06",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "Insulated ends of a rod ($u_x(0,t)=u_x(L,t)=0$) lead to:",
+   "choices": [
+    "A cosine series, including a constant term from $\\lambda_0=0$",
+    "A sine series",
+    "Only the zero solution",
+    "Exponential eigenfunctions"
+   ],
+   "answer": 0,
+   "explanation": "As $t\\to\\infty$ the temperature tends to the average of the initial distribution.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-07",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "Which boundary condition is a Neumann condition?",
+   "choices": [
+    "$\\partial u/\\partial x=0$ at $x=0$",
+    "$u=0$ at $x=0$",
+    "$u_x=-h(u-u_m)$ at $x=L$",
+    "$u(x,0)=f(x)$"
+   ],
+   "answer": 0,
+   "explanation": "Dirichlet specifies $u$. Neumann specifies the normal derivative. Robin specifies a combination of both (e.g. convection).",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-08",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "tf",
+   "question": "For the heat equation, each mode decays like $e^{-k(n\\pi/L)^2t}$, so higher modes die out faster.",
+   "answer": true,
+   "explanation": "The solution smooths out quickly, so after a while the first term dominates.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-09",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "The wave equation needs how many initial conditions?",
+   "choices": [
+    "Two: initial displacement $u(x,0)$ and initial velocity $u_t(x,0)$",
+    "One: $u(x,0)$",
+    "None",
+    "Three"
+   ],
+   "answer": 0,
+   "explanation": "It is second order in time. The heat equation is first order in time and needs one IC.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-10",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "short",
+   "question": "For a vibrating string with fixed ends, what are the standing waves and the fundamental frequency?",
+   "answer": "Each term $u_n=(A_n\\cos\\frac{n\\pi a}{L}t+B_n\\sin\\frac{n\\pi a}{L}t)\\sin\\frac{n\\pi x}{L}$ is a standing wave (normal mode). The $n=1$ mode is the first standing wave, with fundamental frequency $f_1=\\frac{a}{2L}$.",
+   "explanation": "Higher modes are overtones at integer multiples of $f_1$. Points with $\\sin(n\\pi x/L)=0$ are nodes.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "keywords": [
+    "standing waves",
+    "fundamental frequency a/2L",
+    "nodes"
+   ]
+  },
+  {
+   "id": "e311-pd-11",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "In the steady-state (Dirichlet) problem for Laplace's equation on a rectangle with three zero edges, the $y$-dependence typically uses:",
+   "choices": [
+    "$\\sinh$ or $\\cosh$",
+    "$\\sin$ or $\\cos$",
+    "decaying exponentials in $t$",
+    "polynomials"
+   ],
+   "answer": 0,
+   "explanation": "The direction with homogeneous BCs gets $\\sin$ (eigenfunctions). The other direction gets $\\sinh/\\cosh$.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-12",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "tf",
+   "question": "If a rectangle has nonzero temperatures on two edges, you can split it into two problems (each with one nonzero edge) and add the solutions.",
+   "answer": true,
+   "explanation": "This is the superposition principle for Laplace's equation.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e311-pd-13",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "short",
+   "question": "How do you handle a heat problem with nonhomogeneous, time-independent BCs (e.g. $u(0,t)=u_0$, $u(L,t)=u_1$)?",
+   "answer": "Write $u=v(x,t)+\\psi(x)$. $\\psi$ is the steady-state solution satisfying $k\\psi''=0$ (plus any source term) and the nonhomogeneous BCs. $v$ satisfies the heat equation with homogeneous BCs and the IC $v(x,0)=f(x)-\\psi(x)$. Then $u\\to\\psi$ as $t\\to\\infty$.",
+   "explanation": "Section 13.6. With no source, $\\psi$ is the straight line between the end temperatures.",
+   "source": "Ch 13 slides – Boundary-Value Problems",
+   "keywords": [
+    "u = v + ψ",
+    "steady state",
+    "homogeneous BCs for v"
+   ]
+  },
+  {
+   "id": "e311-pd-14",
+   "course": "engr311",
+   "topic": "PDEs & separation of variables",
+   "type": "mcq",
+   "question": "In the separated heat problem, what does the $T(t)$ equation look like?",
+   "choices": [
+    "$T'+k\\lambda T=0$, giving $T=e^{-k\\lambda t}$",
+    "$T''+a^2\\lambda T=0$",
+    "$T'=\\lambda T$ with growth",
+    "$T=$ constant"
+   ],
+   "answer": 0,
+   "explanation": "With $\\lambda>0$ the solution decays, as heat physically must.",
+   "source": "Ch 13 slides – Boundary-Value Problems"
+  },
+  {
+   "id": "e391-er-01",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "short",
+   "question": "Name the two kinds of numerical error discussed in Lesson 1 and where each comes from.",
+   "answer": "Round-off error: the computer stores only a finite number of digits. Truncation error: an infinite process (e.g. a Taylor series or a limit) is cut off after finitely many steps.",
+   "explanation": "Other error sources (modelling, bad input data) exist but aren't the algorithm's fault.",
+   "source": "Lesson 1 – Introduction and Fundamentals",
+   "keywords": [
+    "round-off: finite digits",
+    "truncation: approximation of math"
+   ]
+  },
+  {
+   "id": "e391-er-02",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "tf",
+   "question": "Making the step size $h$ smaller always reduces the total numerical error.",
    "answer": false,
-   "explanation": "Perfectly plastic means e = 0 (bodies stick). e = 1 is perfectly elastic.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Truncation error falls as $h$ shrinks, but round-off error grows (e.g. subtracting nearly equal numbers). The total error has a minimum at an optimal $h$.",
+   "source": "Lesson 1 – Introduction and Fundamentals"
   },
   {
-   "id": "e391-s01",
+   "id": "e391-er-03",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "mcq",
+   "question": "A truncation error of $O(h^2)$ means that halving $h$ reduces the error by roughly a factor of:",
+   "choices": [
+    "4",
+    "2",
+    "8",
+    "16"
+   ],
+   "answer": 0,
+   "explanation": "$(1/2)^2=1/4$. For $O(h^4)$ the factor is 16.",
+   "source": "Lesson 1 – Introduction and Fundamentals"
+  },
+  {
+   "id": "e391-er-04",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "mcq",
+   "question": "Truncating a Taylor series after the $h^n$ term leaves a remainder of order:",
+   "choices": [
+    "$O(h^{n+1})$",
+    "$O(h^n)$",
+    "$O(h^{n-1})$",
+    "$O(1)$"
+   ],
+   "answer": 0,
+   "explanation": "The remainder is $\\frac{f^{(n+1)}(\\xi)}{(n+1)!}h^{n+1}$.",
+   "source": "Lesson 1 – Introduction and Fundamentals"
+  },
+  {
+   "id": "e391-er-05",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "tf",
+   "question": "The true error needs the exact answer, so in practice algorithms use an estimated error (e.g. the change between successive iterates) to decide when to stop.",
+   "answer": true,
+   "explanation": "Example: stop when $|x_{i+1}-x_i|<$ TOL.",
+   "source": "Lesson 1 – Introduction and Fundamentals"
+  },
+  {
+   "id": "e391-er-06",
+   "course": "engr391",
+   "topic": "Errors & fundamentals",
+   "type": "mcq",
+   "question": "Subtracting two nearly equal floating-point numbers mainly causes:",
+   "choices": [
+    "Loss of significant digits (catastrophic cancellation)",
+    "Overflow",
+    "Truncation error",
+    "No error at all"
+   ],
+   "answer": 0,
+   "explanation": "This is why forward-difference derivatives go bad when $h$ is tiny.",
+   "source": "Lesson 6 – Numerical Differentiation"
+  },
+  {
+   "id": "e391-nl-01",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "mcq",
-   "question": "Near a simple root, Newton–Raphson converges:",
+   "question": "Which two root-finding methods are bracketing methods?",
    "choices": [
+    "Bisection and false position",
+    "Newton and fixed-point",
+    "Newton and secant",
+    "Fixed-point and bisection"
+   ],
+   "answer": 0,
+   "explanation": "Bracketing needs $f(a)f(b)<0$ and always converges. Open methods (fixed-point, Newton) may not converge.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-02",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "tf",
+   "question": "Bisection is guaranteed to converge for a continuous $f$ with $f(a)f(b)<0$.",
+   "answer": true,
+   "explanation": "By the intermediate value theorem there's a root in $[a,b]$, and each step halves the bracket.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-03",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "After $n$ bisection steps starting from $[a,b]$, the error bound (using the midpoint) is:",
+   "choices": [
+    "$\\dfrac{b-a}{2^{n+1}}$",
+    "$\\dfrac{b-a}{n}$",
+    "$(b-a)^n$",
+    "$\\dfrac{b-a}{2n}$"
+   ],
+   "answer": 0,
+   "explanation": "Solve this for $n$ to find how many steps reach a given TOL.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-04",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "Bisection converges:",
+   "choices": [
+    "Linearly, with ratio 1/2",
     "Quadratically",
-    "Linearly",
+    "Superlinearly",
+    "Cubically"
+   ],
+   "answer": 0,
+   "explanation": "Each step gains about one binary digit (~0.3 decimal digits).",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-05",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "The fixed-point iteration $x_{i+1}=g(x_i)$ converges locally to the fixed point $r$ if:",
+   "choices": [
+    "$|g'(r)|<1$",
+    "$|g'(r)|>1$",
+    "$g(r)=0$",
+    "$g'(r)=1$"
+   ],
+   "answer": 0,
+   "explanation": "The convergence is linear with rate $S=|g'(r)|$. If $|g'(r)|>1$ the iteration diverges.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-06",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "tf",
+   "question": "The same equation $f(x)=0$ can be rewritten as $x=g(x)$ in several ways, and some rewritings converge while others diverge.",
+   "answer": true,
+   "explanation": "Pick a $g$ with $|g'(r)|<1$, and as small as possible.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-07",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "Newton's method update is:",
+   "choices": [
+    "$x_{i+1}=x_i-\\dfrac{f(x_i)}{f'(x_i)}$",
+    "$x_{i+1}=x_i-f'(x_i)f(x_i)$",
+    "$x_{i+1}=\\dfrac{x_i+f(x_i)}{2}$",
+    "$x_{i+1}=g(x_i)$ with $g=f$"
+   ],
+   "answer": 0,
+   "explanation": "Geometrically: follow the tangent line down to the $x$-axis.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-08",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "Newton's method at a root of multiplicity $m>1$ converges:",
+   "choices": [
+    "Only linearly, with rate $(m-1)/m$",
+    "Quadratically",
     "Cubically",
     "Not at all"
    ],
    "answer": 0,
-   "explanation": "The error roughly squares each step for a simple root with a good starting guess.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Quadratic convergence needs a simple root ($f'(r)\\ne0$). The modified Newton $x_{i+1}=x_i-m\\,f/f'$ restores it.",
+   "source": "Lesson 2 – Non-linear Equations"
   },
   {
-   "id": "e391-s02",
+   "id": "e391-nl-09",
    "course": "engr391",
    "topic": "Nonlinear equations",
    "type": "tf",
-   "question": "The bisection method is guaranteed to converge if f is continuous and f(a)·f(b) < 0.",
-   "answer": true,
-   "explanation": "The intermediate value theorem guarantees a root in the bracket, and the bracket halves every iteration.",
-   "source": "Sample (general knowledge)"
+   "question": "Newton's method always converges, whatever the initial guess.",
+   "answer": false,
+   "explanation": "It's an open method. A poor guess, a near-zero $f'$ or cycling can make it diverge.",
+   "source": "Lesson 2 – Non-linear Equations"
   },
   {
-   "id": "e391-s03",
+   "id": "e391-nl-10",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "The backward error of an approximate root $x_a$ is:",
+   "choices": [
+    "$|f(x_a)|$",
+    "$|r-x_a|$",
+    "$|x_a|$",
+    "$|f'(x_a)|$"
+   ],
+   "answer": 0,
+   "explanation": "The forward error is $|r-x_a|$. A small backward error does not guarantee a small forward error when the problem is ill-conditioned.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-11",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "short",
+   "question": "Why are multiple roots ill-conditioned?",
+   "answer": "Near a root of multiplicity $m$, $f$ is very flat ($f'(r)=0$), so a tiny backward error $|f(x_a)|$ allows a large forward error $|r-x_a|\\approx(m!|f(x_a)|/|f^{(m)}|)^{1/m}$. Small changes to the equation shift the root a lot.",
+   "explanation": "The error magnification factor is large. This is the Wilkinson polynomial idea.",
+   "source": "Lesson 2 – Non-linear Equations",
+   "keywords": [
+    "flat f",
+    "small backward, large forward",
+    "error magnification"
+   ]
+  },
+  {
+   "id": "e391-nl-12",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "The error magnification factor is:",
+   "choices": [
+    "Relative forward error ÷ relative backward error",
+    "Forward error × backward error",
+    "Backward error ÷ forward error",
+    "Number of iterations ÷ tolerance"
+   ],
+   "answer": 0,
+   "explanation": "A large factor means the problem is ill-conditioned.",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-nl-13",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "An algorithm converges with order $q$ if:",
+   "choices": [
+    "$e_{i+1}\\approx C\\,e_i^q$",
+    "$e_{i+1}\\approx C\\,q\\,e_i$",
+    "$e_{i+1}=e_i-q$",
+    "$e_i\\approx q^i$"
+   ],
+   "answer": 0,
+   "explanation": "$q=1$ linear (needs $C<1$), $q=2$ quadratic (correct digits roughly double each step).",
+   "source": "Lesson 2 – Non-linear Equations"
+  },
+  {
+   "id": "e391-ls-01",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "tf",
+   "question": "Gauss elimination and LU decomposition have no truncation error. Only round-off error affects the result.",
+   "answer": true,
+   "explanation": "They are direct methods that would be exact in exact arithmetic. (L3 takeaway)",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-02",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "short",
+   "question": "What are the two stages of Gauss elimination?",
+   "answer": "Forward elimination (reduce the augmented matrix to upper-triangular form), then back substitution (solve from the last equation upward).",
+   "explanation": "Forward elimination costs about $\\tfrac23n^3$ operations. Back substitution costs about $n^2$.",
+   "source": "Lesson 3 – Linear Equations",
+   "keywords": [
+    "forward elimination",
+    "back substitution"
+   ]
+  },
+  {
+   "id": "e391-ls-03",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "Partial pivoting means:",
+   "choices": [
+    "Swapping rows so the pivot is the largest-magnitude entry in its column (at or below the diagonal)",
+    "Swapping columns randomly",
+    "Dividing every row by its largest entry",
+    "Skipping zero pivots"
+   ],
+   "answer": 0,
+   "explanation": "It avoids dividing by zero or tiny pivots, which would amplify round-off.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-04",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "tf",
+   "question": "Naive Gauss elimination can fail even when the system has a unique solution.",
+   "answer": true,
+   "explanation": "For example, with a zero pivot $a_{11}=0$. Pivoting fixes this.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-05",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "The main advantage of LU decomposition over plain Gauss elimination is:",
+   "choices": [
+    "Once $A=LU$ is computed, each new right-hand side $b$ is solved cheaply (two triangular solves)",
+    "It has no round-off error",
+    "It works for singular matrices",
+    "It needs no pivoting ever"
+   ],
+   "answer": 0,
+   "explanation": "Solve $Lc=b$ (forward), then $Ux=c$ (back). Each costs only $O(n^2)$.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-06",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "With pivoting, the factorization is written as:",
+   "choices": [
+    "$PA=LU$, with $P$ a permutation matrix",
+    "$A=LUP$",
+    "$A=PLU^T$",
+    "$A=L+U$"
+   ],
+   "answer": 0,
+   "explanation": "Then $Ax=b$ becomes $LUx=Pb$.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-07",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "The infinity norm $\\|x\\|_\\infty$ of a vector is:",
+   "choices": [
+    "$\\max_i|x_i|$",
+    "$\\sum|x_i|$",
+    "$\\sqrt{\\sum x_i^2}$",
+    "$\\min_i|x_i|$"
+   ],
+   "answer": 0,
+   "explanation": "The matching matrix norm $\\|A\\|_\\infty$ is the maximum absolute row sum.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-08",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "The condition number $\\mathrm{cond}(A)=\\|A\\|\\|A^{-1}\\|$ represents:",
+   "choices": [
+    "The largest possible error magnification factor when solving $Ax=b$",
+    "The number of iterations needed",
+    "The determinant of $A$",
+    "The rank of $A$"
+   ],
+   "answer": 0,
+   "explanation": "$\\mathrm{cond}(A)\\ge1$. A large value means ill-conditioned.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-09",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "mcq",
+   "question": "If $\\mathrm{cond}(A)\\approx10^k$, you can expect to lose about ___ significant digits when solving $Ax=b$:",
+   "choices": [
+    "$k$",
+    "$2k$",
+    "$k/2$",
+    "$10^k$"
+   ],
+   "answer": 0,
+   "explanation": "With double precision (~16 digits) and $\\mathrm{cond}=10^{10}$, only about 6 digits are trustworthy.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-10",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "tf",
+   "question": "A small residual $\\|b-Ax_a\\|$ guarantees that $x_a$ is close to the true solution.",
+   "answer": false,
+   "explanation": "The residual is the backward error. If $A$ is ill-conditioned, the forward error can be large despite a small residual.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ls-11",
+   "course": "engr391",
+   "topic": "Linear systems",
+   "type": "tf",
+   "question": "A system with two nearly identical equations (nearly parallel lines) is ill-conditioned.",
+   "answer": true,
+   "explanation": "Tiny changes in the data move the intersection point a lot.",
+   "source": "Lesson 3 – Linear Equations"
+  },
+  {
+   "id": "e391-ri-01",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "short",
+   "question": "What is the difference between regression and interpolation?",
+   "answer": "Regression (curve fitting) finds a model that best fits noisy data in the least-squares sense and need not pass through the points. Interpolation finds a function that passes exactly through every data point.",
+   "explanation": "Use regression for measured data with scatter, interpolation for exact tabulated values.",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "keywords": [
+    "regression: best fit, least squares",
+    "interpolation: passes through points"
+   ]
+  },
+  {
+   "id": "e391-ri-02",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "Linear least squares chooses parameters to minimize:",
+   "choices": [
+    "The squared error $SE=\\sum r_i^2$",
+    "The largest residual",
+    "The sum of residuals $\\sum r_i$",
+    "The number of data points"
+   ],
+   "answer": 0,
+   "explanation": "Setting the partial derivatives to zero gives the normal equations $A^TA\\hat a=A^Ty$.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-03",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "The root-mean-square error of a fit is:",
+   "choices": [
+    "$\\sqrt{SE/m}$",
+    "$SE/m$",
+    "$\\sqrt{SE}$",
+    "$SE\\cdot m$"
+   ],
+   "answer": 0,
+   "explanation": "MSE $=SE/m$, RMSE $=\\sqrt{MSE}$, with $m$ = number of data points.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-04",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "tf",
+   "question": "\"Linear\" regression means linear in the parameters $a_i$, so $y=a_1+a_2x+a_3x^2$ or $y=a_1+a_2\\sin x$ count as linear models.",
+   "answer": true,
+   "explanation": "The basis functions $f_i(x)$ can be nonlinear in $x$.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-05",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "To fit an exponential model $y=c\\,e^{kx}$ with linear least squares, you:",
+   "choices": [
+    "Take logs: $\\ln y=\\ln c+kx$, then fit a line",
+    "Fit $y$ directly against $x$",
+    "Take $\\sqrt y$",
+    "Use interpolation instead"
+   ],
+   "answer": 0,
+   "explanation": "Power law $y=cx^k$: $\\ln y=\\ln c+k\\ln x$. This is linearization (e.g. the Moore's law example).",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-06",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "tf",
+   "question": "The residual vector of a least-squares fit is orthogonal to the columns of $A$.",
+   "answer": true,
+   "explanation": "$A^T(y-A\\hat a)=0$ is exactly the normal equations.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-07",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "Through $n$ distinct data points there is a unique interpolating polynomial of degree at most:",
+   "choices": [
+    "$n-1$",
+    "$n$",
+    "$n+1$",
+    "$2n$"
+   ],
+   "answer": 0,
+   "explanation": "Vandermonde, Newton and Lagrange forms all give the same polynomial, written differently.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-08",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "tf",
+   "question": "The Vandermonde matrix is often badly conditioned, which is one reason to prefer the Newton or Lagrange forms.",
+   "answer": true,
+   "explanation": "Its columns $1,x,x^2,\\dots$ become nearly parallel.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-09",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "A practical advantage of Newton's divided-difference form is:",
+   "choices": [
+    "Adding a new data point only adds one new term, so earlier coefficients are reused",
+    "It needs no arithmetic",
+    "It always gives a lower-degree polynomial",
+    "It avoids round-off completely"
+   ],
+   "answer": 0,
+   "explanation": "Coefficients come from the top diagonal of the divided-difference table.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-10",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "short",
+   "question": "What does the interpolation error theorem say, and how can the error be reduced?",
+   "answer": "$f(x)-P(x)=\\frac{(x-x_1)\\cdots(x-x_n)}{n!}f^{(n)}(c)$. The error depends on the product of distances to the nodes and on a high derivative. It can be reduced by placing nodes well, e.g. Chebyshev points clustered toward the ends rather than equally spaced.",
+   "explanation": "Equally spaced high-degree interpolation can oscillate wildly near the ends (Runge phenomenon).",
+   "source": "Lesson 4 – Regression and Interpolation",
+   "keywords": [
+    "product (x−xi)",
+    "f^(n)/n!",
+    "Chebyshev nodes",
+    "Runge"
+   ]
+  },
+  {
+   "id": "e391-ri-11",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "tf",
+   "question": "Increasing the degree of an equally spaced interpolating polynomial always improves accuracy.",
+   "answer": false,
+   "explanation": "The Runge phenomenon: large oscillations near the interval ends.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-ri-12",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "mcq",
+   "question": "Cubic splines join piecewise cubics so that at interior knots these are continuous:",
+   "choices": [
+    "The function, first and second derivatives",
+    "Only the function",
+    "The function and first derivative only",
+    "All derivatives"
+   ],
+   "answer": 0,
+   "explanation": "End conditions (natural, clamped, …) supply the last two equations.",
+   "source": "Lesson 4 – Regression and Interpolation"
+  },
+  {
+   "id": "e391-nd-01",
+   "course": "engr391",
+   "topic": "Numerical differentiation",
+   "type": "mcq",
+   "question": "The forward difference $\\dfrac{f(x+h)-f(x)}{h}$ has truncation error:",
+   "choices": [
+    "$O(h)$",
+    "$O(h^2)$",
+    "$O(h^3)$",
+    "$O(1)$"
+   ],
+   "answer": 0,
+   "explanation": "The central difference $\\frac{f(x+h)-f(x-h)}{2h}$ is $O(h^2)$.",
+   "source": "Lesson 6 – Numerical Differentiation"
+  },
+  {
+   "id": "e391-nd-02",
+   "course": "engr391",
+   "topic": "Numerical differentiation",
+   "type": "mcq",
+   "question": "The three-point central difference for $f''(x)$ is:",
+   "choices": [
+    "$\\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$, error $O(h^2)$",
+    "$\\dfrac{f(x+h)-f(x-h)}{2h}$",
+    "$\\dfrac{f(x+h)-2f(x)}{h^2}$",
+    "$\\dfrac{f(x+2h)-f(x)}{2h}$"
+   ],
+   "answer": 0,
+   "explanation": "This comes from adding the Taylor series for $f(x\\pm h)$.",
+   "source": "Lesson 6 – Numerical Differentiation"
+  },
+  {
+   "id": "e391-nd-03",
+   "course": "engr391",
+   "topic": "Numerical differentiation",
+   "type": "short",
+   "question": "Why is there an optimal step size $h$ for numerical differentiation?",
+   "answer": "Total error = truncation error (shrinks as $h$ shrinks, e.g. $\\propto h^2$) + round-off error (grows like $\\epsilon_{mach}/h$ because of cancellation). Their sum has a minimum at an intermediate $h$.",
+   "explanation": "For the central difference, $h_{opt}\\sim\\epsilon_{mach}^{1/3}\\approx10^{-5}$ in double precision.",
+   "source": "Lesson 6 – Numerical Differentiation",
+   "keywords": [
+    "truncation decreases",
+    "round-off increases",
+    "minimum total"
+   ]
+  },
+  {
+   "id": "e391-nd-04",
+   "course": "engr391",
+   "topic": "Numerical differentiation",
+   "type": "tf",
+   "question": "Higher-order difference formulas allow a larger optimal $h$ and a smaller minimum achievable error.",
+   "answer": true,
+   "explanation": "Their truncation error drops faster, so round-off dominates later.",
+   "source": "Lesson 6 – Numerical Differentiation"
+  },
+  {
+   "id": "e391-ni-01",
    "course": "engr391",
    "topic": "Numerical integration",
    "type": "mcq",
-   "question": "Simpson's 1/3 rule integrates exactly polynomials up to degree:",
+   "question": "Newton–Cotes formulas are derived by:",
+   "choices": [
+    "Integrating an interpolating polynomial through equally spaced points",
+    "Choosing optimal (non-uniform) nodes",
+    "Fitting a least-squares line",
+    "Taylor series in $h$ only"
+   ],
+   "answer": 0,
+   "explanation": "Closed formulas include the endpoints (trapezoid, Simpson). Open formulas don't (midpoint).",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-02",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "The composite trapezoid rule has global error:",
+   "choices": [
+    "$O(h^2)$",
+    "$O(h)$",
+    "$O(h^3)$",
+    "$O(h^4)$"
+   ],
+   "answer": 0,
+   "explanation": "A single application has error $-\\frac{h^3}{12}f''(c)$. Summing $n\\propto1/h$ panels loses one order.",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-03",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "The composite Simpson's 1/3 rule has global error:",
+   "choices": [
+    "$O(h^4)$",
+    "$O(h^2)$",
+    "$O(h^3)$",
+    "$O(h^5)$"
+   ],
+   "answer": 0,
+   "explanation": "Halving $h$ cuts the error by about 16. It needs an even number of subintervals.",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-04",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "The degree of precision of Simpson's rule is:",
    "choices": [
     "3",
     "2",
@@ -278,33 +2403,1883 @@
     "4"
    ],
    "answer": 0,
-   "explanation": "Although it fits a parabola, error cancellation makes it exact for cubics. Error ∝ f⁗.",
-   "source": "Sample (general knowledge)"
+   "explanation": "Degree of precision = highest polynomial degree integrated exactly. Trapezoid: 1. Simpson: 3 (one more than expected).",
+   "source": "Lesson 7 – Numerical Integration"
   },
   {
-   "id": "e391-s04",
+   "id": "e391-ni-05",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "tf",
+   "question": "Composite Simpson's rule requires an even number of subintervals.",
+   "answer": true,
+   "explanation": "Each application covers two subintervals (three points).",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-06",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "When $h$ is halved, the error of the composite trapezoid rule falls by about a factor of:",
+   "choices": [
+    "4",
+    "2",
+    "8",
+    "16"
+   ],
+   "answer": 0,
+   "explanation": "Ratios close to 4 (trapezoid) or 16 (Simpson) confirm the expected order of convergence.",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-07",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "short",
+   "question": "What is Richardson extrapolation (the Richardson error formula) used for in numerical integration?",
+   "answer": "Combining two estimates with step sizes $h$ and $h/2$ to estimate the error and cancel the leading error term. For an $O(h^n)$ method: error $\\approx\\frac{I_{h/2}-I_h}{2^n-1}$, and the improved value is $I_{h/2}+\\frac{I_{h/2}-I_h}{2^n-1}$.",
+   "explanation": "Applying it repeatedly to the trapezoid rule gives Romberg integration.",
+   "source": "Lesson 7 – Numerical Integration",
+   "keywords": [
+    "two step sizes",
+    "estimate error",
+    "cancel leading term",
+    "Romberg"
+   ]
+  },
+  {
+   "id": "e391-ni-08",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "Romberg integration is:",
+   "choices": [
+    "Repeated Richardson extrapolation of composite trapezoid estimates",
+    "Gauss quadrature with random nodes",
+    "Simpson's 3/8 rule",
+    "Monte Carlo integration"
+   ],
+   "answer": 0,
+   "explanation": "Each column of the Romberg table raises the order by 2.",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-09",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "Gauss quadrature with $n$ points is exact for polynomials up to degree:",
+   "choices": [
+    "$2n-1$",
+    "$n-1$",
+    "$n$",
+    "$2n$"
+   ],
+   "answer": 0,
+   "explanation": "It achieves this by choosing both the node locations and the weights optimally (roots of Legendre polynomials).",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-ni-10",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "tf",
+   "question": "Gauss quadrature needs the function values at non-uniformly spaced points, so it suits integrating a known function better than tabulated equally spaced data.",
+   "answer": true,
+   "explanation": "For tabulated data, use composite Newton–Cotes formulas.",
+   "source": "Lesson 7 – Numerical Integration"
+  },
+  {
+   "id": "e391-iv-01",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "Euler's method update for $y'=f(t,y)$ is:",
+   "choices": [
+    "$w_{i+1}=w_i+h\\,f(t_i,w_i)$",
+    "$w_{i+1}=w_i+\\frac h2[f(t_i,w_i)+f(t_{i+1},w_{i+1})]$",
+    "$w_{i+1}=w_i+h\\,f(t_{i+1},w_{i+1})$",
+    "$w_{i+1}=w_i-h\\,f'(t_i)$"
+   ],
+   "answer": 0,
+   "explanation": "Explicit, first order. Follow the slope at the start of the step.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-02",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "Euler's method has local and global truncation errors of order:",
+   "choices": [
+    "$O(h^2)$ local, $O(h)$ global",
+    "$O(h)$ local, $O(h^2)$ global",
+    "$O(h^2)$ both",
+    "$O(h^3)$ local, $O(h^2)$ global"
+   ],
+   "answer": 0,
+   "explanation": "Errors accumulate over $\\sim1/h$ steps, so the global error is one order lower than the local error.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-03",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "Classical RK4 has global truncation error:",
+   "choices": [
+    "$O(h^4)$",
+    "$O(h^2)$",
+    "$O(h^5)$",
+    "$O(h)$"
+   ],
+   "answer": 0,
+   "explanation": "It uses four slope evaluations per step. Local error $O(h^5)$.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-04",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "The explicit trapezoid method (Heun) and the midpoint method are both:",
+   "choices": [
+    "Second-order Runge–Kutta methods",
+    "First-order methods",
+    "Fourth-order methods",
+    "Implicit multistep methods"
+   ],
+   "answer": 0,
+   "explanation": "Both use two slope evaluations per step and have global error $O(h^2)$.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-05",
    "course": "engr391",
    "topic": "Initial value problems",
    "type": "short",
-   "question": "What is the global truncation error order of Euler's method and of classical 4th-order Runge–Kutta?",
-   "answer": "Euler: O(h). RK4: O(h⁴).",
+   "question": "What is the intuitive idea behind Runge–Kutta methods compared with Euler's method?",
+   "answer": "Instead of using only the slope at the start of the step, they evaluate the slope at several points inside the step and use a weighted average. This reaches higher accuracy without needing derivatives of $f$.",
+   "explanation": "Taylor methods also reach higher order, but they need the derivatives of $f$.",
+   "source": "Lesson 8 – Initial Value Problems",
    "keywords": [
-    "Euler O(h)",
-    "RK4 O(h⁴)",
-    "local one order higher"
-   ],
-   "explanation": "The local errors are O(h²) and O(h⁵). Summing over ~1/h steps loses one order.",
-   "source": "Sample (general knowledge)"
+    "several slope evaluations",
+    "weighted average",
+    "no derivatives of f"
+   ]
   },
   {
-   "id": "e391-s05",
+   "id": "e391-iv-06",
    "course": "engr391",
-   "topic": "Regression & interpolation",
+   "topic": "Initial value problems",
+   "type": "short",
+   "question": "What does the Lipschitz condition guarantee for an IVP, and what are its consequences?",
+   "answer": "If $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$, the IVP has a unique solution, and solutions starting from nearby initial conditions stay close, separating by at most a factor $e^{L(t-t_0)}$. So small errors can grow over time.",
+   "explanation": "This explains why the global error can grow exponentially with $t$.",
+   "source": "Lesson 8 – Initial Value Problems",
+   "keywords": [
+    "existence and uniqueness",
+    "e^{L(t−t0)} growth",
+    "sensitivity to ICs"
+   ]
+  },
+  {
+   "id": "e391-iv-07",
+   "course": "engr391",
+   "topic": "Initial value problems",
    "type": "tf",
-   "question": "An interpolating polynomial through n+1 distinct points of degree ≤ n is unique.",
+   "question": "For a stiff or rapidly decaying problem, Euler's method with too large a step can produce oscillating, growing (unstable) solutions even though the true solution decays.",
    "answer": true,
-   "explanation": "Lagrange and Newton forms are just different ways of writing the same polynomial.",
-   "source": "Sample (general knowledge)"
+   "explanation": "For $y'=-\\lambda y$, explicit Euler is stable only if $h<2/\\lambda$.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-08",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "A higher-order ODE like $y''=f(t,y,y')$ is solved with IVP solvers by:",
+   "choices": [
+    "Rewriting it as a first-order system: $y_1=y$, $y_2=y'$",
+    "Applying Euler directly to $y''$",
+    "Integrating twice analytically first",
+    "It cannot be solved numerically"
+   ],
+   "answer": 0,
+   "explanation": "Pendulum and orbital-mechanics examples in Lesson 8.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-09",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "tf",
+   "question": "For very small step sizes, round-off error can make IVP results worse, just as in numerical differentiation.",
+   "answer": true,
+   "explanation": "The total error vs $h$ again has a minimum.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "e391-iv-10",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "mcq",
+   "question": "Using Richardson's formula with step sizes $h$ and $h/2$ for an order-$n$ method, the estimated error of the $h/2$ solution is:",
+   "choices": [
+    "$\\dfrac{w_{h/2}-w_h}{2^n-1}$",
+    "$w_{h/2}-w_h$",
+    "$\\dfrac{w_h}{2^n}$",
+    "$2^n(w_{h/2}-w_h)$"
+   ],
+   "answer": 0,
+   "explanation": "This is the basis for error control and step-size selection.",
+   "source": "Lesson 8 – Initial Value Problems"
+  },
+  {
+   "id": "m361-c1-01",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "tf",
+   "question": "A solid deforms when a shear stress is applied, but unlike a fluid its deformation is not continuous.",
+   "answer": true,
+   "explanation": "A fluid is defined as a substance that deforms continuously under shear stress, however small.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-02",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "mcq",
+   "question": "For a Newtonian fluid, shear stress is:",
+   "choices": [
+    "Linearly proportional to the rate of shear strain, $\\tau=\\mu\\,du/dy$",
+    "Proportional to the shear strain itself",
+    "Independent of the velocity gradient",
+    "Proportional to $(du/dy)^2$"
+   ],
+   "answer": 0,
+   "explanation": "The constant of proportionality is the dynamic viscosity $\\mu$. Water, air and oil are Newtonian.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-03",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "mcq",
+   "question": "Ketchup and paint get easier to stir the harder you shear them. They are:",
+   "choices": [
+    "Shear-thinning (pseudoplastic)",
+    "Shear-thickening (dilatant)",
+    "Bingham plastics",
+    "Newtonian"
+   ],
+   "answer": 0,
+   "explanation": "Shear-thinning: apparent viscosity decreases as shear rate increases.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-04",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "mcq",
+   "question": "A water–cornstarch mixture (or quicksand) is an example of a:",
+   "choices": [
+    "Shear-thickening (dilatant) fluid",
+    "Shear-thinning fluid",
+    "Bingham plastic",
+    "Newtonian fluid"
+   ],
+   "answer": 0,
+   "explanation": "Apparent viscosity increases with shear rate.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-05",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "tf",
+   "question": "Toothpaste and mayonnaise can withstand a finite yield stress without flowing, which makes them Bingham plastics.",
+   "answer": true,
+   "explanation": "Below $\\tau_{yield}$ they behave like a solid. Once it is exceeded they flow.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-06",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "short",
+   "question": "List the five basic laws used to analyze fluid problems.",
+   "answer": "Conservation of mass, Newton's 2nd law (linear momentum), angular momentum principle, 1st law of thermodynamics, 2nd law of thermodynamics.",
+   "explanation": "Not every problem needs all five. Some also need an equation of state (e.g. $p=\\rho RT$) and boundary conditions such as no-slip.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics",
+   "keywords": [
+    "mass",
+    "linear momentum",
+    "angular momentum",
+    "1st law",
+    "2nd law"
+   ]
+  },
+  {
+   "id": "m361-c1-07",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "mcq",
+   "question": "Which statement about a control volume is TRUE?",
+   "choices": [
+    "Mass can cross its control surface",
+    "It always contains the same fluid particles",
+    "The basic laws apply to it directly without modification",
+    "Its boundary can never move"
+   ],
+   "answer": 0,
+   "explanation": "A system is a fixed mass (no mass crosses its boundary). A CV is a region in space and mass flows through it. The basic laws are written for systems and must be converted (Reynolds transport theorem) to apply to a CV.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-08",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "mcq",
+   "question": "Following one fluid particle as it moves through the flow is the:",
+   "choices": [
+    "Lagrangian approach",
+    "Eulerian approach",
+    "Integral approach",
+    "Control-volume approach"
+   ],
+   "answer": 0,
+   "explanation": "The Eulerian approach describes the field at fixed points in space and is the one usually used in fluid mechanics.",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-c1-09",
+   "course": "mech361",
+   "topic": "Fluid basics (Ch 1)",
+   "type": "tf",
+   "question": "The integral approach gives the detailed velocity distribution in a pipe, while the differential approach only gives bulk quantities like average velocity.",
+   "answer": false,
+   "explanation": "It's the reverse: integral → gross/bulk behaviour (e.g. $U_{av}=Q/A$, drag); differential → detailed field (e.g. $u(r)$).",
+   "source": "Lecture 02 – Introduction & Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-01",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "A flow whose velocity at every point does not change with time is steady, even if the velocity varies from point to point.",
+   "answer": true,
+   "explanation": "Steady = no time dependence. Uniform = no spatial variation over a region. These are independent properties.",
+   "source": "Lecture 02 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-02",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "The material derivative of velocity, $\\frac{D\\vec V}{Dt}=\\frac{\\partial \\vec V}{\\partial t}+(\\vec V\\cdot\\nabla)\\vec V$, consists of:",
+   "choices": [
+    "Local acceleration + convective acceleration",
+    "Normal acceleration + tangential acceleration",
+    "Linear acceleration + angular acceleration",
+    "Pressure acceleration + viscous acceleration"
+   ],
+   "answer": 0,
+   "explanation": "Local = unsteadiness at a point. Convective = change because the particle moves to a place with a different velocity.",
+   "source": "Lecture 02 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-03",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "In a steady flow, fluid particles cannot accelerate.",
+   "answer": false,
+   "explanation": "Steady flow kills the local term only. Convective acceleration $(\\vec V\\cdot\\nabla)\\vec V$ can still be nonzero, e.g. flow speeding up through a nozzle.",
+   "source": "Lecture 02 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-04",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "short",
+   "question": "Name the four types of motion a fluid element can undergo.",
+   "answer": "Translation, rotation, linear deformation, and angular deformation (distortion).",
+   "explanation": "Translation + rotation are rigid-body motion. Linear and angular deformation change the element's shape or size.",
+   "source": "Lecture 03 – Fluid Kinematics",
+   "keywords": [
+    "translation",
+    "rotation",
+    "linear deformation",
+    "angular deformation"
+   ]
+  },
+  {
+   "id": "m361-k-05",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "The volumetric dilatation rate $\\frac{1}{V}\\frac{dV}{dt}$ equals:",
+   "choices": [
+    "$\\nabla\\cdot\\vec V=\\partial u/\\partial x+\\partial v/\\partial y+\\partial w/\\partial z$",
+    "$\\nabla\\times\\vec V$",
+    "$\\frac12(\\partial v/\\partial x-\\partial u/\\partial y)$",
+    "$\\partial v/\\partial x+\\partial u/\\partial y$"
+   ],
+   "answer": 0,
+   "explanation": "It is the sum of the three linear strain rates $\\varepsilon_{xx}+\\varepsilon_{yy}+\\varepsilon_{zz}$.",
+   "source": "Lecture 03 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-06",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "What is the volumetric dilatation rate in an incompressible flow?",
+   "choices": [
+    "Zero",
+    "Constant but nonzero",
+    "One",
+    "Negative"
+   ],
+   "answer": 0,
+   "explanation": "Incompressible means fluid elements keep their volume: $\\nabla\\cdot\\vec V=0$, which is the incompressible continuity equation. (Engineers at Work 6.1)",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-07",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "When air is compressed in a cylinder by a piston, the volumetric dilatation rate of the air is negative.",
+   "answer": true,
+   "explanation": "Fluid elements shrink, so $\\frac1V\\frac{dV}{dt}<0$. (Engineers at Work 6.1)",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-08",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "Vorticity $\\vec\\zeta$ is related to the angular velocity $\\vec\\omega$ of a fluid particle by:",
+   "choices": [
+    "$\\vec\\zeta=2\\vec\\omega=\\nabla\\times\\vec V$",
+    "$\\vec\\zeta=\\vec\\omega$",
+    "$\\vec\\zeta=\\tfrac12\\vec\\omega$",
+    "$\\vec\\zeta=\\nabla\\cdot\\vec V$"
+   ],
+   "answer": 0,
+   "explanation": "Vorticity is twice the rate of rotation and equals the curl of the velocity.",
+   "source": "Lecture 03 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-09",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "For a 2-D flow in the $x$–$y$ plane, the flow is irrotational when:",
+   "choices": [
+    "$\\partial v/\\partial x=\\partial u/\\partial y$",
+    "$\\partial u/\\partial x=-\\partial v/\\partial y$",
+    "$\\partial v/\\partial x=-\\partial u/\\partial y$",
+    "$u=v$"
+   ],
+   "answer": 0,
+   "explanation": "$\\zeta_z=\\partial v/\\partial x-\\partial u/\\partial y=0$.",
+   "source": "Lecture 03 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-10",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "The 2-D velocity field $u=3x-y$, $v=2y$ is irrotational.",
+   "answer": false,
+   "explanation": "$\\zeta_z=\\partial v/\\partial x-\\partial u/\\partial y=0-(-1)=1\\neq0$, so it is rotational. (Engineers at Work 6.2)",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-k-11",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "The rate of angular deformation (rate of shearing strain) in the $x$–$y$ plane is:",
+   "choices": [
+    "$\\dot\\gamma=\\partial v/\\partial x+\\partial u/\\partial y$",
+    "$\\dot\\gamma=\\partial v/\\partial x-\\partial u/\\partial y$",
+    "$\\dot\\gamma=\\partial u/\\partial x+\\partial v/\\partial y$",
+    "$\\dot\\gamma=\\tfrac12(\\partial v/\\partial x-\\partial u/\\partial y)$"
+   ],
+   "answer": 0,
+   "explanation": "It is the rate of change of the angle between two initially perpendicular lines. The shear strain rate $\\varepsilon_{xy}$ is half of it.",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-12",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "For the Couette-type flow $u=Uy/b$ between plates, the flow is both rotational and undergoing angular deformation.",
+   "answer": true,
+   "explanation": "$\\partial u/\\partial y=U/b\\neq0$ gives $\\zeta_z=-U/b$ (rotational) and $\\dot\\gamma=U/b$ (deforming). Dilatation is zero. (Example 6.3)",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-13",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "mcq",
+   "question": "What is the simplest type of motion a fluid particle can undergo?",
+   "choices": [
+    "Translation",
+    "Rotation",
+    "Linear deformation",
+    "Angular deformation"
+   ],
+   "answer": 0,
+   "explanation": "Engineers at Work 6.2.",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-k-14",
+   "course": "mech361",
+   "topic": "Fluid kinematics (6.1)",
+   "type": "tf",
+   "question": "The strain-rate tensor is symmetric, with linear (normal) strain rates on its diagonal and shear strain rates off-diagonal.",
+   "answer": true,
+   "explanation": "$\\varepsilon_{ij}=\\varepsilon_{ji}=\\tfrac12(\\partial u_i/\\partial x_j+\\partial u_j/\\partial x_i)$.",
+   "source": "Lecture 04 – Fluid Kinematics"
+  },
+  {
+   "id": "m361-cm-01",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "mcq",
+   "question": "The general differential continuity equation is:",
+   "choices": [
+    "$\\partial\\rho/\\partial t+\\nabla\\cdot(\\rho\\vec V)=0$",
+    "$\\nabla\\cdot\\vec V=0$",
+    "$\\nabla\\times\\vec V=0$",
+    "$\\rho\\,D\\vec V/Dt=-\\nabla p$"
+   ],
+   "answer": 0,
+   "explanation": "Steady compressible flow: $\\nabla\\cdot(\\rho\\vec V)=0$. Incompressible flow: $\\nabla\\cdot\\vec V=0$.",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-02",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "mcq",
+   "question": "For steady compressible flow, the continuity equation reduces to:",
+   "choices": [
+    "$\\nabla\\cdot(\\rho\\vec V)=0$",
+    "$\\nabla\\cdot\\vec V=0$",
+    "$\\partial\\rho/\\partial t=0$ only",
+    "$\\rho\\vec V=$ constant everywhere"
+   ],
+   "answer": 0,
+   "explanation": "Only the time-derivative term drops out. Density can still vary in space.",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-03",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "mcq",
+   "question": "In 2-D incompressible Cartesian flow, the stream function is defined by:",
+   "choices": [
+    "$u=\\partial\\psi/\\partial y,\\ v=-\\partial\\psi/\\partial x$",
+    "$u=-\\partial\\psi/\\partial y,\\ v=\\partial\\psi/\\partial x$",
+    "$u=\\partial\\psi/\\partial x,\\ v=\\partial\\psi/\\partial y$",
+    "$\\vec V=\\nabla\\psi$"
+   ],
+   "answer": 0,
+   "explanation": "This definition satisfies continuity automatically, so two unknowns ($u$, $v$) become one ($\\psi$).",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-04",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "tf",
+   "question": "In 2-D incompressible flow, lines of constant stream function are streamlines.",
+   "answer": true,
+   "explanation": "Along a streamline $d\\psi=0$. (Engineers at Work 6.2)",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-05",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "tf",
+   "question": "The volume flow rate per unit width between two streamlines equals the difference in their stream-function values, $q=\\psi_2-\\psi_1$.",
+   "answer": true,
+   "explanation": "No flow crosses a streamline, so $Q$ between them is fixed by $\\Delta\\psi$.",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-06",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "mcq",
+   "question": "In polar coordinates the stream function gives:",
+   "choices": [
+    "$v_r=\\frac1r\\frac{\\partial\\psi}{\\partial\\theta},\\ v_\\theta=-\\frac{\\partial\\psi}{\\partial r}$",
+    "$v_r=\\frac{\\partial\\psi}{\\partial r},\\ v_\\theta=\\frac1r\\frac{\\partial\\psi}{\\partial\\theta}$",
+    "$v_r=-\\frac{\\partial\\psi}{\\partial r},\\ v_\\theta=\\frac1r\\frac{\\partial\\psi}{\\partial\\theta}$",
+    "$v_r=r\\frac{\\partial\\psi}{\\partial\\theta},\\ v_\\theta=\\frac{\\partial\\psi}{\\partial r}$"
+   ],
+   "answer": 0,
+   "explanation": "Compare the velocity potential, which gives $v_r=\\partial\\phi/\\partial r$ and $v_\\theta=\\frac1r\\partial\\phi/\\partial\\theta$.",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-cm-07",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "short",
+   "question": "How do you check whether a stream function exists for a given 2-D velocity field?",
+   "answer": "Check that the flow satisfies incompressible continuity: $\\partial u/\\partial x+\\partial v/\\partial y=0$. If it does, $\\psi$ exists.",
+   "explanation": "The stream function is built to satisfy continuity, so it exists only for incompressible (or steady 2-D) flows that obey it. Irrotationality is not required. (Example 6.5)",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass",
+   "keywords": [
+    "continuity satisfied",
+    "divergence zero"
+   ]
+  },
+  {
+   "id": "m361-cm-08",
+   "course": "mech361",
+   "topic": "Continuity & stream function (6.2)",
+   "type": "mcq",
+   "question": "For $\\psi=4x^2y-y^3$, the velocity component $v$ is:",
+   "choices": [
+    "$-8xy$",
+    "$4x^2-3y^2$",
+    "$8xy$",
+    "$-4x^2+3y^2$"
+   ],
+   "answer": 0,
+   "explanation": "$v=-\\partial\\psi/\\partial x=-8xy$. (Engineers at Work 6.2)",
+   "source": "Lecture 05 – Kinematics & Conservation of Mass"
+  },
+  {
+   "id": "m361-mo-01",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "mcq",
+   "question": "The forces acting on a differential fluid element are:",
+   "choices": [
+    "Body forces (gravity) and surface forces (normal and shear stresses)",
+    "Only pressure forces",
+    "Only gravity",
+    "Inertial and centrifugal forces"
+   ],
+   "answer": 0,
+   "explanation": "Surface forces come from the stress field: normal stresses $\\sigma$ and shear stresses $\\tau$.",
+   "source": "Lecture 06 – Linear Momentum & Inviscid Flow"
+  },
+  {
+   "id": "m361-mo-02",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "tf",
+   "question": "In the stress notation $\\sigma_{yx}$, the first index gives the direction of the normal to the plane and the second gives the direction the stress acts in.",
+   "answer": true,
+   "explanation": "So $\\tau_{yx}$ acts on a plane normal to $y$, in the $x$-direction.",
+   "source": "Lecture 06 – Linear Momentum & Inviscid Flow"
+  },
+  {
+   "id": "m361-mo-03",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "mcq",
+   "question": "The general differential momentum equations written in terms of stresses are called:",
+   "choices": [
+    "Cauchy's equations",
+    "Euler's equations",
+    "Navier–Stokes equations",
+    "Bernoulli equations"
+   ],
+   "answer": 0,
+   "explanation": "Substituting $\\sigma=-p$, $\\tau=0$ gives Euler's equations. Substituting Newtonian stresses gives Navier–Stokes.",
+   "source": "Lecture 06 – Linear Momentum & Inviscid Flow"
+  },
+  {
+   "id": "m361-mo-04",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "mcq",
+   "question": "A flow is called inviscid when:",
+   "choices": [
+    "Shearing stresses are negligible",
+    "The velocity is negligible",
+    "No acceleration occurs",
+    "The density is constant"
+   ],
+   "answer": 0,
+   "explanation": "Engineers at Work: with $\\mu\\approx0$ the only stress is pressure.",
+   "source": "Lecture 07 – LME & Potential Flow"
+  },
+  {
+   "id": "m361-mo-05",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "mcq",
+   "question": "The equations of motion for an inviscid flow are commonly called:",
+   "choices": [
+    "Euler's equations",
+    "Cauchy's equations",
+    "Newton's equations",
+    "Stokes' equations"
+   ],
+   "answer": 0,
+   "explanation": "$\\rho\\,g-\\nabla p=\\rho\\,D\\vec V/Dt$.",
+   "source": "Lecture 07 – LME & Potential Flow"
+  },
+  {
+   "id": "m361-mo-06",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "tf",
+   "question": "All inviscid flows are irrotational, but not all irrotational flows are inviscid.",
+   "answer": false,
+   "explanation": "The first part is false: an inviscid flow can still be rotational (vorticity is carried along, not destroyed, when viscosity is zero). In this course, irrotational (potential) flows are modelled as inviscid. (Engineers at Work)",
+   "source": "Lecture 07 – LME & Potential Flow"
+  },
+  {
+   "id": "m361-mo-07",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "short",
+   "question": "State the assumptions behind the Bernoulli equation $p+\\tfrac12\\rho V^2+\\gamma z=$ const.",
+   "answer": "Inviscid, steady, incompressible flow, applied along a streamline. If the flow is also irrotational, the constant is the same everywhere (any two points).",
+   "explanation": "Bernoulli comes from integrating Euler's equation along a streamline.",
+   "source": "Lecture 06 – Linear Momentum & Inviscid Flow",
+   "keywords": [
+    "inviscid",
+    "steady",
+    "incompressible",
+    "along a streamline",
+    "irrotational → anywhere"
+   ]
+  },
+  {
+   "id": "m361-mo-08",
+   "course": "mech361",
+   "topic": "Momentum & inviscid flow (6.3–6.4)",
+   "type": "tf",
+   "question": "For irrotational flow, the Bernoulli equation can be applied between any two points, not just along one streamline.",
+   "answer": true,
+   "explanation": "Irrotationality makes the Bernoulli constant uniform throughout the flow field.",
+   "source": "Lecture 07 – LME & Potential Flow"
+  },
+  {
+   "id": "m361-pf-01",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "short",
+   "question": "What three properties define a potential flow, and which equation governs it?",
+   "answer": "Inviscid, incompressible and irrotational. Governed by Laplace's equation $\\nabla^2\\phi=0$ (and $\\nabla^2\\psi=0$ in 2-D).",
+   "explanation": "Velocity comes from $\\vec V=\\nabla\\phi$. Pressure then comes from Bernoulli.",
+   "source": "Lecture 07 – Potential Flow – Uniform Flow",
+   "keywords": [
+    "inviscid",
+    "incompressible",
+    "irrotational",
+    "Laplace"
+   ]
+  },
+  {
+   "id": "m361-pf-02",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "The major advantage of Laplace's equation over the momentum equations is that it is:",
+   "choices": [
+    "Linear, so solutions can be superposed",
+    "Nonlinear, so it captures turbulence",
+    "First order",
+    "Valid for viscous flows"
+   ],
+   "answer": 0,
+   "explanation": "Linearity lets you add basic solutions (uniform flow, source, vortex, doublet) to build complex flows.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-03",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "tf",
+   "question": "The velocity potential exists only for irrotational flows, while the stream function (2-D) exists for any incompressible flow.",
+   "answer": true,
+   "explanation": "$\\vec V=\\nabla\\phi$ automatically gives $\\nabla\\times\\vec V=0$. $\\psi$ only needs continuity.",
+   "source": "Lecture 07 – Potential Flow – Uniform Flow"
+  },
+  {
+   "id": "m361-pf-04",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "tf",
+   "question": "In a potential flow, lines of constant $\\phi$ (equipotential lines) are perpendicular to streamlines.",
+   "answer": true,
+   "explanation": "$\\nabla\\phi$ is parallel to $\\vec V$, which is tangent to streamlines, so equipotentials cross streamlines at right angles.",
+   "source": "Lecture 07 – Potential Flow – Uniform Flow"
+  },
+  {
+   "id": "m361-pf-05",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "For a 2-D source of strength $m$ (where $m=q/2\\pi$), the radial velocity is:",
+   "choices": [
+    "$v_r=m/r$",
+    "$v_r=mr$",
+    "$v_r=m/r^2$",
+    "$v_r=m$"
+   ],
+   "answer": 0,
+   "explanation": "$v_r=q/(2\\pi r)$ and $v_\\theta=0$. Velocity becomes infinite at $r=0$ (a singularity).",
+   "source": "Lecture 08 – Source, Sink & Vortex"
+  },
+  {
+   "id": "m361-pf-06",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "The streamlines of a free vortex are:",
+   "choices": [
+    "Concentric circles",
+    "Radial lines",
+    "Parallel straight lines",
+    "Hyperbolas"
+   ],
+   "answer": 0,
+   "explanation": "$v_r=0$ and $v_\\theta=K/r$.",
+   "source": "Lecture 08 – Source, Sink & Vortex"
+  },
+  {
+   "id": "m361-pf-07",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Which statement about free and forced vortices is correct?",
+   "choices": [
+    "A free vortex ($v_\\theta=K/r$) is irrotational. A forced vortex ($v_\\theta=\\omega r$) is rotational.",
+    "Both are irrotational",
+    "A free vortex is rotational. A forced vortex is irrotational.",
+    "Both are rotational"
+   ],
+   "answer": 0,
+   "explanation": "Drain swirl and hurricanes (outer region) ≈ free vortex. A rotating tank of liquid = forced vortex.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-08",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "short",
+   "question": "What is a combined (Rankine) vortex, and give an example.",
+   "answer": "A forced (rigid-body, rotational) vortex core surrounded by a free (irrotational) vortex outside it. Example: a tornado.",
+   "explanation": "Velocity rises linearly with $r$ in the core, peaks at the core edge, then decays as $1/r$.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition",
+   "keywords": [
+    "forced core",
+    "free outer",
+    "tornado"
+   ]
+  },
+  {
+   "id": "m361-pf-09",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Circulation $\\Gamma$ is defined as:",
+   "choices": [
+    "The line integral of the tangential velocity around a closed curve, $\\oint \\vec V\\cdot d\\vec s$",
+    "The flow rate through a closed curve",
+    "The curl of the velocity at a point",
+    "The area integral of pressure"
+   ],
+   "answer": 0,
+   "explanation": "For a free vortex $\\Gamma=2\\pi K$, and it is nonzero only around paths that enclose the singularity.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-10",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "tf",
+   "question": "The circulation around any closed path that does NOT enclose the centre of a free vortex is zero.",
+   "answer": true,
+   "explanation": "The free vortex is irrotational everywhere except at the singularity at $r=0$.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-11",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "A doublet is formed by:",
+   "choices": [
+    "Bringing a source and an equal sink together ($a\\to0$) while $q\\to\\infty$ with $qa$ fixed",
+    "Adding a vortex to a uniform flow",
+    "Adding two sources of equal strength",
+    "Adding a source to a uniform flow"
+   ],
+   "answer": 0,
+   "explanation": "Its streamlines are circles tangent to the axis at the origin.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-12",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Uniform flow + a source produces flow around a:",
+   "choices": [
+    "Half-body (Rankine half-body)",
+    "Circular cylinder",
+    "Closed Rankine oval",
+    "Rotating cylinder"
+   ],
+   "answer": 0,
+   "explanation": "It has one stagnation point upstream of the source, and the body stays open downstream.",
+   "source": "Lecture 09 – Vortex, Doublet & Superposition"
+  },
+  {
+   "id": "m361-pf-13",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Uniform flow + a source and sink of equal strength gives a:",
+   "choices": [
+    "Rankine oval (closed body)",
+    "Half-body",
+    "Circular cylinder",
+    "Free vortex"
+   ],
+   "answer": 0,
+   "explanation": "It has two stagnation points, one upstream and one downstream.",
+   "source": "Lecture 10 – Superposition"
+  },
+  {
+   "id": "m361-pf-14",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Potential flow around a stationary circular cylinder is built from:",
+   "choices": [
+    "Uniform flow + doublet",
+    "Uniform flow + source",
+    "Uniform flow + vortex only",
+    "Source + sink + vortex"
+   ],
+   "answer": 0,
+   "explanation": "Adding a vortex as well gives a rotating cylinder with lift.",
+   "source": "Lecture 10 – Superposition"
+  },
+  {
+   "id": "m361-pf-15",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "On the surface of a cylinder in potential flow, the maximum speed is ___ and occurs at the top and bottom ($\\theta=\\pm90^\\circ$).",
+   "choices": [
+    "$2U$",
+    "$U$",
+    "$\\sqrt2\\,U$",
+    "$4U$"
+   ],
+   "answer": 0,
+   "explanation": "$v_\\theta=-2U\\sin\\theta$ on $r=a$.",
+   "source": "Lecture 10 – Superposition"
+  },
+  {
+   "id": "m361-pf-16",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "short",
+   "question": "State d'Alembert's paradox.",
+   "answer": "In inviscid (potential) flow, a body such as a cylinder experiences zero drag, which contradicts experiments where real bodies have significant drag.",
+   "explanation": "The symmetric potential-flow pressure distribution cancels out. Real flows have boundary layers and separation that break this symmetry.",
+   "source": "Lecture 10 – Superposition",
+   "keywords": [
+    "zero drag",
+    "inviscid",
+    "contradicts experiment",
+    "separation"
+   ]
+  },
+  {
+   "id": "m361-pf-17",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "Adding a vortex of circulation $\\Gamma$ to the flow around a cylinder produces:",
+   "choices": [
+    "Lift $= -\\rho U\\Gamma$ per unit length, but still zero drag",
+    "Drag but no lift",
+    "Both lift and drag",
+    "Neither lift nor drag"
+   ],
+   "answer": 0,
+   "explanation": "This is the Magnus effect (Kutta–Joukowski lift). D'Alembert's paradox still holds for drag.",
+   "source": "Lecture 11 – Superposition & Navier–Stokes"
+  },
+  {
+   "id": "m361-pf-18",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "mcq",
+   "question": "For a rotating cylinder, as $\\Gamma/(4\\pi Ua)$ increases beyond 1, the stagnation point:",
+   "choices": [
+    "Leaves the surface and moves into the flow",
+    "Moves to the front of the cylinder",
+    "Splits into four points",
+    "Disappears entirely"
+   ],
+   "answer": 0,
+   "explanation": "There are three cases: two stagnation points on the surface (<1), one coincident point at the bottom (=1), one point off the body (>1).",
+   "source": "Lecture 11 – Superposition & Navier–Stokes"
+  },
+  {
+   "id": "m361-pf-19",
+   "course": "mech361",
+   "topic": "Potential flow (6.5–6.6)",
+   "type": "tf",
+   "question": "The Magnus effect is the development of lift on a rotating body in a crossflow, e.g. a curving soccer ball.",
+   "answer": true,
+   "explanation": "Rotation adds circulation, and circulation in a uniform stream produces lift.",
+   "source": "Lecture 11 – Superposition & Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-01",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "The Navier–Stokes equations are:",
+   "choices": [
+    "Second-order, nonlinear partial differential equations with no general analytical solution",
+    "First-order linear ODEs",
+    "Linear PDEs that can be superposed",
+    "Algebraic equations"
+   ],
+   "answer": 0,
+   "explanation": "The nonlinear convective-acceleration term $(\\vec V\\cdot\\nabla)\\vec V$ is the main difficulty.",
+   "source": "Lecture 11 – Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-02",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "short",
+   "question": "Name three situations where Navier–Stokes has analytical solutions.",
+   "answer": "(1) Incompressible irrotational (potential) flow. (2) Fully developed flows where the convective acceleration is zero, e.g. pipe or channel flow. (3) Stokes (creeping) flow where inertia is negligible next to viscous forces.",
+   "explanation": "In each case the nonlinear term vanishes or becomes negligible.",
+   "source": "Lecture 11 – Navier–Stokes",
+   "keywords": [
+    "potential flow",
+    "fully developed",
+    "Stokes/creeping flow"
+   ]
+  },
+  {
+   "id": "m361-ns-03",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "For incompressible 3-D viscous flow, Navier–Stokes plus continuity give:",
+   "choices": [
+    "4 equations for 4 unknowns ($u, v, w, p$)",
+    "3 equations for 3 unknowns",
+    "4 equations for 3 unknowns",
+    "1 equation for 1 unknown"
+   ],
+   "answer": 0,
+   "explanation": "3 momentum equations + continuity, with unknowns $u$, $v$, $w$, $p$.",
+   "source": "Lecture 11 – Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-04",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "tf",
+   "question": "For a Newtonian incompressible fluid, the viscous stress tensor is linearly proportional to the strain-rate tensor: $\\tau_{ij}=2\\mu\\varepsilon_{ij}$.",
+   "answer": true,
+   "explanation": "This constitutive relation turns the Cauchy equations into Navier–Stokes.",
+   "source": "Lecture 11 – Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-05",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "The no-slip boundary condition states that at a solid wall:",
+   "choices": [
+    "The fluid velocity equals the wall velocity",
+    "The shear stress is zero",
+    "The normal velocity is maximum",
+    "The pressure is zero"
+   ],
+   "answer": 0,
+   "explanation": "For a stationary wall, $\\vec V=0$ at the wall.",
+   "source": "Lecture 11 – Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-06",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "At a free surface (free-slip condition), which holds?",
+   "choices": [
+    "The shear stress is zero",
+    "The velocity is zero",
+    "The pressure gradient is infinite",
+    "The vorticity is maximum"
+   ],
+   "answer": 0,
+   "explanation": "Free surface: no shear, $\\partial u/\\partial y=0$, and the pressure equals the atmospheric pressure.",
+   "source": "Lecture 11 – Navier–Stokes"
+  },
+  {
+   "id": "m361-ns-07",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "short",
+   "question": "What two conditions must hold at the interface between two immiscible fluids?",
+   "answer": "The velocities of the two fluids are equal (no slip between them), and the shear stress parallel to the interface is the same in both fluids.",
+   "explanation": "These conditions couple the two velocity profiles.",
+   "source": "Lecture 11 – Navier–Stokes",
+   "keywords": [
+    "equal velocity",
+    "equal shear stress"
+   ]
+  },
+  {
+   "id": "m361-ns-08",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "Steady, fully developed laminar flow between two fixed parallel plates (plane Poiseuille flow) has a velocity profile that is:",
+   "choices": [
+    "Parabolic, with maximum at the centreline",
+    "Linear",
+    "Uniform",
+    "Logarithmic"
+   ],
+   "answer": 0,
+   "explanation": "$u=\\frac{1}{2\\mu}\\frac{dp}{dx}(y^2-h^2)$.",
+   "source": "Lecture 12 – Viscous Flow"
+  },
+  {
+   "id": "m361-ns-09",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "tf",
+   "question": "In pressure-driven flow between fixed plates, the pressure gradient $dp/dx$ is negative in the flow direction.",
+   "answer": true,
+   "explanation": "Pressure falls along the flow to overcome viscous wall shear.",
+   "source": "Lecture 12 – Viscous Flow"
+  },
+  {
+   "id": "m361-ns-10",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "Couette flow with zero pressure gradient between a fixed plate and a plate moving at $U$ has a velocity profile that is:",
+   "choices": [
+    "Linear, $u=Uy/b$",
+    "Parabolic",
+    "Logarithmic",
+    "Uniform"
+   ],
+   "answer": 0,
+   "explanation": "A nonzero $dp/dx$ adds a parabolic part on top of the linear one.",
+   "source": "Lecture 13-14 – Viscous Flow Examples"
+  },
+  {
+   "id": "m361-ns-11",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "mcq",
+   "question": "Hagen–Poiseuille (laminar pipe) flow has volume flow rate:",
+   "choices": [
+    "$Q=\\dfrac{\\pi R^4\\Delta p}{8\\mu\\ell}$",
+    "$Q=\\dfrac{\\pi R^2\\Delta p}{8\\mu\\ell}$",
+    "$Q=\\dfrac{\\pi D^4\\Delta p}{8\\mu\\ell}$",
+    "$Q=\\dfrac{\\pi R^4\\Delta p}{4\\mu\\ell}$"
+   ],
+   "answer": 0,
+   "explanation": "The fourth-power dependence on $R$ means halving the radius cuts $Q$ by a factor of 16 at the same $\\Delta p$.",
+   "source": "Lecture 13-14 – Viscous Flow Examples"
+  },
+  {
+   "id": "m361-ns-12",
+   "course": "mech361",
+   "topic": "Navier–Stokes & exact solutions (6.8–6.9)",
+   "type": "tf",
+   "question": "In laminar pipe flow, the average velocity is half the centreline (maximum) velocity.",
+   "answer": true,
+   "explanation": "$V_{avg}=u_{max}/2$ for the parabolic profile $u=u_{max}(1-r^2/R^2)$.",
+   "source": "Lecture 13-14 – Viscous Flow Examples"
+  },
+  {
+   "id": "m361-pp-01",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "For pipe flow (based on $D$ and average velocity), the flow is typically laminar below Re ≈",
+   "choices": [
+    "2100",
+    "500",
+    "5×10⁵",
+    "10,000"
+   ],
+   "answer": 0,
+   "explanation": "Laminar < 2100, transitional 2100–4000, turbulent > 4000 (the values used in this course).",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-02",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "The distinguishing feature of turbulence is the presence of random velocity fluctuations. Without them there is no turbulence.",
+   "answer": true,
+   "explanation": "This is why we use Reynolds decomposition $u=\\bar u+u'$.",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-03",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "Reynolds decomposition splits an instantaneous variable into:",
+   "choices": [
+    "A time-mean part plus a fluctuating part",
+    "A laminar part plus a turbulent part",
+    "A pressure part plus a viscous part",
+    "Normal and shear components"
+   ],
+   "answer": 0,
+   "explanation": "$u=\\bar u+u'$, with $\\overline{u'}=0$.",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-04",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "Turbulence intensity is defined as:",
+   "choices": [
+    "$u'_{rms}/\\bar u$",
+    "$\\bar u/u'_{rms}$",
+    "$\\overline{u'v'}$",
+    "$\\bar u/U_{max}$"
+   ],
+   "answer": 0,
+   "explanation": "The RMS fluctuation as a fraction of the mean velocity.",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-05",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "The time average of a fluctuation is zero, but the time average of a product of two fluctuations, $\\overline{u'v'}$, generally is not.",
+   "answer": true,
+   "explanation": "That nonzero correlation is the Reynolds shear stress.",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-06",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "Averaging the Navier–Stokes equations (RANS) creates extra unknowns called:",
+   "choices": [
+    "Reynolds stresses $-\\rho\\overline{u_i'u_j'}$",
+    "Viscous stresses",
+    "Body forces",
+    "Pressure fluctuations only"
+   ],
+   "answer": 0,
+   "explanation": "The diagonal terms are normal Reynolds stresses (they sum to 2× the turbulent kinetic energy). Off-diagonal terms are shear stresses.",
+   "source": "Lecture 15 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-07",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "short",
+   "question": "What is the turbulence closure problem?",
+   "answer": "The RANS equations have more unknowns than equations: 4 mean variables plus 6 independent Reynolds stresses (10 unknowns) against only 4 equations. The Reynolds stresses must be modelled (e.g. eddy viscosity) to close the system.",
+   "explanation": "No exact equation exists for the new unknowns without introducing even more unknowns.",
+   "source": "Lecture 15 – Viscous Flow in Pipes",
+   "keywords": [
+    "more unknowns than equations",
+    "Reynolds stresses",
+    "need a model"
+   ]
+  },
+  {
+   "id": "m361-pp-08",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "In the eddy-viscosity model, the total shear stress in turbulent flow is:",
+   "choices": [
+    "$\\tau=(\\mu+\\eta)\\,d\\bar u/dy$, i.e. viscous plus turbulent ($-\\rho\\overline{u'v'}=\\eta\\,d\\bar u/dy$)",
+    "$\\tau=\\mu\\,d\\bar u/dy$ only",
+    "$\\tau=-\\rho\\overline{u'v'}$ only",
+    "$\\tau=\\rho\\bar u^2$"
+   ],
+   "answer": 0,
+   "explanation": "The eddy viscosity $\\eta$ is a flow property, not a fluid property. It is usually much larger than $\\mu$ away from the wall.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-09",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "From the wall outward, the three layers of a turbulent velocity profile are:",
+   "choices": [
+    "Viscous sublayer → overlap (log) layer → outer layer",
+    "Outer layer → viscous sublayer → overlap layer",
+    "Laminar layer → transition layer → wake",
+    "Boundary layer → core → wake"
+   ],
+   "answer": 0,
+   "explanation": "In the viscous sublayer viscous stress dominates. In the outer layer turbulent stress dominates. The log law holds in the overlap.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-10",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "A turbulent pipe velocity profile is flatter (fuller) across the core than the laminar parabolic profile, with a steeper gradient at the wall.",
+   "answer": true,
+   "explanation": "Turbulent mixing evens out momentum across the core. The steep wall gradient means a higher wall shear stress.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-11",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "The quantity $u^*=\\sqrt{\\tau_w/\\rho}$ used in the log law is the:",
+   "choices": [
+    "Friction velocity",
+    "Free-stream velocity",
+    "Average velocity",
+    "Fluctuation RMS"
+   ],
+   "answer": 0,
+   "explanation": "Log law: $\\bar u/u^*=2.5\\ln(yu^*/\\nu)+5.0$.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-12",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "In fully developed turbulent pipe flow, the friction factor $f$ depends on:",
+   "choices": [
+    "Reynolds number and relative roughness $\\varepsilon/D$",
+    "Reynolds number only",
+    "Relative roughness only",
+    "Pipe length only"
+   ],
+   "answer": 0,
+   "explanation": "Laminar flow: $f=64/\\mathrm{Re}$ (no roughness effect). Fully rough turbulent flow: $f$ depends on $\\varepsilon/D$ only.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-13",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "Wall roughness has a negligible effect on the friction factor in laminar pipe flow.",
+   "answer": true,
+   "explanation": "In laminar flow viscous effects span the whole pipe, so small roughness elements don't matter.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-14",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "short",
+   "question": "Why does roughness matter in turbulent flow but not laminar flow?",
+   "answer": "In turbulent flow the viscous sublayer is very thin, so roughness elements can poke through it into the turbulent region and disturb the flow. In laminar flow viscous effects fill the whole pipe and swamp small roughness.",
+   "explanation": "This leads to the classification: hydraulically smooth, transitionally rough, fully rough.",
+   "source": "Lecture 16 – Viscous Flow in Pipes",
+   "keywords": [
+    "thin viscous sublayer",
+    "roughness protrudes",
+    "laminar dominated by viscosity"
+   ]
+  },
+  {
+   "id": "m361-pp-15",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "At very high Re (fully rough regime) on the Moody chart, the friction factor:",
+   "choices": [
+    "Becomes independent of Re and depends only on $\\varepsilon/D$",
+    "Keeps decreasing like $64/\\mathrm{Re}$",
+    "Increases linearly with Re",
+    "Goes to zero"
+   ],
+   "answer": 0,
+   "explanation": "The Moody curves become horizontal to the right of the dashed line.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-16",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "The Blasius correlation $f=0.316/\\mathrm{Re}^{1/4}$ applies to:",
+   "choices": [
+    "Turbulent flow in smooth pipes (Re ≲ 10⁵)",
+    "Laminar flow",
+    "Fully rough pipes",
+    "Non-circular ducts only"
+   ],
+   "answer": 0,
+   "explanation": "Colebrook (implicit) or Haaland (explicit) are used for rough pipes.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-17",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "Major head loss in a pipe (Darcy–Weisbach) is:",
+   "choices": [
+    "$h_L=f\\dfrac{\\ell}{D}\\dfrac{V^2}{2g}$",
+    "$h_L=K_L\\dfrac{V^2}{2g}$",
+    "$h_L=\\dfrac{32\\mu\\ell V}{D}$",
+    "$h_L=f\\dfrac{D}{\\ell}\\dfrac{V^2}{2g}$"
+   ],
+   "answer": 0,
+   "explanation": "Minor losses use $h_L=K_L V^2/2g$, or an equivalent length $\\ell_{eq}=K_L D/f$.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-18",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "Bernoulli's equation can be applied directly to viscous pipe flow as long as the flow is steady.",
+   "answer": false,
+   "explanation": "Bernoulli assumes frictionless flow. For real pipe flow, use the energy equation with head-loss terms $h_L$ (and pump or turbine heads).",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-19",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "The hydraulic diameter of a non-circular duct is:",
+   "choices": [
+    "$D_h=4A/P$ (four times area over wetted perimeter)",
+    "$D_h=A/P$",
+    "$D_h=2A/P$",
+    "$D_h=\\sqrt{4A/\\pi}$"
+   ],
+   "answer": 0,
+   "explanation": "For a circle $D_h=D$. For a square of side $a$, $D_h=a$.",
+   "source": "Lecture 17 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-20",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "mcq",
+   "question": "In the energy equation for pipe flow, a pump appears as:",
+   "choices": [
+    "A head added, $+h_p$, on the upstream side (gain)",
+    "A head loss, like friction",
+    "A change in elevation",
+    "It does not appear"
+   ],
+   "answer": 0,
+   "explanation": "$\\frac{p_1}{\\gamma}+\\frac{V_1^2}{2g}+z_1+h_p=\\frac{p_2}{\\gamma}+\\frac{V_2^2}{2g}+z_2+h_T+h_L$. A turbine extracts head $h_T$.",
+   "source": "Lecture 17 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-21",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "For pipes in series, the flow rate is the same in each pipe and the head losses add.",
+   "answer": true,
+   "explanation": "For parallel pipes it's reversed: the head loss is the same in each branch and the flow rates add.",
+   "source": "Lecture 17 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-pp-22",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "short",
+   "question": "For a single-pipe problem, which of the three classic unknowns ($\\Delta p$, $D$, or $Q$) can be found without iteration?",
+   "answer": "$\\Delta p$ (or head loss) for given $L$, $D$, $Q$: compute Re and $f$, then apply the energy equation directly. Finding $D$ or $Q$ requires iteration, because $f$ depends on the unknown through Re and $\\varepsilon/D$.",
+   "explanation": "Iterate between the energy equation and Colebrook/Haaland (or the Moody chart).",
+   "source": "Lecture 17 – Viscous Flow in Pipes",
+   "keywords": [
+    "Δp direct",
+    "D and Q iterate"
+   ]
+  },
+  {
+   "id": "m361-pp-23",
+   "course": "mech361",
+   "topic": "Pipe flow & turbulence (Ch 8)",
+   "type": "tf",
+   "question": "Pressure drop in fully developed pipe flow is proportional to pipe length.",
+   "answer": true,
+   "explanation": "That is why $\\Delta p\\propto \\ell/D$ in Darcy–Weisbach.",
+   "source": "Lecture 16 – Viscous Flow in Pipes"
+  },
+  {
+   "id": "m361-ex-01",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "Drag is the component of the resultant fluid force:",
+   "choices": [
+    "Parallel to the upstream flow direction",
+    "Perpendicular to the upstream flow",
+    "Normal to the body surface",
+    "Due only to shear stress"
+   ],
+   "answer": 0,
+   "explanation": "Lift is perpendicular to the free stream.",
+   "source": "Lecture 18 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-02",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "short",
+   "question": "Lift and drag come from integrating which two surface quantities over a body?",
+   "answer": "Pressure (acting normal to the surface) and wall shear stress (acting tangential to the surface).",
+   "explanation": "Drag = pressure (form) drag + friction drag.",
+   "source": "Lecture 18 – Flow over Immersed Bodies",
+   "keywords": [
+    "pressure",
+    "wall shear stress"
+   ]
+  },
+  {
+   "id": "m361-ex-03",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "The drag coefficient is defined as:",
+   "choices": [
+    "$C_D=\\dfrac{F_D}{\\tfrac12\\rho U^2A}$",
+    "$C_D=\\dfrac{F_D}{\\rho U^2A}$",
+    "$C_D=\\dfrac{\\tfrac12\\rho U^2A}{F_D}$",
+    "$C_D=\\dfrac{F_D}{\\rho U A}$"
+   ],
+   "answer": 0,
+   "explanation": "Same form for $C_L$. $A$ is frontal area for bluff bodies and planform area for wings.",
+   "source": "Lecture 18 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-04",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "tf",
+   "question": "The fluid forces on a body are the same whether the body moves through still fluid or the fluid moves past a stationary body at the same relative speed.",
+   "answer": true,
+   "explanation": "Only relative motion matters, which is why wind tunnels work.",
+   "source": "Lecture 18 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-05",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "The boundary-layer thickness $\\delta$ is commonly defined as the distance from the wall where:",
+   "choices": [
+    "$u=0.99U$",
+    "$u=0.5U$",
+    "$u=U$ exactly",
+    "The shear stress is maximum"
+   ],
+   "answer": 0,
+   "explanation": "Displacement thickness $\\delta^*$ and momentum thickness $\\theta$ are integral measures.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-06",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "For a laminar flat-plate boundary layer (Blasius), $\\delta$ grows like:",
+   "choices": [
+    "$\\delta\\approx5x/\\sqrt{\\mathrm{Re}_x}$, i.e. $\\propto\\sqrt x$",
+    "$\\delta\\propto x$",
+    "$\\delta\\propto x^{4/5}$",
+    "$\\delta$ = constant"
+   ],
+   "answer": 0,
+   "explanation": "A turbulent BL grows faster, roughly $\\delta\\approx0.37x/\\mathrm{Re}_x^{1/5}$, i.e. $\\propto x^{4/5}$.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-07",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "Transition to turbulence on a smooth flat plate typically occurs near:",
+   "choices": [
+    "$\\mathrm{Re}_x\\approx5\\times10^5$",
+    "$\\mathrm{Re}_x\\approx2100$",
+    "$\\mathrm{Re}_x\\approx4000$",
+    "$\\mathrm{Re}_x\\approx10^9$"
+   ],
+   "answer": 0,
+   "explanation": "This varies from $2\\times10^5$ to $3\\times10^6$ depending on roughness and free-stream turbulence.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-08",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "tf",
+   "question": "Momentum thickness $\\theta$ represents the loss of momentum flux in the boundary layer compared with inviscid flow.",
+   "answer": true,
+   "explanation": "$\\theta=\\int_0^\\infty \\frac uU(1-\\frac uU)dy$. It relates directly to drag on the plate.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-09",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "tf",
+   "question": "Wall shear stress on a flat plate in laminar flow decreases with distance from the leading edge.",
+   "answer": true,
+   "explanation": "As $\\delta$ grows, the velocity gradient at the wall drops: $\\tau_w\\propto x^{-1/2}$.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-10",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "For a streamlined body (e.g. a thin airfoil at small angle of attack), most of the drag is:",
+   "choices": [
+    "Friction drag",
+    "Pressure (form) drag",
+    "Wave drag",
+    "Induced by separation"
+   ],
+   "answer": 0,
+   "explanation": "Bluff bodies (cylinders, flat plates normal to the flow) are dominated by pressure drag from separation.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-11",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "Boundary-layer separation is caused by:",
+   "choices": [
+    "An adverse pressure gradient ($dp/dx>0$) that decelerates slow near-wall fluid until $\\partial u/\\partial y=0$ at the wall",
+    "A favourable pressure gradient",
+    "High free-stream turbulence alone",
+    "Compressibility"
+   ],
+   "answer": 0,
+   "explanation": "Past the separation point there is reversed flow and a wake.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-12",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "tf",
+   "question": "A turbulent boundary layer resists separation better than a laminar one.",
+   "answer": true,
+   "explanation": "Turbulent mixing brings high-momentum fluid toward the wall. This is why golf-ball dimples and trip wires reduce drag on bluff bodies.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-13",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "The sudden drop in $C_D$ for a smooth sphere around Re ≈ 3×10⁵ happens because:",
+   "choices": [
+    "The boundary layer becomes turbulent, separation moves aft and the wake narrows",
+    "The flow becomes laminar everywhere",
+    "Friction drag disappears",
+    "The sphere starts to rotate"
+   ],
+   "answer": 0,
+   "explanation": "This is the drag crisis. Pressure drag falls a lot even though friction drag rises slightly.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-14",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "tf",
+   "question": "Golf-ball dimples reduce drag by causing an earlier transition to a turbulent boundary layer.",
+   "answer": true,
+   "explanation": "This delays separation and shrinks the wake, giving lower pressure drag at typical drive speeds.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-15",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "An airfoil stalls when, at high angle of attack:",
+   "choices": [
+    "The flow separates from the upper surface, lift drops and drag rises sharply",
+    "The flow becomes supersonic",
+    "The pressure on the lower surface drops",
+    "The boundary layer becomes laminar"
+   ],
+   "answer": 0,
+   "explanation": "This is why $C_L$ peaks at the stall angle. Lab 4 measured the airfoil $C_p$ distribution.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-ex-16",
+   "course": "mech361",
+   "topic": "External flow & boundary layers (Ch 9)",
+   "type": "mcq",
+   "question": "For creeping flow past a sphere (Re < 1), Stokes' law gives:",
+   "choices": [
+    "$F_D=3\\pi\\mu UD$, so $C_D=24/\\mathrm{Re}$",
+    "$C_D\\approx0.47$",
+    "$F_D\\propto U^2$",
+    "$C_D=64/\\mathrm{Re}$"
+   ],
+   "answer": 0,
+   "explanation": "Drag is linear in velocity because viscous forces dominate inertia.",
+   "source": "Lecture 19 – Flow over Immersed Bodies"
+  },
+  {
+   "id": "m361-cf-01",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "mcq",
+   "question": "The speed of sound in an ideal gas is:",
+   "choices": [
+    "$c=\\sqrt{kRT}$",
+    "$c=\\sqrt{RT}$",
+    "$c=kRT$",
+    "$c=\\sqrt{p/\\rho}$"
+   ],
+   "answer": 0,
+   "explanation": "In air at 15 °C, $c\\approx340$ m/s. It depends only on temperature for a given gas.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-02",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "mcq",
+   "question": "Flow is usually treated as incompressible when the Mach number is below about:",
+   "choices": [
+    "0.3",
+    "1.0",
+    "0.8",
+    "0.05"
+   ],
+   "answer": 0,
+   "explanation": "At $\\mathrm{Ma}<0.3$, density changes are under about 5%.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-03",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "tf",
+   "question": "In isentropic subsonic flow through a converging duct, the velocity increases and the pressure decreases.",
+   "answer": true,
+   "explanation": "Area–velocity relation: $\\frac{dA}{A}=(\\mathrm{Ma}^2-1)\\frac{dV}{V}$. For Ma < 1, $dA<0$ gives $dV>0$.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-04",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "tf",
+   "question": "In supersonic flow, a diverging duct accelerates the flow.",
+   "answer": true,
+   "explanation": "For Ma > 1, $(\\mathrm{Ma}^2-1)>0$, so $dA>0$ gives $dV>0$. This is why rockets use the diverging part of a nozzle.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-05",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "mcq",
+   "question": "In isentropic flow, Ma = 1 can only occur:",
+   "choices": [
+    "At the throat (minimum area)",
+    "At the inlet",
+    "Anywhere in a diverging section",
+    "At the exit of a converging section only when the back pressure is high"
+   ],
+   "answer": 0,
+   "explanation": "To go from subsonic to supersonic you need a converging–diverging nozzle with sonic flow at the throat.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-06",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "short",
+   "question": "What does it mean for a converging nozzle to be choked?",
+   "answer": "The flow reaches Ma = 1 at the exit (throat). Lowering the back pressure further cannot increase the mass flow rate, which stays at its maximum for the given stagnation conditions.",
+   "explanation": "Choked mass flow depends only on the stagnation pressure and temperature and the throat area.",
+   "source": "Course outline – Ch 11 (11.1–11.6)",
+   "keywords": [
+    "Ma = 1 at throat",
+    "max mass flow",
+    "independent of back pressure"
+   ]
+  },
+  {
+   "id": "m361-cf-07",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "tf",
+   "question": "Stagnation temperature stays constant in adiabatic flow of an ideal gas, even across a normal shock.",
+   "answer": true,
+   "explanation": "$T_0=T(1+\\frac{k-1}2\\mathrm{Ma}^2)$ is conserved when no heat or work is added. Stagnation pressure, however, drops across a shock.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
+  },
+  {
+   "id": "m361-cf-08",
+   "course": "mech361",
+   "topic": "Compressible flow (Ch 11)",
+   "type": "mcq",
+   "question": "Across a normal shock, the flow goes from:",
+   "choices": [
+    "Supersonic to subsonic, with a rise in static pressure and a loss of stagnation pressure",
+    "Subsonic to supersonic",
+    "Supersonic to more supersonic",
+    "Subsonic to sonic, isentropically"
+   ],
+   "answer": 0,
+   "explanation": "Shocks are irreversible: entropy rises, so $p_0$ falls.",
+   "source": "Course outline – Ch 11 (11.1–11.6)"
   }
  ]
 }
