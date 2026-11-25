@@ -5,3 +5,4 @@ android/
 .env
 signing/
 *.keystore
+dist-claude/

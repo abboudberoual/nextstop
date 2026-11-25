@@ -1,4 +1,5 @@
 // Two-way sync with Supabase. Last-writer-wins per question (by state.updated).
+export const mode = 'app';
 import { createClient } from '@supabase/supabase-js';
 import { store } from './store.js';
 import { CONFIG } from './config.js';

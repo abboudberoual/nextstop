@@ -28,3 +28,7 @@ New semester: replace `courses` and `questions` in `public/bank.json` (or push n
 
 ## Sync setup
 The sync server is the Supabase project `nextstop` (ca-central-1); `supabase/schema.sql` matches what's applied. After pushing new questions, run `select public.import_bank();` (Claude can do this through the Supabase connector) and every device picks them up on its next sync, no reinstall needed. Create your account in the app under Settings → Sync.
+
+## Claude study page
+The same app is published as a Claude page: https://claude.ai/artifact/QVPV6E4BNkk7ho6Mttokxc
+`VITE_TARGET=claude npm run build` → `dist-claude/index.html` (single file, fonts inlined) + `bank.json`. On claude.ai a page can't reach Supabase directly, so `src/sync-claude.js` syncs through the viewer's Supabase connector (`execute_sql`) and links to the phone account by email. The page declares `mcp: Supabase/execute_sql`.

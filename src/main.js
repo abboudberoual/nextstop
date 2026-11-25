@@ -306,9 +306,12 @@ async function account() {
   if (!sync.supa()) { el.innerHTML = 'Sync isn\'t set up in this build. Progress is saved on this device.'; return; }
   const s = await sync.session();
   if (s) {
-    el.innerHTML = `Signed in as <b>${esc(s.user.email)}</b>. Progress syncs with the Claude study page.<div class="row" style="margin-top:10px"><button class="chip" id="now">Sync now</button><button class="chip" id="out">Sign out</button></div>`;
+    el.innerHTML = `Signed in as <b>${esc(s.user.email)}</b>. Progress syncs ${sync.mode === 'claude' ? 'with the phone app' : 'with the Claude study page'}.<div class="row" style="margin-top:10px"><button class="chip" id="now">Sync now</button><button class="chip" id="out">Sign out</button></div>`;
     $('#now').onclick = () => doSync(false);
     $('#out').onclick = async () => { await sync.signOut(); account(); };
+  } else if (sync.mode === 'claude') {
+    el.innerHTML = `Link this page to the account you created in the phone app. It syncs through your Supabase connector, so no password is needed here.<label class="f">Account email<input id="em" type="email" autocomplete="email"></label><button class="chip" id="in">Link account</button>`;
+    $('#in').onclick = async () => { try { await sync.signIn($('#em').value); toast('Linked'); await doSync(false); account(); } catch (e) { toast(e.message); } };
   } else {
     el.innerHTML = `<label class="f">Email<input id="em" type="email" autocomplete="email"></label><label class="f">Password<input id="pw" type="password" autocomplete="current-password"></label>
       <div class="row"><button class="chip" id="in">Sign in</button><button class="chip" id="up">Create account</button></div>`;
