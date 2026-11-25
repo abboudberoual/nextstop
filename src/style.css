@@ -1,0 +1,102 @@
+/*
+VOICE  calm, quick, one-thumb; built for a metro car
+IDEA   the STM metro map: each course is a line, each final is a terminus
+PICTURE a horizontal line with today's dot travelling toward four exam stations
+COLOUR white / night #0e1116, STM green, orange, blue, yellow as course colours
+TYPE   Figtree 800 for numbers and titles, Figtree 400–600 for text
+*/
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#ffffff, #0e1116);
+  --panel: light-dark(#f3f4f6, #171b22);
+  --line: light-dark(#e3e5e8, #262c36);
+  --ink: light-dark(#111418, #eef1f5);
+  --mute: light-dark(#5b6370, #9aa3af);
+  --accent: #0a5cff;
+  --ok: #00a05a;
+  --bad: #e6261f;
+  --green: #008e4f; --orange: #f08123; --blue: #0083ca; --yellow: #f2c500;
+  --safe-t: env(safe-area-inset-top, 0px); --safe-b: env(safe-area-inset-bottom, 0px);
+}
+:root[data-theme=light] { color-scheme: light } :root[data-theme=dark] { color-scheme: dark }
+* { box-sizing: border-box; min-width: 0; -webkit-tap-highlight-color: transparent }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 Figtree, system-ui, sans-serif; overflow-x: clip }
+button { font: inherit; color: inherit; cursor: pointer }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
+#app { max-width: 640px; margin: 0 auto; min-height: 100dvh; padding: calc(var(--safe-t) + 14px) 16px calc(var(--safe-b) + 88px) }
+
+h1 { font-weight: 800; font-size: 34px; line-height: 1.05; margin: 0 0 4px; text-wrap: balance }
+h2 { font-weight: 800; font-size: 20px; margin: 28px 0 10px }
+.mute { color: var(--mute) } .small { font-size: 13px }
+.row { display: flex; align-items: center; gap: 10px }
+.sp { flex: 1 }
+
+/* Metro line hero */
+.metro { margin: 14px -4px 10px }
+.metro svg { display: block; width: 100%; height: auto; max-height: 150px }
+.metro text { font: 600 10.5px Figtree, system-ui, sans-serif; fill: var(--ink) }
+.metro .d { font-weight: 800; font-size: 11.5px }
+
+.today { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: center; background: var(--panel); border-radius: 18px; padding: 16px }
+.ring { width: 84px; height: 84px }
+.big { font-weight: 800; font-size: 28px; line-height: 1 }
+
+.cta { display: block; width: 100%; border: 0; border-radius: 16px; padding: 18px; margin-top: 14px; background: var(--accent); color: #fff; font-weight: 800; font-size: 19px; min-height: 60px }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px }
+.chip { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 10px 14px; min-height: 44px; font-weight: 600; font-size: 15px }
+.chip[aria-pressed=true] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+
+.course { display: grid; grid-template-columns: 10px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line) }
+.course .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 6px }
+.course .bar i { display: block; height: 100% }
+.dot { width: 10px; height: 100%; min-height: 40px; border-radius: 5px }
+.course button { border: 1px solid var(--line); background: none; border-radius: 12px; padding: 8px 12px; min-height: 44px; font-weight: 700 }
+
+/* Question */
+.qtop { display: flex; align-items: center; gap: 10px; margin-bottom: 12px }
+.prog { flex: 1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden }
+.prog i { display: block; height: 100%; background: var(--accent); transition: width .25s }
+.x { border: 0; background: none; font-size: 26px; width: 44px; height: 44px; line-height: 1 }
+.tag { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; font-size: 13px; padding: 4px 10px; border-radius: 999px; color: #fff }
+.tag.light { color: #111 }
+.qtext { font-size: 20px; line-height: 1.4; font-weight: 600; margin: 14px 0 18px; white-space: pre-wrap }
+.choices { display: grid; gap: 10px }
+.choice { text-align: left; border: 2px solid var(--line); background: var(--bg); border-radius: 14px; padding: 14px 16px; min-height: 56px; font-size: 17px; line-height: 1.35 }
+.choice.ok { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, var(--bg)) }
+.choice.bad { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--bg)) }
+.choice:disabled { cursor: default }
+.tf { grid-template-columns: 1fr 1fr } .tf .choice { text-align: center; font-weight: 800; font-size: 19px; min-height: 72px }
+.reveal { background: var(--panel); border-radius: 14px; padding: 14px 16px; margin-top: 14px; white-space: pre-wrap }
+.reveal b { display: block; margin-bottom: 4px }
+.grades { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 12px }
+.grades button { border: 0; border-radius: 14px; min-height: 60px; font-weight: 800; color: #fff }
+.g0 { background: var(--bad) } .g1 { background: #c98a00 } .g2 { background: var(--ok) }
+.dock { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(var(--safe-b) + 12px); background: linear-gradient(transparent, var(--bg) 30%) }
+.dock .in { max-width: 608px; margin: 0 auto; display: flex; gap: 8px }
+.dock .cta { margin: 0 }
+.ghost { white-space: nowrap; border: 1px solid var(--line); background: var(--bg); border-radius: 16px; padding: 0 16px; min-height: 60px; font-weight: 700 }
+textarea { width: 100%; min-height: 84px; font: 16px Figtree, system-ui; border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--bg); color: var(--ink) }
+
+/* Nav */
+nav { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); padding-bottom: var(--safe-b) }
+nav .in { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr) }
+nav button { border: 0; background: none; min-height: 60px; font-weight: 700; color: var(--mute) }
+nav button[aria-current=page] { color: var(--ink) }
+
+/* Stats & settings */
+.bars { display: flex; align-items: flex-end; gap: 4px; height: 120px; padding-top: 10px }
+.bars div { flex: 1; background: var(--accent); border-radius: 4px 4px 0 0; min-height: 2px; position: relative }
+.bars div.goal { background: var(--ok) }
+.topic { display: grid; grid-template-columns: minmax(0,1fr) 90px 44px; gap: 10px; align-items: center; padding: 6px 0; font-size: 15px }
+.topic .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden } .topic .bar i { display: block; height: 100% }
+.num { text-align: right; font-variant-numeric: tabular-nums }
+label.f { display: grid; gap: 6px; margin: 12px 0; font-weight: 600 }
+input, select { font: 16px Figtree, system-ui; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--ink); min-height: 44px }
+.nudge { display: grid; grid-template-columns: 100px minmax(0,1fr) 44px; gap: 8px; align-items: center; margin: 8px 0 }
+.days { display: flex; gap: 4px; flex-wrap: wrap } .days button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: none; font-size: 13px; font-weight: 700 }
+.days button[aria-pressed=true] { background: var(--ink); color: var(--bg) }
+.note { background: var(--panel); border-radius: 14px; padding: 12px 14px; font-size: 15px }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--safe-b) + 80px); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-weight: 600; z-index: 9 }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+
+.katex { font-size: 1.05em } .katex-display { margin: .4em 0; overflow-x: auto; overflow-y: hidden }

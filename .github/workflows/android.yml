@@ -1,0 +1,90 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+
+      - name: Install
+        run: npm ci
+
+      - name: Validate question bank
+        run: npm run validate
+
+      - name: Build web app
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: npm run build
+
+      - name: Add Android platform
+        run: |
+          npx cap add android
+          npx @capacitor/assets@3 generate --android --iconBackgroundColor '#0e1116' --splashBackgroundColor '#0e1116' || echo "icon generation skipped"
+          npx cap sync android
+
+      - name: Permissions for notifications
+        run: |
+          M=android/app/src/main/AndroidManifest.xml
+          for p in POST_NOTIFICATIONS SCHEDULE_EXACT_ALARM RECEIVE_BOOT_COMPLETED VIBRATE; do
+            grep -q "android.permission.$p" $M || sed -i "s#</manifest>#    <uses-permission android:name=\"android.permission.$p\" />\n</manifest>#" $M
+          done
+          cat $M
+
+      - name: Signing key (same key every build so updates install over the old app)
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then echo "::error::Add the KEYSTORE_B64 repo secret (see README)"; exit 1; fi
+          echo "$KEYSTORE_B64" | base64 -d > android/app/release.keystore
+          cat >> android/app/build.gradle <<'EOF'
+          android {
+              signingConfigs {
+                  stable {
+                      storeFile file('release.keystore')
+                      storePassword System.getenv('KEYSTORE_PASSWORD')
+                      keyAlias 'finals'
+                      keyPassword System.getenv('KEYSTORE_PASSWORD')
+                  }
+              }
+              buildTypes {
+                  release { signingConfig signingConfigs.stable; minifyEnabled false }
+              }
+          }
+          EOF
+
+      - name: Gradle build
+        working-directory: android
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk ../NextStop.apk
+
+      - uses: actions/upload-artifact@v4
+        with: { name: NextStop-apk, path: NextStop.apk }
+
+      - name: Publish to "latest" release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Next Stop (latest build)
+          body: Built from ${{ github.sha }}. Download NextStop.apk on your phone and install it over the previous version.
+          files: NextStop.apk
+          make_latest: true

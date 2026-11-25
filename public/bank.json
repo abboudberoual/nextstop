@@ -1,0 +1,310 @@
+{
+ "version": 1,
+ "courses": [
+  {
+   "id": "mech361",
+   "code": "MECH 361",
+   "name": "Fluid Mechanics II",
+   "exam": "2026-12-09T14:00:00-05:00",
+   "room": "MB 3.255",
+   "finalWeight": 60,
+   "colorName": "green"
+  },
+  {
+   "id": "engr311",
+   "code": "ENGR 311",
+   "name": "Transform Calculus & PDEs",
+   "exam": "2026-12-12T14:00:00-05:00",
+   "room": "MBS 2.105",
+   "finalWeight": 55,
+   "colorName": "orange"
+  },
+  {
+   "id": "engr243",
+   "code": "ENGR 243",
+   "name": "Dynamics",
+   "exam": "2026-12-14T09:00:00-05:00",
+   "room": "MB 3.285",
+   "finalWeight": 70,
+   "colorName": "blue"
+  },
+  {
+   "id": "engr391",
+   "code": "ENGR 391",
+   "name": "Numerical Methods",
+   "exam": "2026-12-14T14:00:00-05:00",
+   "room": "Online (SEB)",
+   "finalWeight": 45,
+   "colorName": "yellow"
+  }
+ ],
+ "questions": [
+  {
+   "id": "m361-s01",
+   "course": "mech361",
+   "topic": "Pipe flow",
+   "type": "tf",
+   "question": "In fully developed laminar pipe flow, the Darcy friction factor depends only on the Reynolds number.",
+   "answer": true,
+   "explanation": "For laminar flow f = 64/Re, independent of wall roughness.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "m361-s02",
+   "course": "mech361",
+   "topic": "Pipe flow",
+   "type": "mcq",
+   "question": "Doubling the mean velocity in fully developed laminar pipe flow (same pipe, same fluid) changes the head loss by a factor of:",
+   "choices": [
+    "2",
+    "4",
+    "√2",
+    "1 (no change)"
+   ],
+   "answer": 0,
+   "explanation": "h_L = f(L/D)V²/2g with f = 64/Re ∝ 1/V, so h_L ∝ V.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "m361-s03",
+   "course": "mech361",
+   "topic": "Boundary layers",
+   "type": "short",
+   "question": "What does the displacement thickness δ* of a boundary layer physically represent?",
+   "answer": "The distance the wall would have to be moved outward so that an inviscid (uniform) flow carries the same mass flow rate as the actual boundary-layer flow.",
+   "keywords": [
+    "mass flow deficit",
+    "wall displaced outward",
+    "equivalent inviscid flow"
+   ],
+   "explanation": "δ* = ∫(1 − u/U) dy. It measures the mass-flux deficit caused by the slowed fluid near the wall.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "m361-s04",
+   "course": "mech361",
+   "topic": "External flow & drag",
+   "type": "mcq",
+   "question": "The 'drag crisis' on a smooth sphere near Re ≈ 3×10⁵ is caused by:",
+   "choices": [
+    "The boundary layer turning turbulent and separating later",
+    "Flow becoming fully laminar",
+    "Compressibility effects",
+    "The wake becoming wider"
+   ],
+   "answer": 0,
+   "explanation": "A turbulent boundary layer resists the adverse pressure gradient better, so separation moves aft, the wake narrows and C_D drops sharply.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "m361-s05",
+   "course": "mech361",
+   "topic": "Boundary layers",
+   "type": "tf",
+   "question": "A favourable pressure gradient (dp/dx < 0) promotes boundary-layer separation.",
+   "answer": false,
+   "explanation": "Separation needs an adverse gradient (dp/dx > 0). A favourable gradient accelerates the flow and keeps it attached.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e311-s01",
+   "course": "engr311",
+   "topic": "Laplace transform",
+   "type": "mcq",
+   "question": "What is $\\mathcal{L}\\{e^{at} f(t)\\}$?",
+   "choices": [
+    "$F(s-a)$",
+    "$F(s+a)$",
+    "$e^{-as}F(s)$",
+    "$\\dfrac{F(s)}{s-a}$"
+   ],
+   "answer": 0,
+   "explanation": "First translation theorem: multiplying by e^{at} shifts the transform to F(s − a).",
+   "source": "Sample (Zill §4.3)"
+  },
+  {
+   "id": "e311-s02",
+   "course": "engr311",
+   "topic": "Laplace transform",
+   "type": "tf",
+   "question": "$\\mathcal{L}\\{f(t-a)\\,\\mathcal{U}(t-a)\\} = e^{-as}F(s)$ for $a > 0$.",
+   "answer": true,
+   "explanation": "Second translation theorem: a delay of a in time multiplies the transform by e^{−as}.",
+   "source": "Sample (Zill §4.3)"
+  },
+  {
+   "id": "e311-s03",
+   "course": "engr311",
+   "topic": "Fourier series",
+   "type": "mcq",
+   "question": "The Fourier series of an odd function on (−p, p) contains:",
+   "choices": [
+    "Only sine terms",
+    "Only cosine terms and a₀",
+    "Both sines and cosines",
+    "Only a₀"
+   ],
+   "answer": 0,
+   "explanation": "f(x)cos(nπx/p) is odd so every aₙ (and a₀) integrates to zero, leaving a sine series.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e311-s04",
+   "course": "engr311",
+   "topic": "PDEs",
+   "type": "short",
+   "question": "Name the 1-D heat equation and the 1-D wave equation, and say which one is parabolic and which is hyperbolic.",
+   "answer": "Heat: k u_xx = u_t (parabolic). Wave: a² u_xx = u_tt (hyperbolic).",
+   "keywords": [
+    "u_t = k u_xx",
+    "u_tt = a² u_xx",
+    "parabolic / hyperbolic"
+   ],
+   "explanation": "Classified by B² − 4AC: heat gives 0 (parabolic), wave gives a positive value (hyperbolic).",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e311-s05",
+   "course": "engr311",
+   "topic": "Laplace transform",
+   "type": "tf",
+   "question": "$\\mathcal{L}\\{\\delta(t - t_0)\\} = e^{-s t_0}$ for $t_0 \\ge 0$.",
+   "answer": true,
+   "explanation": "Sifting property of the Dirac delta.",
+   "source": "Sample (Zill §4.5)"
+  },
+  {
+   "id": "e243-s01",
+   "course": "engr243",
+   "topic": "Kinematics of particles",
+   "type": "mcq",
+   "question": "For a particle moving on a curved path at constant speed, its acceleration is:",
+   "choices": [
+    "Directed toward the centre of curvature, magnitude v²/ρ",
+    "Zero",
+    "Tangent to the path",
+    "Directed away from the centre of curvature"
+   ],
+   "answer": 0,
+   "explanation": "Constant speed means aₜ = 0, but aₙ = v²/ρ points to the centre of curvature.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e243-s02",
+   "course": "engr243",
+   "topic": "Work & energy",
+   "type": "tf",
+   "question": "The work done by friction on a block sliding on a fixed surface depends on the path taken.",
+   "answer": true,
+   "explanation": "Friction is non-conservative: its work depends on path length.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e243-s03",
+   "course": "engr243",
+   "topic": "Impulse & momentum",
+   "type": "short",
+   "question": "State the condition under which the linear momentum of a system of particles is conserved.",
+   "answer": "When the resultant external force (impulse) on the system is zero over the interval.",
+   "keywords": [
+    "sum of external forces = 0",
+    "internal forces cancel"
+   ],
+   "explanation": "Internal forces occur in equal and opposite pairs, so only external impulse changes total momentum.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e243-s04",
+   "course": "engr243",
+   "topic": "Rigid-body kinematics",
+   "type": "mcq",
+   "question": "A wheel rolls without slipping. The velocity of the contact point with the ground is:",
+   "choices": [
+    "Zero",
+    "ωr forward",
+    "2ωr forward",
+    "ωr backward"
+   ],
+   "answer": 0,
+   "explanation": "No slip means the contact point is the instantaneous centre of zero velocity.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e243-s05",
+   "course": "engr243",
+   "topic": "Impulse & momentum",
+   "type": "tf",
+   "question": "In a perfectly plastic impact the coefficient of restitution is e = 1.",
+   "answer": false,
+   "explanation": "Perfectly plastic means e = 0 (bodies stick). e = 1 is perfectly elastic.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e391-s01",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "mcq",
+   "question": "Near a simple root, Newton–Raphson converges:",
+   "choices": [
+    "Quadratically",
+    "Linearly",
+    "Cubically",
+    "Not at all"
+   ],
+   "answer": 0,
+   "explanation": "The error roughly squares each step for a simple root with a good starting guess.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e391-s02",
+   "course": "engr391",
+   "topic": "Nonlinear equations",
+   "type": "tf",
+   "question": "The bisection method is guaranteed to converge if f is continuous and f(a)·f(b) < 0.",
+   "answer": true,
+   "explanation": "The intermediate value theorem guarantees a root in the bracket, and the bracket halves every iteration.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e391-s03",
+   "course": "engr391",
+   "topic": "Numerical integration",
+   "type": "mcq",
+   "question": "Simpson's 1/3 rule integrates exactly polynomials up to degree:",
+   "choices": [
+    "3",
+    "2",
+    "1",
+    "4"
+   ],
+   "answer": 0,
+   "explanation": "Although it fits a parabola, error cancellation makes it exact for cubics. Error ∝ f⁗.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e391-s04",
+   "course": "engr391",
+   "topic": "Initial value problems",
+   "type": "short",
+   "question": "What is the global truncation error order of Euler's method and of classical 4th-order Runge–Kutta?",
+   "answer": "Euler: O(h). RK4: O(h⁴).",
+   "keywords": [
+    "Euler O(h)",
+    "RK4 O(h⁴)",
+    "local one order higher"
+   ],
+   "explanation": "The local errors are O(h²) and O(h⁵). Summing over ~1/h steps loses one order.",
+   "source": "Sample (general knowledge)"
+  },
+  {
+   "id": "e391-s05",
+   "course": "engr391",
+   "topic": "Regression & interpolation",
+   "type": "tf",
+   "question": "An interpolating polynomial through n+1 distinct points of degree ≤ n is unique.",
+   "answer": true,
+   "explanation": "Lagrange and Newton forms are just different ways of writing the same polynomial.",
+   "source": "Sample (general knowledge)"
+  }
+ ]
+}

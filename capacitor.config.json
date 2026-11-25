@@ -1,0 +1,8 @@
+{
+  "appId": "app.nextstop.study",
+  "appName": "Next Stop",
+  "webDir": "dist",
+  "plugins": {
+    "LocalNotifications": { "iconColor": "#0a5cff" }
+  }
+}
