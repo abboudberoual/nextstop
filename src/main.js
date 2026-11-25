@@ -20,12 +20,12 @@ const native = Capacitor.isNativePlatform();
 const tx = v => String(v ?? '').split(/(\$\$[^$]+\$\$|\$[^$\n]+\$)/g).map(part => {
   const disp = part.startsWith('$$') && part.endsWith('$$') && part.length > 4;
   const inl = !disp && part.startsWith('$') && part.endsWith('$') && part.length > 2;
-  if (!disp && !inl) return esc(part);
+  if (!disp && !inl) return esc(part).replace(/\((sheet p\.\d[^)]*|definition, not on the sheet|know this[^)]*|derived[^)]*)\)/g, (m, t) => `<span class="src ${t.startsWith('sheet') ? 'sheet' : t.startsWith('know') ? 'know' : t.startsWith('derived') ? 'der' : 'def'}">${t}</span>`);
   try { return katex.renderToString(part.slice(disp ? 2 : 1, disp ? -2 : -1), { displayMode: disp, throwOnError: false, output: 'html' }); } catch { return esc(part); }
 }).join('');
 const buzz = (ok) => { if (native) (ok === undefined ? Haptics.impact({ style: ImpactStyle.Light }) : Haptics.notification({ type: ok ? NotificationType.Success : NotificationType.Error })).catch(() => {}); };
 
-let BANK = [], COURSES = [], view = 'home', sess = null, filter = { courses: [], mode: 'mix' };
+let BANK = [], COURSES = [], FIGS = {}, view = 'home', sess = null, filter = { courses: [], mode: 'mix' };
 
 // ---------- data ----------
 async function loadBank() {
@@ -33,14 +33,14 @@ async function loadBank() {
   try { bundled = await (await fetch('./bank.json', { cache: 'no-store' })).json(); } catch {}
   const cached = store.cachedBank();
   const b = cached && cached.version >= bundled.version ? cached : bundled;
-  COURSES = b.courses; BANK = b.questions;
+  COURSES = b.courses; BANK = b.questions; FIGS = b.figures || {};
   if (b === bundled) store.saveBank(bundled);
 }
 
 async function doSync(quiet = true) {
   try {
     const merged = await sync.pullBank(BANK);
-    if (merged) { BANK = merged; const c = store.cachedBank() || {}; store.saveBank({ ...c, courses: COURSES, questions: BANK }); }
+    if (merged) { BANK = merged; const c = store.cachedBank() || {}; store.saveBank({ ...c, courses: COURSES, questions: BANK, figures: FIGS }); }
     const r = await sync.syncProgress();
     if (!quiet) toast(r.ok ? `Synced · ${r.pushed} up, ${r.merged} down` : `Sync: ${r.reason}`);
     if (r.ok && view === 'home') render();
@@ -136,7 +136,7 @@ function start(opts, firstQid) {
   let qs = buildSession(BANK, store.progress, COURSES, opts);
   if (firstQid) { const q = BANK.find(x => x.id === firstQid); if (q) qs = [q, ...qs.filter(x => x.id !== firstQid)].slice(0, opts.n || 10); }
   if (!qs.length) return toast('No questions available for that filter.');
-  sess = { qs: qs.map(shuffleChoices), i: 0, results: [], requeued: new Set(), answered: false, started: Date.now() };
+  sess = { qs: qs.map(shuffleChoices), i: 0, results: [], requeued: new Set(), tried: new Set(), answered: false, started: Date.now() };
   view = 'q'; render();
 }
 
@@ -151,6 +151,7 @@ function question() {
     <div class="qtop"><button class="x" id="quit" aria-label="End session">×</button>
       <div class="prog"><i style="width:${sess.i / sess.qs.length * 100}%"></i></div><span class="small mute num">${sess.i + 1}/${sess.qs.length}</span></div>
     <span class="tag ${lightText(c) ? 'light' : ''}" style="${tagStyle}">${esc(c?.code)} · ${esc(q.topic)}</span>
+    ${q.figure && FIGS[q.figure] ? `<div class="figq">${FIGS[q.figure]}</div>` : ''}
     <div class="qtext">${tx(q.question)}</div>
     ${body}
     <div id="after"></div>
@@ -176,7 +177,7 @@ function answerChoice(q, btn) {
     if (v === q.answer) b.classList.add('ok'); else if (b === btn) b.classList.add('bad');
   });
   buzz(ok);
-  $('#after').innerHTML = explain(q, ok);
+  $('#after').innerHTML = (sess.tried.has(q.id) ? '<div class="small mute" style="margin-top:10px">Retry. Only your first try counts.</div>' : '') + explain(q, ok);
   let grade = ok ? GRADE.GOOD : GRADE.AGAIN;
   $('#dock').innerHTML = (ok ? '<button class="ghost" id="guess" aria-pressed="false">I guessed</button>' : '') + '<button class="cta" id="next">Next</button>';
   const g = $('#guess'); if (g) g.onclick = () => { const on = g.getAttribute('aria-pressed') !== 'true'; g.setAttribute('aria-pressed', on); g.textContent = on ? 'Guessed ✓' : 'I guessed'; grade = on ? GRADE.HARD : GRADE.GOOD; };
@@ -193,11 +194,14 @@ function revealShort(q) {
 }
 
 function commit(q, grade, ok) {
-  store.setState(q.id, review(store.progress[q.id], grade, course(q.course)));
+  // Only the first try at a card counts (score and spaced repetition). The in-session retry is practice.
+  const first = !sess.tried.has(q.id);
+  sess.tried.add(q.id);
+  if (first) store.setState(q.id, review(store.progress[q.id], grade, course(q.course)));
   const before = store.daily[today()]?.answered || 0;
   store.logAnswer(ok);
   if (before < store.settings.dailyGoal && before + 1 >= store.settings.dailyGoal) { notify.goalReached(); toast('Daily goal hit 🎯'); }
-  sess.results.push({ id: q.id, ok, course: q.course });
+  if (first) sess.results.push({ id: q.id, ok, course: q.course });
   // Missed → see it again a few cards later (once).
   if (!ok && !sess.requeued.has(q.id)) { sess.requeued.add(q.id); sess.qs.splice(Math.min(sess.qs.length, sess.i + 4), 0, shuffleChoices(BANK.find(x => x.id === q.id))); }
   sess.answered = false;
@@ -213,7 +217,7 @@ function finish() {
   for (const x of r) { by[x.course] ??= { n: 0, ok: 0 }; by[x.course].n++; if (x.ok) by[x.course].ok++; }
   const mins = Math.max(1, Math.round((Date.now() - sess.started) / 60e3));
   view = 'done';
-  app.innerHTML = `<h1>${ok}/${r.length} correct</h1><div class="mute">${mins} min · ${store.daily[today()]?.answered || 0} answered today</div>
+  app.innerHTML = `<h1>${ok}/${r.length} correct</h1><div class="small mute">First tries only.</div><div class="mute">${mins} min · ${store.daily[today()]?.answered || 0} answered today</div>
     <h2>By course</h2>${Object.entries(by).map(([id, v]) => { const c = course(id); return `<div class="topic"><span><b>${esc(c?.code)}</b></span>
       <div class="bar"><i style="width:${v.ok / v.n * 100}%;background:var(--${c?.colorName})"></i></div><span class="num">${v.ok}/${v.n}</span></div>`; }).join('')}
     <div class="dock"><div class="in"><button class="ghost" id="home">Home</button><button class="cta" id="again">Another ${store.settings.sessionSize}</button></div></div>`;

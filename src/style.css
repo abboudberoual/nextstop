@@ -100,3 +100,12 @@ input, select { font: 16px Figtree, system-ui; padding: 10px 12px; border: 1px s
 @media (prefers-reduced-motion: reduce) { * { transition: none !important } }
 
 .katex { font-size: 1.05em } .katex-display { margin: .4em 0; overflow-x: auto; overflow-y: hidden }
+
+.figq { margin: 12px 0 0; color: var(--ink); background: var(--panel); border-radius: 14px; padding: 8px }
+.figq svg { display: block; width: 100%; height: auto; max-height: 240px }
+.src { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1.3; padding: 1px 7px; border-radius: 999px; margin: 0 2px; white-space: nowrap; vertical-align: 1px }
+.src.sheet { background: color-mix(in srgb, var(--ok) 18%, transparent); color: light-dark(#006b3d, #5fd39b) }
+.src.def { background: color-mix(in srgb, var(--accent) 16%, transparent); color: light-dark(#0a4bd1, #8fb2ff) }
+.src.der { background: color-mix(in srgb, #c98a00 20%, transparent); color: light-dark(#8a5d00, #f2c55c) }
+.src.know { background: color-mix(in srgb, var(--bad) 16%, transparent); color: light-dark(#b01e18, #ff8a85) }
+.reveal .src { white-space: normal }

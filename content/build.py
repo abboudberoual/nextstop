@@ -13,6 +13,11 @@ for f in sorted(here.glob("*.py")):
 # Keep hand-added questions (imports from class projects) that no module defines, but drop the old samples.
 for q in bank["questions"]:
     if q["id"] not in seen and "-s0" not in q["id"]: qs.append(q)
+figs = json.loads((here / "figures.json").read_text())
+used = {q["figure"] for q in qs if q.get("figure")}
+missing = used - set(figs)
+if missing: sys.exit(f"missing figures: {missing}")
+bank["figures"] = {k: figs[k] for k in sorted(used)}
 bank["questions"] = qs
 bank["version"] = bank.get("version", 1) + 1
 (here.parent / "public/bank.json").write_text(json.dumps(bank, ensure_ascii=False, indent=1))
