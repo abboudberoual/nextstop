@@ -21,7 +21,7 @@ def svg(name, streams, body="", extra="", dividing=None, label=""):
     axes = f'<line x1="0" y1="{sy(0):.0f}" x2="{W}" y2="{sy(0):.0f}" stroke-dasharray="3 3" opacity=".45"/><line x1="{sx(0):.0f}" y1="0" x2="{sx(0):.0f}" y2="{H}" stroke-dasharray="3 3" opacity=".45"/>'
     uarrow = f'<g stroke-width="2"><line x1="8" y1="22" x2="40" y2="22"/><path d="M40,22 l-7,-4 v8z" fill="currentColor"/></g><text x="10" y="15">U</text>'
     s = (f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{label}" fill="none" stroke="currentColor" '
-         f'font-family="Figtree,system-ui,sans-serif" font-size="12"><g stroke-width="1" opacity=".55">{sl}</g>{axes}'
+         f'font-family="Source Sans 3,Segoe UI,sans-serif" font-size="12"><g stroke-width="1" opacity=".55">{sl}</g>{axes}'
          f'<g stroke-width="2.2">{dv}</g>{body}<g stroke="none" fill="currentColor">{extra}</g><g fill="currentColor" stroke="currentColor">{uarrow}</g>'
          f'<text x="{W-14}" y="{sy(0)-6:.0f}" fill="currentColor" stroke="none">x</text><text x="{sx(0)+5:.0f}" y="12" fill="currentColor" stroke="none">y</text></svg>')
     return s

@@ -29,6 +29,18 @@ export async function signIn(email, password, create = false) {
 
 export async function signOut() { const c = supa(); if (c) await c.auth.signOut(); }
 
+/** Course list and sketches (a new semester only needs a new bank.json import). */
+export async function pullMeta() {
+  const c = supa(); if (!c) return null;
+  const since = new Date(store.meta.metaPulled || 0).toISOString();
+  const { data, error } = await c.from('bank_meta').select('key,value,updated_at').gt('updated_at', since);
+  if (error || !data?.length) return null;
+  const out = {};
+  for (const r of data) { out[r.key] = r.value; store.meta.metaPulled = Math.max(store.meta.metaPulled || 0, new Date(r.updated_at).getTime()); }
+  store.saveMeta();
+  return out;
+}
+
 /** Pull newer questions from the shared bank. Returns merged bank or null. */
 export async function pullBank(bank) {
   const c = supa(); if (!c) return null;

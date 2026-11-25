@@ -27,4 +27,4 @@ Signing: create a keystore once (`keytool -genkeypair -keystore release.keystore
 New semester: replace `courses` and `questions` in `public/bank.json` (or push new rows to the Supabase `questions` table). Past courses drop out of the mix automatically after their exam date. Repo secrets `SUPABASE_URL` and `SUPABASE_ANON_KEY` bake the sync server into the app. Without them, you can enter the server in Settings.
 
 ## Sync setup
-Run `supabase/schema.sql` in the Supabase SQL editor, then create your account in the app under Settings → Sync.
+The sync server is the Supabase project `nextstop` (ca-central-1); `supabase/schema.sql` matches what's applied. After pushing new questions, run `select public.import_bank();` (Claude can do this through the Supabase connector) and every device picks them up on its next sync, no reinstall needed. Create your account in the app under Settings → Sync.

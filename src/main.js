@@ -1,6 +1,8 @@
-import '@fontsource/figtree/400.css';
-import '@fontsource/figtree/600.css';
-import '@fontsource/figtree/800.css';
+import '@fontsource/source-sans-3/400.css';
+import '@fontsource/source-sans-3/600.css';
+import '@fontsource/source-sans-3/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/600.css';
 import 'katex/dist/katex.min.css';
 import './style.css';
 import katex from 'katex';
@@ -39,8 +41,12 @@ async function loadBank() {
 
 async function doSync(quiet = true) {
   try {
+    const meta = await sync.pullMeta();
+    if (meta?.courses) COURSES = meta.courses;
+    if (meta?.figures) FIGS = { ...FIGS, ...meta.figures };
     const merged = await sync.pullBank(BANK);
-    if (merged) { BANK = merged; const c = store.cachedBank() || {}; store.saveBank({ ...c, courses: COURSES, questions: BANK, figures: FIGS }); }
+    if (merged) BANK = merged;
+    if (meta || merged) { const c = store.cachedBank() || {}; store.saveBank({ ...c, courses: COURSES, questions: BANK, figures: FIGS }); }
     const r = await sync.syncProgress();
     if (!quiet) toast(r.ok ? `Synced · ${r.pushed} up, ${r.merged} down` : `Sync: ${r.reason}`);
     if (r.ok && view === 'home') render();
@@ -48,6 +54,7 @@ async function doSync(quiet = true) {
 }
 
 const course = id => COURSES.find(c => c.id === id);
+const col = c => `var(--${c?.colorName === 'blue' ? 'blue-line' : (c?.colorName || 'ink')})`;
 const lightText = c => c && ['yellow'].includes(c.colorName);
 const allDaily = () => {
   const out = { ...store.daily };
@@ -73,11 +80,11 @@ function metroSVG() {
     break;
   }
   let px = x0, segs = '';
-  live.forEach((c, i) => { segs += `<line x1="${px}" y1="${y}" x2="${xs[i]}" y2="${y}" stroke="var(--${c.colorName})" stroke-width="9" stroke-linecap="round"/>`; px = xs[i]; });
+  live.forEach((c, i) => { segs += `<line x1="${px}" y1="${y}" x2="${xs[i]}" y2="${y}" stroke="${col(c)}" stroke-width="9" stroke-linecap="round"/>`; px = xs[i]; });
   const st = live.map((c, i) => {
     const t = new Date(c.exam).getTime(), past = t < now, d = Math.ceil(daysUntil(c.exam, now)), up = i % 2 === 1;
     const day = new Date(c.exam).toLocaleDateString([], { month: 'short', day: 'numeric' });
-    return `<g opacity="${past ? .35 : 1}"><circle cx="${xs[i]}" cy="${y}" r="10" fill="var(--bg)" stroke="var(--${c.colorName})" stroke-width="5.5"/>
+    return `<g opacity="${past ? .35 : 1}"><circle cx="${xs[i]}" cy="${y}" r="10" fill="var(--bg)" stroke="${col(c)}" stroke-width="5.5"/>
       <text x="${xs[i]}" y="${up ? y - 30 : y + 30}" text-anchor="middle" class="d">${esc(c.code)}</text>
       <text x="${xs[i]}" y="${up ? y - 16 : y + 44}" text-anchor="middle" style="fill:var(--mute)">${past ? 'done' : esc(day) + ' · ' + (d <= 0 ? 'today' : d + 'd')}</text></g>`;
   }).join('');
@@ -101,7 +108,7 @@ function home() {
     <div class="today">
       <svg class="ring" viewBox="0 0 84 84"><circle cx="42" cy="42" r="${R}" fill="none" stroke="var(--line)" stroke-width="9"/>
         <circle cx="42" cy="42" r="${R}" fill="none" stroke="${pct >= 1 ? 'var(--ok)' : 'var(--accent)'}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C * pct} ${C}" transform="rotate(-90 42 42)"/>
-        <text x="42" y="48" text-anchor="middle" style="font:800 18px Figtree,system-ui;fill:var(--ink)">${done}</text></svg>
+        <text x="42" y="48" text-anchor="middle" >${done}</text></svg>
       <div><div class="big">${done} / ${goal}</div><div class="mute">today · ${st}-day streak</div>
         <div class="small mute">${due} due for review · ${fresh} not seen yet</div></div>
     </div>
@@ -114,10 +121,10 @@ function home() {
       const m = qs.length ? qs.reduce((a, q) => a + mastery(store.progress[q.id]), 0) / qs.length : 0;
       const seen = qs.filter(q => store.progress[q.id]?.seen).length;
       const on = filter.courses.includes(c.id), past = daysUntil(c.exam) <= 0;
-      return `<div class="course" style="opacity:${past ? .45 : 1}"><span class="dot" style="background:var(--${c.colorName})"></span>
+      return `<div class="course" style="opacity:${past ? .45 : 1}"><span class="dot" style="background:${col(c)}"></span>
         <div><div class="row"><b>${esc(c.code)}</b><span class="mute small">${esc(c.name)}</span></div>
         <div class="small mute">${seen}/${qs.length} seen · ${Math.round(m * 100)}% mastered · final ${c.finalWeight}%</div>
-        <div class="bar"><i style="width:${m * 100}%;background:var(--${c.colorName})"></i></div></div>
+        <div class="bar"><i style="width:${m * 100}%;background:${col(c)}"></i></div></div>
         <button data-course="${esc(c.id)}" aria-pressed="${on}" ${past ? 'disabled' : ''}>${on ? 'Only this ✓' : 'Only this'}</button></div>`;
     }).join('')}</div>
     <p class="small mute">Questions mix across courses by default, weighted toward the nearest exam and the biggest final weight. Anything you miss comes back within the session, then again over the next days.</p>
@@ -142,7 +149,7 @@ function start(opts, firstQid) {
 
 function question() {
   const q = sess.qs[sess.i], c = course(q.course);
-  const tagStyle = `background:var(--${c?.colorName || 'blue'})`;
+  const tagStyle = `background:${col(c)}`;
   let body = '';
   if (q.type === 'mcq') body = `<div class="choices">${q.choices.map((t, i) => `<button class="choice" data-i="${i}">${tx(t)}</button>`).join('')}</div>`;
   else if (q.type === 'tf') body = `<div class="choices tf"><button class="choice" data-i="true">True</button><button class="choice" data-i="false">False</button></div>`;
@@ -150,7 +157,7 @@ function question() {
   app.innerHTML = `
     <div class="qtop"><button class="x" id="quit" aria-label="End session">×</button>
       <div class="prog"><i style="width:${sess.i / sess.qs.length * 100}%"></i></div><span class="small mute num">${sess.i + 1}/${sess.qs.length}</span></div>
-    <span class="tag ${lightText(c) ? 'light' : ''}" style="${tagStyle}">${esc(c?.code)} · ${esc(q.topic)}</span>
+    <span class="tag" style="--c:${col(c)}">${esc(c?.code)} · ${esc(q.topic)}</span>
     ${q.figure && FIGS[q.figure] ? `<div class="figq">${FIGS[q.figure]}</div>` : ''}
     <div class="qtext">${tx(q.question)}</div>
     ${body}
@@ -162,8 +169,9 @@ function question() {
 }
 
 function explain(q, ok) {
-  const src = q.source ? `<div class="small mute" style="margin-top:6px">Source: ${esc(q.source)}</div>` : '';
-  return `<div class="reveal"><b style="color:${ok === undefined ? 'inherit' : ok ? 'var(--ok)' : 'var(--bad)'}">${ok === undefined ? 'Model answer' : ok ? 'Correct' : 'Not quite'}</b>${tx(q.explanation || '')}${src}</div>`;
+  const src = q.source ? `<div class="srcline">${esc(q.source)}</div>` : '';
+  const cls = ok === undefined ? 'model' : ok ? 'good' : 'wrong';
+  return `<div class="reveal ${cls}"><b>${ok === undefined ? 'Why' : ok ? 'Correct' : 'Not quite'}</b>${tx(q.explanation || '')}${src}</div>`;
 }
 
 function answerChoice(q, btn) {
@@ -186,7 +194,7 @@ function answerChoice(q, btn) {
 
 function revealShort(q) {
   $('#after').innerHTML = explain(q) + (q.keywords?.length ? `<div class="small mute" style="margin-top:8px">Key points: ${q.keywords.map(tx).join(' · ')}</div>` : '');
-  const a = q.answer ? `<div class="reveal"><b>Answer</b>${tx(q.answer)}</div>` : '';
+  const a = q.answer ? `<div class="reveal good"><b>Answer</b>${tx(q.answer)}</div>` : '';
   $('#after').innerHTML = a + $('#after').innerHTML;
   $('#dock').innerHTML = `<div class="grades" style="width:100%;margin:0"><button class="g0" data-g="0">Missed</button><button class="g1" data-g="1">Partly</button><button class="g2" data-g="2">Got it</button></div>`;
   app.querySelectorAll('[data-g]').forEach(b => b.onclick = () => { const g = Number(b.dataset.g); commit(q, g, g > 0); });
@@ -219,7 +227,7 @@ function finish() {
   view = 'done';
   app.innerHTML = `<h1>${ok}/${r.length} correct</h1><div class="small mute">First tries only.</div><div class="mute">${mins} min · ${store.daily[today()]?.answered || 0} answered today</div>
     <h2>By course</h2>${Object.entries(by).map(([id, v]) => { const c = course(id); return `<div class="topic"><span><b>${esc(c?.code)}</b></span>
-      <div class="bar"><i style="width:${v.ok / v.n * 100}%;background:var(--${c?.colorName})"></i></div><span class="num">${v.ok}/${v.n}</span></div>`; }).join('')}
+      <div class="bar"><i style="width:${v.ok / v.n * 100}%;background:${col(c)}"></i></div><span class="num">${v.ok}/${v.n}</span></div>`; }).join('')}
     <div class="dock"><div class="in"><button class="ghost" id="home">Home</button><button class="cta" id="again">Another ${store.settings.sessionSize}</button></div></div>`;
   $('#home').onclick = () => { view = 'home'; render(); };
   $('#again').onclick = () => start({ n: store.settings.sessionSize, mode: filter.mode, courseIds: filter.courses });
@@ -237,9 +245,9 @@ function stats() {
     ${COURSES.map(c => {
       const topics = {};
       for (const q of BANK.filter(q => q.course === c.id && !q.retired)) { (topics[q.topic] ??= []).push(q); }
-      return `<h2 style="color:var(--${c.colorName})">${esc(c.code)}</h2>` + Object.entries(topics).map(([t, qs]) => {
+      return `<h2 class="row"><span class="dot" style="background:${col(c)};min-height:18px"></span>${esc(c.code)}</h2>` + Object.entries(topics).map(([t, qs]) => {
         const m = qs.reduce((a, q) => a + mastery(store.progress[q.id]), 0) / qs.length;
-        return `<div class="topic"><span>${esc(t)}</span><div class="bar"><i style="width:${m * 100}%;background:var(--${c.colorName})"></i></div><span class="num small">${Math.round(m * 100)}%</span></div>`;
+        return `<div class="topic"><span>${esc(t)}</span><div class="bar"><i style="width:${m * 100}%;background:${col(c)}"></i></div><span class="num small">${Math.round(m * 100)}%</span></div>`;
       }).join('');
     }).join('')}` + nav();
   bindNav();
